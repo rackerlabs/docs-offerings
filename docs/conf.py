@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-<officialProjectName> build configuration file.
+Offer Service API documentation build configuration file.
 
 This file is execfile()d with the current directory set to its
 containing dir.
@@ -100,8 +100,8 @@ linkcheck_ignore = ['https://pages.github.rackspace.com*',
 linkcheck_anchors = False
 
 # General information about the project.
-project = '<officialProjectName>'
-copyright = '<year>, Rackspace'
+project = 'Offer Service API'
+copyright = '2018, Rackspace'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -109,18 +109,18 @@ copyright = '<year>, Rackspace'
 #
 
 # The short X.Y version.
-version = "1.0"
+version = "2.0"
 
 # The full version, including alpha/beta/rc tags.
-release = "version"
+release = "version 2.0"
 
 # Global variables that are replaced by the specified value during the build
 # process.
 rst_epilog = """
-.. |service| replace:: <officialProjectName>
-.. |api-service| replace:: <officialProjectName API>
-.. |contract version| replace:: <version>
-.. |product name| replace:: <PRODUCT NAME>
+.. |service| replace:: Offer Service
+.. |api-service| replace:: Offer Service API
+.. |contract version| replace:: 2.0
+.. |product name| replace:: Offer Service
 """
 
 # sphinxcontrib-versioning options
@@ -218,11 +218,11 @@ else:
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = '<projectName> v<release> documentation'
+html_title = 'Offer Service API v2.0 documentation'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 # html_short_title = None
-html_short_title = '<projectName> v<release>'
+html_short_title = 'Offer Service API v2.0'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -304,7 +304,7 @@ html_context = {
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'docs-<product-name>'
+htmlhelp_basename = 'docs-offer-service'
 
 # this will change the 'paragraph' character to '#'
 html_add_permalinks = '#'

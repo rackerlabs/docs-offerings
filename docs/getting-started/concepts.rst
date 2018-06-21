@@ -11,35 +11,40 @@ concepts.
    them with relevant information for your product, and provide as many
    concepts as needed.
 
-.. _concept-load-balancer:
+.. _concept-offering:
 
-Load balancer
-~~~~~~~~~~~~~
-A logical device that belongs to a cloud account. A load balancer is used to
-distribute workloads between multiple back-end systems or services, based on
-the criteria that is defined as part of its configuration.
+Offering
+~~~~~~~~
+An offering is a configuration of products that a user can purchase for a
+certain price. It is a collection of products, product characteristics and
+product prices.
 
-.. _concept-virtual-ip:
+.. _concept-product:
 
-Virtual IP
-~~~~~~~~~~
-An Internet Protocol (IP) address configured on the load balancer for use by
-clients connecting to a service that is load balanced. Incoming connections are
-distributed to back-end nodes based on the configuration of the load balancer.
+Product
+~~~~~~~
+A product is a tangible or intangible item that is sold to a customer.
 
-.. _concept-error-page:
+.. _concept-product-characteristic:
 
-Error page
-~~~~~~~~~~
+Product characteristic
+~~~~~~~~~~~~~~~~~~~~~~
+A product characteristic provides additional information about a product. It
+follows the format ``Characteristic key : Characteristic value``. Product
+characteristics are mainly intended to be used to configure information from
+external applications that drive product configuration.
 
-The HTML file that is shown to the end user when an error in the service is
-generated. By default, every virtual server is provided with the default error
-file. It is also possible to submit a custom error page via the Load Balancers
-API.
+.. _concept-commit-grid:
 
-.. _concept-node:
+Commit Grid
+~~~~~~~~~~~
 
-Node
-~~~~
+A commit grid is a grid that is available for customers to enroll for monthly
+Commit Discounts.
 
-A back-end device that provides a service on a specified IP address and port.
+.. _concept-volume-grid:
+
+Volume Grid
+~~~~~~~~~~~
+
+A volume grid is a grid that is available to customers for Volume Discounts.

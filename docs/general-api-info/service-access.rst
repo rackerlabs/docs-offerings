@@ -4,67 +4,95 @@
 Service access endpoints
 ========================
 
-.. COMMENT: Adapt this topic to provide information that is relevant for
-   your product.
+The |apiservice| can be accessed at https://offer.api.rackspace.com/v2.
 
-The |apiservice| service is a regionalized service. It allows the caller to
-select the region into which a load balancer is provisioned.
+Versions
+~~~~~~~~
 
-The following table lists the |product name| endpoints that are available
-for each region.
+The Offering API uses a URI versioning scheme. The first element of the URI
+path contains the target version identifier: for example, in the URL
+https://offer.api.rackspacecloud.com/v2/, the API version is 2.
 
-.. tip::
-   To help you decide which regionalized endpoint to use, read about
-   :how-to:`special considerations for choosing a region <about-regions>`.
+All requests except for queries for the contract version must contain a target
+version. Any feature or functionality change that would necessitate a break in
+API compatibility will require a new version, which results in the URI version
+being updated accordingly. When new API versions are released, older versions
+will be marked as deprecated. Rackspace will work with developers and partners
+to ensure that there is adequate time to migrate to the new version before
+deprecated versions are discontinued.
 
-.. _api-info-service-access-regional:
+Example request with URI versioning
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. list-table:: **Regionalized service endpoints**
-    :widths: 10 40
-    :header-rows: 1
+.. code-block:: curl
 
-    * - Region
-      - Endpoint
-    * - Chicago (ORD)
-      - ``https://ord.loadbalancers.api.rackspacecloud.com/v1.0/1234``
-    * - Dallas/Ft. Worth (DFW)
-      - ``https://dfw.loadbalancers.api.rackspacecloud.com/v1.0/1234``
-    * - Northern Virginia (IAD)
-      - ``https://iad.loadbalancers.api.rackspacecloud.com/v1.0/1234``
-    * - London (LON)
-      - ``https://lon.loadbalancers.api.rackspacecloud.com/v1.0/1234``
-    * - Sydney (SYD)
-      - ``https://syd.loadbalancers.api.rackspacecloud.com/v1.0/1234``
-    * - Hong Kong (HKG)
-      - ``https://hkg.loadbalancers.api.rackspacecloud.com/v1.0/1234``
+   GET /v1/offerings HTTP/1.1
+   Host: offer.api.rackspacecloud.com
+   Accept: application/xml
+   X_AUTH_TOKEN: ab48a9efdfedb23ty3494
 
+Your application can programmatically determine the available API contract
+versions by performing a GET on the root URL (with the version and everything
+to the right of it truncated) returned from the authentication system.
 
-Replace the sample account ID number, ``1234``, with your actual account number
-that is returned as part of the authentication response. The account number is
-located  after the  final slash (/) in the ``publicURL`` field.
+Example service profile request
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The service catalog returned in the authentication response specifies the
-correct service access endpoint for your account to use for accessing
-|product name|. Use the service type (``rax:load-balancer``) to locate the
-correct endpoint in the service catalog. For an example of the service
-catalog, see
-:ref:`authentication response examples <authentication-response-examples>`.
+.. code-block:: curl
 
-- If you are load balancing **cloud servers**, you can determine the
-  appropriate region to select by viewing your Cloud Servers list and creating
-  a load balancer within the same region as the data center in which your
-  servers reside. When your resources reside in the same region as your load
-  balancer, devices are in close proximity to each other and can take advantage
-  of ServiceNet connectivity for free data transfer between services.
+   GET HTTP/1.1
+   Host: offer.api.rackspacecloud.com
+   Accept: application/xml
 
-  .. note::
+This operation does not require a request body.
 
-     ServiceNet is an internal Rackspace only, multitenant network connection
-     within each Rackspace data center. ServiceNet IP addresses are not
-     accessible via the public Internet. Rackspace customers can configure
-     resources to use an internal IP address so that traffic over the
-     ServiceNet network is not billed.
+Normal Response Code(s): 200
 
-- If you are load balancing **external servers**, you can determine the
-  appropriate region to select by choosing the region that is geographically
-  as close to your external servers as possible.
+Error Response Code(s): 400, 500, 503
+
+Your application can programmatically determine the available API contract versions by performing a GET on the root URL (https://offer.api.rackspacecloud.com/).
+
+Versions List Response: XML
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+INCLUDE/PULL IN new SAMPLE FROM SAMPLES FOLDER?
+
+Versions List Response: JSON
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+INCLUDE/PULL IN new SAMPLE FROM SAMPLES FOLDER?
+
+You can also obtain additional information about a contract version by performing a GET on the base version's URL (For example, https://offer.api.rackspace.com/v1).
+
+Example version details request
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: curl
+
+   GET HTTP/1.1
+   Host: offer.api.rackspacecloud.com/v1
+   Accept: application/xml
+
+This operation does not require a request body.
+
+Normal Response Code(s): 200
+
+Error Response Code(s): 400, 500, 503
+
+Example version details response: XML
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+INCLUDE/PULL IN new SAMPLE FROM SAMPLES FOLDER?
+
+Example version details response: JSON
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+INCLUDE/PULL IN new SAMPLE FROM SAMPLES FOLDER?
+
+The detailed version response contains pointers to both a human-readable and a
+machine-processable description of the API service. The machine-processable
+description is written in the Web Application Description Language (WADL).
+
+**Note**: If there is a discrepancy between the two specifications, the WADL
+is authoritative as it contains the most accurate and up-to-date description
+of the API service.
