@@ -120,7 +120,7 @@ rst_epilog = """
 .. |service| replace:: Offer Service
 .. |api-service| replace:: Offer Service API
 .. |contract version| replace:: 2.0
-.. |product name| replace:: Offer Service
+.. |product name| replace:: Offer
 """
 
 # sphinxcontrib-versioning options

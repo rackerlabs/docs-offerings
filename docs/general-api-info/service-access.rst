@@ -93,6 +93,4 @@ The detailed version response contains pointers to both a human-readable and a
 machine-processable description of the API service. The machine-processable
 description is written in the Web Application Description Language (WADL).
 
-**Note**: If there is a discrepancy between the two specifications, the WADL
-is authoritative as it contains the most accurate and up-to-date description
-of the API service.
+.. note:: If there is a discrepancy between the two specifications, the WADL is authoritative as it contains the most accurate and up-to-date description of the API service.
