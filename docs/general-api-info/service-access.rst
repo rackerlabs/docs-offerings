@@ -24,7 +24,7 @@ deprecated versions are discontinued.
 Example request with URI versioning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: curl
+.. code::
 
    GET /v1/offerings HTTP/1.1
    Host: offer.api.rackspacecloud.com
@@ -38,7 +38,7 @@ to the right of it truncated) returned from the authentication system.
 Example service profile request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: curl
+.. code::
 
    GET HTTP/1.1
    Host: offer.api.rackspacecloud.com
@@ -55,19 +55,48 @@ Your application can programmatically determine the available API contract versi
 Versions List Response: XML
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-INCLUDE/PULL IN new SAMPLE FROM SAMPLES FOLDER?
+.. code::
+
+   <?xml version="1.0" encoding="UTF-8"?>
+
+      <versions xmlns="http://docs.openstack.org/common/api/v1.0"
+          xmlns:atom="http://www.w3.org/2005/Atom">
+       <version id="v1" status="BETA"
+                updated="2012-04-25T11:33:21-06:00">
+           <atom:link rel="self"
+                      href="http://billing.api.rackspacecloud.com/v1"/>
+       </version>
+      </versions>
 
 Versions List Response: JSON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-INCLUDE/PULL IN new SAMPLE FROM SAMPLES FOLDER?
+.. code::
 
-You can also obtain additional information about a contract version by performing a GET on the base version's URL (For example, https://offer.api.rackspace.com/v1).
+   {
+       "versions": [
+           {
+               "id": "v1",
+               "status": "BETA",
+               "updated": "2009-10-09T11:30:00Z",
+               "links": [
+                   {
+                       "rel": "self",
+                       "href": "https://offer.api.rackspacecloud.com/v1/"
+                   }
+               ]
+           }
+        ]
+   }
+
+You can also obtain additional information about a contract version by
+performing a GET on the base version's URL (for example,
+https://offer.api.rackspace.com/v1).
 
 Example version details request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: curl
+.. code::
 
    GET HTTP/1.1
    Host: offer.api.rackspacecloud.com/v1
@@ -82,12 +111,38 @@ Error Response Code(s): 400, 500, 503
 Example version details response: XML
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-INCLUDE/PULL IN new SAMPLE FROM SAMPLES FOLDER?
+.. code::
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <version xmlns="http://docs.openstack.org/common/api/v1.0" xmlns:atom="http://www.w3.org/2005/Atom" id="v1" status="BETA" updated="2012-04-25T11:33:21-06:00">
+    <atom:link rel="describedby" type="application/pdf" href="http://docs-internal.rackspace.com/foundations/offeringdevguide/offeringdevguide.pdf"/>
+    <atom:link rel="describedby" type="application/vnd.sun.wadl+xml" href="http://offer.api.rackspacecloud.com/v1/application.wadl"/>
+   </version>
 
 Example version details response: JSON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-INCLUDE/PULL IN new SAMPLE FROM SAMPLES FOLDER?
+.. code::
+
+   {
+       "version" : {
+           "id" : "v1",
+           "status" : "BETA",
+           "updated" : "2012-04-25T11:33:21-06:00",
+           "links": [
+               {
+                   "rel" : "describedby",
+                   "type" : "application/pdf",
+                   "href" : "http://docs-internal.rackspace.com/foundations/offeringdevguide/offeringdevguide.pdf"
+               },
+               {
+                   "rel" : "describedby",
+                   "type" : "application/vnd.sun.wadl+xml",
+                   "href" : "https://offer.api.rackspacecloud.com/v1/application.wadl"
+               }
+            ]
+         }
+      }
 
 The detailed version response contains pointers to both a human-readable and a
 machine-processable description of the API service. The machine-processable

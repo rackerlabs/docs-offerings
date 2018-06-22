@@ -1,0 +1,218 @@
+.. _get-currency:
+
+List supported currency information
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code::
+
+    GET /currencies
+
+Gets information on supported monetary currencies.
+
+This operation returns a list of supported monetary currencies.
+
+Request
+-------
+
+The request has the following query parameters.
+
+.. list-table::
+   :widths: 15 10 30
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - ``X-Auth-Token``
+     - Header string *(Required)*
+     - A valid authentication token
+   * - ``Content-type``
+     - Header string
+     - Value: ``application/json`` or ``application/xml``
+   * - ``Accept``
+     - Header string
+     - Value: ``application/json`` or ``application/xml``
+   * - ``limit``
+     - String
+     - The maximum number of items that can be returned. This parameter is
+       used to control the pagination. For example, a limit value of 50
+       specifies that a maximum of 50 product offering items can be returned.
+   * - ``marker``
+     - String
+     - The starting point for the return data. This parameter is used to
+       control the pagination.
+
+This operation does not accept a request body.
+
+**Example Request: header**
+
+The following example shows the header information.
+
+.. code::
+
+   X-Auth-Token: f064c46a782c444cb4ba4b6434288f7c
+   Content-Type: application/json
+   Accept: application/json
+
+
+Response
+--------
+
+The response has the following body parameters.
+
+.. list-table::
+   :widths: 15 10 30
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - **images**\.[]
+     - Array
+     - An array of images in the list.
+   * - images.\ **id**
+     - String
+     - The UUID of the image.
+   * - images.\ **name**
+     - String
+     - The name of the image.
+   * - images.\ **status**
+     - String
+     - The status of the image. For possible image statuses,
+       see :ref:`Statuses <statuses>`.
+   * - images.\ **visibility**
+     - String
+     - Specifies image visibility as ``public``, ``private``, or ``shared``.
+   * - images.\ **size**
+     - String
+     - The size of the image in bytes.
+   * - images.\ **checksum**
+     - String
+     - The checksum of this image.
+   * - images.\ **self**
+     - String
+     - The link to the image.
+   * - images.\ **file**
+     - String
+     - The image file.
+   * - **first**
+     - String
+     - The URI for the first image in the list.
+   * - **first**
+     - String
+     - The URI for the next image in the list.
+   * - **last**
+     - String
+     - The URI for the last image in the list.
+
+**Example response: JSON**
+
+The following example shows the JSON response for the request.
+
+.. code::
+
+   Status Code: 200 OK
+   Content-Length: 4543
+   Content-Type: application/json
+   Date: Wed, 03 Dec 2014 17:13:30 GMT
+   Server: Jetty(8.0.y.z-SNAPSHOT)
+   Via: 1.1 Repose (Repose/2.12)
+   x-compute-request-id: req-7b7ffed2-9b1f-46a8-a478-315518d35387
+
+   {
+    "currencies": {
+        "currency": [
+            {
+                "code": "AUD",
+                "description": "Australian Dollar",
+                "symbol": "\\u0041\\u0024",
+                "subDivision": "cents"
+            },
+            {
+                "code": "EUR",
+                "description": "Euro",
+                "symbol": "\\u20AC",
+                "subDivision": "cents"
+            },
+            {
+                "code": "HKD",
+                "description": "Hong Kong Dollar",
+                "symbol": "\\u0048\\u004B\\u0024",
+                "subDivision": "cents"
+            },
+            {
+                "code": "USD",
+                "description": "US Dollar",
+                "symbol": "\\u0024",
+                "subDivision": "cents"
+            },
+            {
+                "code": "GBP",
+                "description": "Pound Sterling",
+                "symbol": "\\u00A3",
+                "subDivision": "pence"
+            }
+        ],
+        "link": [
+            {
+                "href": "http://offer.api.rackspacecloud.com/v2/currencies?marker=1&limit=10",
+                "rel": "next"
+            },
+            {
+                "href": "http://offer.api.rackspacecloud.com/v2/currencies?marker=101&limit=10",
+                "rel": "previous"
+            }
+          ]
+        }
+      }
+
+**Example response: XML** MAYBE THIS SHOULD BE "REFERENCE" INSTEAD???
+
+The following example shows the XML response for the request.
+
+.. code::
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <tns:currencies xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:tns="http://offer.api.rackspacecloud.com/v2">
+      <tns:currency code="AUD" description="Australian Dollar" symbol="\u0041\u0024" subDivision="cents"/>
+      <tns:currency code="EUR" description="Euro" symbol="\u20AC" subDivision="cents"/>
+      <tns:currency code="HKD" description="Hong Kong Dollar" symbol="\u0048\u004B\u0024" subDivision="cents"/>
+      <tns:currency code="USD" description="US Dollar" symbol="\u0024" subDivision="cents"/>
+      <tns:currency code="GBP" description="Pound Sterling" symbol="\u00A3" subDivision="pence"/>
+      <atom:link href="http://offer.api.rackspacecloud.com/v2/currencies" rel="previous" />
+  </tns:currencies>
+
+Response codes
+--------------
+
+This operation can have the following response codes.
+
+.. list-table::
+   :widths: 15 10 30
+   :header-rows: 1
+
+   * - Code
+     - Name
+     - Description
+   * - 200
+     - Success
+     - The request succeeded.
+   * - 400
+     - Error
+     - A general error has occurred.
+   * - 404
+     - Not Found
+     - The requested resource is not found.
+   * - 405
+     - Method Not Allowed
+     - The method received in the request line is known by the origin server
+       but is not supported by the target resource.
+   * - 406
+     - Not Acceptable
+     - The value in the ``Accept`` header is not supported.
+   * - 500
+     - API Fault
+     - The server encountered an unexpected condition that prevented it from
+       fulfilling the request.

@@ -1,11 +1,11 @@
-.. _resource-one-methods:
+.. _currency-methods:
 
 ===========================
-Resource name topic example
+Currency methods
 ===========================
 
-Use the following <resource name> API operations to
-\[insert a description of the resource here\].
+Use the following currency API operations to get information about supported
+currencies.
 
 .. COMMENT:  Provide a detailed description of the resource and how it is used.
              This topic is used to group operations topics that are related.
@@ -16,5 +16,4 @@ Use the following <resource name> API operations to
              Use the include directive to add the API operations to this
              topic.
 
-.. include:: methods/get-list-images.rst
-.. include:: methods/patch-update-image.rst
+.. include:: methods/get-currency.rst

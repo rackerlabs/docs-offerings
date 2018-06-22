@@ -4,11 +4,8 @@
 Faults
 ======
 
-.. COMMENT: Adapt this topic to provide information that is relevant for
-   your product.
-
 API operations that return an error return one of the fault objects described
-in this section.  All fault objects extend from the base fault,
+in this section. All fault objects extend from the base fault,
 ``serviceFault``, for easier exception handling  for languages that support it.
 
 .. _faults-service:
@@ -17,12 +14,12 @@ serviceFault
 ~~~~~~~~~~~~
 
 The ``serviceFault``, and by extension all other faults, includes ``message``
-and ``details``  elements that contain strings that describe the nature of
-the fault. It also contains a ``code``  attribute that represents the HTTP
-response code. The ``code`` attribute of the fault is for  the convenience of
+and ``details`` elements that contain strings that describe the nature of
+the fault. It also contains a ``code`` attribute that represents the HTTP
+response code. The ``code`` attribute of the fault is for the convenience of
 the caller, who can retrieve the response code from the HTTP response headers
 or directly from the fault object. Note that the ``serviceFault`` is not
-returned directly; instead  one of the faults based on it is returned.
+returned directly; instead one of the faults based on it is returned.
 
 .. _faults-badrequest:
 
@@ -37,99 +34,13 @@ integer. The fault wraps validation errors.
 
 .. code::
 
-    <badRequest xmlns="http://docs.openstack.org/loadbalancers/api/v1.0" code="400">
+    <badRequest xmlns="https://offer.api.rackspacecloud.com/v2/" code="400">
         <message>Validation fault</message>
         <details>The object is not valid</details>
             <validationErrors>
-                <message>Node ip is invalid. Please specify a valid ip.</message>
+                <message>Node IP is invalid. Please specify a valid IP.</message>
             </validationErrors>
     </badRequest>
-
-.. _faults-immutableentity:
-
-immutableEntity
-~~~~~~~~~~~~~~~
-
-The ``immutableEntity`` fault is returned when you try to modify an item that
-is not  currently in a state that allows modification. For example, load
-balancers with a status  of ``PENDING_UPDATE``, ``BUILD``, or ``DELETED``
-cannot be modified.
-
-**Example: immutableEntity fault response**
-
-.. code::
-
-    <immutableEntity code="422" xmlns="http://docs.openstack.org/loadbalancers/api/v1.0">
-        <message>The object at the specified URI is immutable and can not be overwritten.</message>
-    </immutableEntity>
-
-.. _faults-itemnotfound:
-
-itemNotFound
-~~~~~~~~~~~~
-
-The ``itemNotFound`` fault is returned when a requested resource is not found.
-
-**Example: itemNotFound fault response**
-
-.. code::
-
-    <itemNotFound code="404" xmlns="http://docs.openstack.org/loadbalancers/api/v1.0">
-        <message>Object not Found</message>
-    </itemNotFound>
-
-.. _faults-loadbalancerfault:
-
-loadBalancerFault
-~~~~~~~~~~~~~~~~~
-
-The ``loadBalancerFault`` fault is returned when an error occurs during a load
-balancer operation.
-
-**Example: loadBalancerFault fault response**
-
-.. code::
-
-    <loadBalancerFault code="401" xmlns="http://docs.openstack.org/loadbalancers/api/v1.0">
-        <message>Invalid authentication token. Please renew</message>
-    </loadBalancerFault>
-
-.. _faults-outofvirtualips:
-
-outOfVirtualIps
-~~~~~~~~~~~~~~~
-
-The ``outOfVirtualIps`` fault indicates that there are no virtual IP addresses
-left  to assign to a new load balancer. In practice, this fault should not
-occur because virtual  IP addresses are ordered as capacity is required. If
-you do experience this fault,  contact Support so that we can make more IP
-addresses available.
-
-**Example: outOfVirtualIps fault response**
-
-.. code::
-
-    <outOfVirtualIps code="500" xmlns="http://docs.openstack.org/loadbalancers/api/v1.0">
-        <message>
-            Out of virtual IPs. Please contact support so they can allocate more virtual IPs.
-        </message>
-    </outOfVirtualips>
-
-.. _faults-overlimit:
-
-overLimit
-~~~~~~~~~
-
-The ``overLimit`` fault is returned when you exceed a currently allocated
-limit.
-
-**Example: overLimit fault response**
-
-.. code::
-
-    <overLimit code="413" xmlns="http://docs.openstack.org/loadbalancers/api/v1.0">
-        <message>Your account is currently over the limit so your request could not be processed.</message>
-    </overLimit>
 
 .. _faults-serviceunavailable:
 
@@ -137,18 +48,15 @@ serviceUnavailable
 ~~~~~~~~~~~~~~~~~~
 
 The ``serviceUnavailable`` fault is returned when the service is unavailable,
-such as when the service is undergoing maintenance. This fault does not
-necessarily  mean that the currently configured load balancers are unable to
-process traffic;  it simply means that the API is currently unable to service
-requests.
+such as when the service is undergoing maintenance.
 
 **Example: serviceUnavailable fault response**
 
 .. code::
 
-    <serviceUnavailable code="500" xmlns="http://docs.openstack.org/loadbalancers/api/v1.0">
-        <message>The Load balancing service is currently not available</message>
-    </serviceUnavailable>
+  <serviceUnavailable code="500" xmlns="https://offer.api.rackspacecloud.com/v2/">
+      <message>The Offer Service is currently not available.</message>
+  </serviceUnavailable>
 
 .. _faults-unauthorized:
 
@@ -162,33 +70,69 @@ an attempted operation.
 
 .. code::
 
-    <unauthorized code="404" xmlns="http://docs.openstack.org/loadbalancers/api/v1.0">
-        <message>You are not authorized to execute this operation.</message>
-    </unauthorized>
+ <unauthorized code="404" xmlns="https://offer.api.rackspacecloud.com/v2/">
+     <message>You are not authorized to execute this operation.</message>
+ </unauthorized>
 
-.. _faults-unprocessableentity:
+.. _faults-forbidden:
 
-unprocessableEntity
-~~~~~~~~~~~~~~~~~~~
+forbidden
+~~~~~~~~~
 
-The ``unprocessableEntity`` fault is returned when an operation is requested
-on an item that does not support the operation, but the request is properly
-formed.
+The ``forbidden`` fault is returned when access to a resource or operation is
+forbidden, regardless of authorization.
 
-.. note::
-    The Cloud Load Balancing API is considered asynchronous, which is why
-    there is a ``status`` attribute on the load balancer. The API does not
-    allow concurrent modifications on a single load balancer instance. If a
-    concurrent modification is attempted, the ``unprocessableEntity`` fault
-    is returned in the response. If you are using the API programmatically,
-    we recommend that you issue a GET request to show load balancer details
-    on the load balancer instance to verify that the status is ``ACTIVE``
-    before continuing any other modifications.
-
-**Example: unprocessableEntity fault response**
+**Example: forbidden fault response**
 
 .. code::
 
-    <unprocessableEntity code="422" xmlns="http://docs.openstack.org/loadbalancers/api/v1.0">
-        <message>The Object at the specified URI is unprocessable.</message>
-    </unprocessableEntity>
+ <forbidden code="403" xmlns="https://offer.api.rackspacecloud.com/v2/">
+    <message>Access is forbidden.</message>
+ </forbidden>
+
+.. _faults-itemnotfound:
+
+itemNotFound
+~~~~~~~~~~~~
+
+The ``itemNotFound`` fault is returned when a requested resource is not found.
+
+**Example: itemNotFound fault response**
+
+.. code::
+
+    <itemNotFound code="404" xmlns="https://offer.api.rackspacecloud.com/v2/">
+        <message>Object not found.</message>
+    </itemNotFound>
+
+.. _faults-methodnotallowed:
+
+methodNotAllowed
+~~~~~~~~~~~~~~~~
+
+The ``methodNotAllowed`` fault is returned when the operation is not allowed
+for the resource that you are calling.
+
+**Example: methodNotAllowed fault response**
+
+.. code::
+
+    <methodNotAllowed code="405" xmlns="https://offer.api.rackspacecloud.com/v2/">
+        <message>The method you are attempting to use is not allowed for this resource.</message>
+    </methodNotAllowed>
+
+.. _faults-unsupportedmediatype:
+
+unsupportedMediaType
+~~~~~~~~~~~~~~~~~~~~
+
+The ``unsupportedMediaType`` fault is returned when the payload type is not
+supported.
+
+**Example: unsupportedMediaType fault response**
+
+.. code::
+
+    <unsupportedMediaType code="415" xmlns="https://offer.api.rackspacecloud.com/v2/">
+        <message>The payload type is not supported.</message>
+    </unsupportedMediaType>
