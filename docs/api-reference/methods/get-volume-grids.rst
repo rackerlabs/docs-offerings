@@ -5,11 +5,11 @@ List volume grids
 
 .. code::
 
-    GET /discountGrids/volumeGrids
+    GET /v2/discountGrids/volumeGrids
 
 Gets information on volume grids.
 
-This operation returns a list of volume grids.
+This operation retrieves a list of volume grids.
 
 Request
 -------

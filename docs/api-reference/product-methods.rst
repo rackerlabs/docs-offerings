@@ -4,8 +4,8 @@
 Product methods
 ===========================
 
-Use the following product API operations to list, create, update, and delete
-products.
+Use the following product API operations to retrieve, create, update, and
+delete products.
 
 .. COMMENT:  Provide a detailed description of the resource and how it is used.
              This topic is used to group operations topics that are related.

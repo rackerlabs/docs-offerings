@@ -4,7 +4,7 @@
 Service access endpoints
 ========================
 
-The |apiservice| can be accessed at https://offer.api.rackspace.com/v2.
+The |apiservice| can be accessed at https://offer.api.rackspace.com/.
 
 Versions
 ~~~~~~~~
@@ -26,7 +26,7 @@ Example request with URI versioning
 
 .. code::
 
-   GET /v1/offerings HTTP/1.1
+   GET /v2/offerings HTTP/1.1
    Host: offer.api.rackspacecloud.com
    Accept: application/xml
    X_AUTH_TOKEN: ab48a9efdfedb23ty3494
@@ -57,7 +57,7 @@ Versions List Response: XML
 
 .. code::
 
-   <?xml version="1.0" encoding="UTF-8"?>
+   <?xml version="2.0" encoding="UTF-8"?>
 
       <versions xmlns="http://docs.openstack.org/common/api/v1.0"
           xmlns:atom="http://www.w3.org/2005/Atom">

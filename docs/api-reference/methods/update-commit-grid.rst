@@ -5,7 +5,7 @@ Update commit grid
 
 .. code::
 
-    PUT /discountGrids/commitGrids/{commitGridId}
+    PUT /v2/discountGrids/commitGrids/{commitGridId}
 
 Updates a commit grid.
 

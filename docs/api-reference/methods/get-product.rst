@@ -5,11 +5,11 @@ List a product
 
 .. code::
 
-    GET /offerings/{offeringId}/products/{productId}
+    GET /v2/offerings/{offeringId}/products/{productId}
 
 Gets a specific product.
 
-This operation returns a specific product.
+This operation retrieves a specific product.
 
 Request
 -------

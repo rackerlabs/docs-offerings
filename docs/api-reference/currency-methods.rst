@@ -4,8 +4,8 @@
 Currency methods
 ===========================
 
-Use the following currency API operations to get information about supported
-currencies.
+Use the following currency API operation to retrieve information about
+supported currencies.
 
 .. COMMENT:  Provide a detailed description of the resource and how it is used.
              This topic is used to group operations topics that are related.

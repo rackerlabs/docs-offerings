@@ -5,11 +5,11 @@ List supported currency information
 
 .. code::
 
-    GET /currencies
+    GET /v2/currencies
 
 Gets information on supported monetary currencies.
 
-This operation returns a list of supported monetary currencies.
+This operation retrieves a list of supported monetary currencies.
 
 Request
 -------

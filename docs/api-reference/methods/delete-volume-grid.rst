@@ -1,15 +1,15 @@
-.. _delete-product:
+.. _delete-volume-grid:
 
-Delete a product
-~~~~~~~~~~~~~~~~
+Delete a volume grid
+~~~~~~~~~~~~~~~~~~~~
 
 .. code::
 
-    DELETE /v2/offerings/{offeringId}/products/{productId}
+    DELETE /v2/discountGrids/volumeGrids/{volumeGridId}
 
-Deletes a product.
+Deletes a volume grid.
 
-This operation deletes a product.
+This operation deletes a volume grid.
 
 Request
 -------
@@ -32,12 +32,9 @@ The request has the following query parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``
-   * - ``offeringId``
+   * - ``volumeGridId``
      - String
-     - The ID for the offering.
-    * - ``productId``
-      - String
-      - The ID for the product.
+     - The ID for the volume grid.
 
 This operation does not accept a request body.
 

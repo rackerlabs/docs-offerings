@@ -1,10 +1,10 @@
-.. _volume-grid-methods:
+.. _discount-grid-methods:
 
 ===========================
-Volume grid methods
+Discount grid methods
 ===========================
 
-Use the following discount grid API operations to get volume grids and to
+Use the following discount grid API operations to retrieve volume grids and
 calculate discounts.
 
 .. COMMENT:  Provide a detailed description of the resource and how it is used.
@@ -18,6 +18,9 @@ calculate discounts.
 
 .. include:: methods/get-volume-grid.rst
 .. include:: methods/get-volume-grids.rst
+.. include:: methods/create-volume-grids.rst
+.. include:: methods/update-volume-grid.rst
+.. include:: methods/delete-volume-grid.rst
 .. include:: methods/get-commit-grid.rst
 .. include:: methods/get-commit-grids.rst
 .. include:: methods/create-commit-grid.rst

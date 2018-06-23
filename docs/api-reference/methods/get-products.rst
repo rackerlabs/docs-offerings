@@ -5,11 +5,11 @@ List products
 
 .. code::
 
-    GET /offerings/{offeringId}/products​
+    GET /v2/offerings/{offeringId}/products​
 
 Gets the products for a Rackspace offering.
 
-This operation returns all of the products that are associated with a
+This operation retrieves all of the products that are associated with a
 Rackspace offering.
 
 Request

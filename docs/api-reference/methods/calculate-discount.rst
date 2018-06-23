@@ -5,7 +5,7 @@ Calculate a discount
 
 .. code::
 
-    GET /discountGrids/commitGrids/{commitGridId}/commitDiscountCalculation
+    GET /v2/discountGrids/commitGrids/{commitGridId}/commitDiscountCalculation
 
 Calculate a discount.
 

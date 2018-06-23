@@ -5,7 +5,7 @@ Delete a commit grid
 
 .. code::
 
-    DELETE /discountGrids/commitGrids/{commitGridId}
+    DELETE /v2/discountGrids/commitGrids/{commitGridId}
 
 Deletes a commit grid.
 

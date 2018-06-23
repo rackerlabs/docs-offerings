@@ -4,7 +4,7 @@
 Commit grid methods
 ===========================
 
-Use the following commit grid API operations to get, create, update, and
+Use the following commit grid API operations to retrieve, create, update, and
 delete commit grids.
 
 .. COMMENT:  Provide a detailed description of the resource and how it is used.

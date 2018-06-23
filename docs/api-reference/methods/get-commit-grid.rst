@@ -5,11 +5,11 @@ List commit grid
 
 .. code::
 
-    GET /discountGrids/commitGrids/{commitGridId}
+    GET /v2/discountGrids/commitGrids/{commitGridId}
 
 Gets information on a specific commit grid.
 
-This operation returns a commit grid.
+This operation retrieves a commit grid.
 
 Request
 -------

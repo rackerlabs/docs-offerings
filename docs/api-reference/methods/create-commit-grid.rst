@@ -5,7 +5,7 @@ Create commit grid
 
 .. code::
 
-    POST /discountGrids/commitGrids
+    POST /v2/discountGrids/commitGrids
 
 Creates a commit grid.
 

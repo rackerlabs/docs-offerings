@@ -1,11 +1,11 @@
-.. _offering-methods:
+.. _volume-grid-methods:
 
 ===========================
-Offering methods
+Volume grid methods
 ===========================
 
-Use the following offering API operation to retrieve information on Rackspace
-offerings.
+Use the following volume grid API operations to retrieve, create, update, and
+delete volume grids.
 
 .. COMMENT:  Provide a detailed description of the resource and how it is used.
              This topic is used to group operations topics that are related.
@@ -16,4 +16,8 @@ offerings.
              Use the include directive to add the API operations to this
              topic.
 
-.. include:: methods/get-offerings.rst
+.. include:: methods/get-volume-grid.rst
+.. include:: methods/get-volume-grids.rst
+.. include:: methods/create-volume-grids.rst
+.. include:: methods/update-volume-grid.rst
+.. include:: methods/delete-volume-grid.rst

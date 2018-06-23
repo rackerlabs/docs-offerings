@@ -5,7 +5,7 @@ Create a product
 
 .. code::
 
-    POST /offerings/{offeringId}/products
+    POST /v2/offerings/{offeringId}/products
 
 Creates a product.
 

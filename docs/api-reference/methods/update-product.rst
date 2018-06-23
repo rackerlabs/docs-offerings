@@ -5,7 +5,7 @@ Update a product
 
 .. code::
 
-    PUT /offerings/{offeringId}/products/{productId}
+    PUT /v2/offerings/{offeringId}/products/{productId}
 
 Updates a product.
 

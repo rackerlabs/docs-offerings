@@ -5,7 +5,7 @@ Create volume grid
 
 .. code::
 
-    POST /discountGrids/volumeGrids
+    POST /v2/discountGrids/volumeGrids
 
 Creates a volume grid.
 

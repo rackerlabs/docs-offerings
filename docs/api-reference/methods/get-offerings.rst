@@ -5,11 +5,11 @@ List offerings
 
 .. code::
 
-    GET /offerings
+    GET /v2/offerings
 
 Lists Rackspace offerings.
 
-This operation returns all of the Rackspace offerings that are available in
+This operation retrieves all of the Rackspace offerings that are available in
 the product catalog.
 
 Request
