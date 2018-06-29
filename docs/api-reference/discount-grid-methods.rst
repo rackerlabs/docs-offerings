@@ -4,8 +4,8 @@
 Discount grid methods
 ===========================
 
-Use the following discount grid API operations to retrieve volume grids and
-calculate discounts.
+Use the following discount grid API operations to retrieve commit grids and
+volume grids and to calculate discounts.
 
 .. COMMENT:  Provide a detailed description of the resource and how it is used.
              This topic is used to group operations topics that are related.

@@ -22,9 +22,7 @@ to interact directly with the service.
 .. toctree::
    :maxdepth: 2
 
-   commit-grid-methods
    currency-methods
    discount-grid-methods
    offering-methods
    product-methods
-   volume-grid-methods
