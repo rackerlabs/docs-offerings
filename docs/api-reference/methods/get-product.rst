@@ -87,15 +87,17 @@ The response has the following body parameters.
    * - product.\ *productOfferingPrice*
      - Complex type
      - Provides pricing information specific to a product in an offering
-       through a nested structure. For more information, see the
-       a"Characteristic structure" table on this page.
+       through a nested structure.
    * - product.\ productOfferingPrice.\ *description*
      - String
      - A short, human-readable description of the price. Example: ``Windows -
        30720 MB High Performance I/O 2 Server Instance Price``.
    * - product.\ productOfferingPrice.\ *priceType*
      - String
-     - The type of price or billing. Example: ``Usage``.
+     -
+       - ``usage``: Utility pricing.
+       - ``item``: One-time pricing.
+       - ``subscription``: Recurring pricing.
    * - product.\ productOfferingPrice.\ *priceDetails*
      - Complex type
      - A collection that provides details specific to pricing for the product.
@@ -113,23 +115,23 @@ The response has the following body parameters.
    * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ *unitOfMeasure*
      - String (enumerated)
      -
-       - per hour
-       - per month
-       - per year
-       - per instance
-       - per request
-       - per compute cycle
-       - per transaction
-       - per GB
-       - per GB/month
-       - per instance/month
-       - per check/hour
-       - per CC
-       - per 100 MB
-       - per server/day
-       - per instance/hour
-       - per 100 MB/hour
-       - per 10000 MB
+       - ``per hour``
+       - ``per month``
+       - ``per year``
+       - ``per instance``
+       - ``per request``
+       - ``per compute cycle``
+       - ``per transaction``
+       - ``per GB``
+       - ``per GB/month``
+       - ``per instance/month``
+       - ``per check/hour``
+       - ``per CC``
+       - ``per 100 MB``
+       - ``per server/day``
+       - ``per instance/hour``
+       - ``per 100 MB/hour``
+       - ``per 10000 MB``
    * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ *price*
      - Complex type
      - An info block containing information about a price.

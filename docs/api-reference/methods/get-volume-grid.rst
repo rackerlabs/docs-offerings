@@ -25,13 +25,13 @@ The request has the following query parameters.
      - Description
    * - ``X-Auth-Token``
      - Header string *(Required)*
-     - A valid authentication token
+     - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``volumeGridId`` *(Required)*
      - String
      - The ID for the volume grid.
@@ -61,43 +61,72 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **images**\.[]
+   * - **volumeGrid**
+     - Object
+     - An object containing information about the volume grid.
+   * - volumeGrid.\ **description**
+     - String
+     - The description of the volume grid. Example: ``Standard USA On Demand
+       Grid for Commit Discounts``.
+   * - volumeGrid.\ **offerings**
+     - Complex type
+     - An info block containing details about offerings.
+   * - volumeGrid.\ offerings.\ **offering**
      - Array
-     - An array of images in the list.
-   * - images.\ **id**
+     - An array of offering codes.
+   * - volumeGrid.\ offerings.\ offering.\ **offeringCode**
      - String
-     - The UUID of the image.
-   * - images.\ **name**
+     - A code for the offering. Example: ``FSTGEN``.
+   * - volumeGrid.\ **volumeTiers**
+     - Complex type
+     - An info block containing details about volume tiers.
+   * - volumeGrid.\ volumeTiers.\ **volumeTier**
+     - Complex type
+     - An info block containing details about a volume tier.
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **minAmount**
      - String
-     - The name of the image.
-   * - images.\ **status**
+     - The minimum amount of the discount.
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **maxAmount**
      - String
-     - The status of the image. For possible image statuses,
-       see :ref:`Statuses <statuses>`.
-   * - images.\ **visibility**
+     - The maximum amount of the discount.
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **discountPercentage**
      - String
-     - Specifies image visibility as ``public``, ``private``, or ``shared``.
-   * - images.\ **size**
+     - The percentage of the discount.
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **tierIndex**
+     - Integer
+     - The index for the tier. This number is used to organize tiers.
+   * - volumeGrid.\ **id**
      - String
-     - The size of the image in bytes.
-   * - images.\ **checksum**
+     - The ID for the volume grid
+   * - volumeGrid.\ **geo**
+     - Geographical RegionType
+     -
+       - ``USA``: United States
+       - ``UK``: United Kingdom
+       - ``AUS``: Australia
+       - ``APAC``: Asia-Pacific
+   * - volumeGrid.\ **currency**
      - String
-     - The checksum of this image.
-   * - images.\ **self**
+     -
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound Sterling
+       - ``AUD``: Australian Dollar
+       - ``EUR``: Euro
+       - ``HKD``: Hong Kong Dollar
+   * - volumeGrid.\ **gridType**
      - String
-     - The link to the image.
-   * - images.\ **file**
+     - The type of grid. By default only ``STANDARD`` grids are returned.
+   * - volumeGrid.\ **gridVersion**
      - String
-     - The image file.
-   * - **first**
+     - The version of the commit grid. Example: ``1``.
+   * - volumeGrid.\ **gridStartDate**
      - String
-     - The URI for the first image in the list.
-   * - **first**
+     - The date and time that the commit grid begins. Example:
+       ``2013-05-30-05:00``.
+   * - volumeGrid.\ **gridEndDate**
      - String
-     - The URI for the next image in the list.
-   * - **last**
-     - String
-     - The URI for the last image in the list.
+     - The date and time that the commit grid ends. Example:
+       ``2013-05-30-05:00``.
 
 **Example response: JSON**
 

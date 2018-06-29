@@ -25,13 +25,13 @@ The request has the following query parameters.
      - Description
    * - ``X-Auth-Token``
      - Header string *(Required)*
-     - A valid authentication token
+     - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``commitGridId`` *(Required)*
      - String
      - The ID for the commit grid.
@@ -61,43 +61,107 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **images**\.[]
+   * - **commitGrid**
+     - Object
+     - An object containing information about the commit grid.
+   * - commitGrid.\ **description**
+     - String
+     - A description of the commit grid.
+   * - commitGrid.\ **offerings**
+     - Object
+     - An object containing one or more offerings.
+   * - commitGrid.\ offerings.\ **offering**
      - Array
-     - An array of images in the list.
-   * - images.\ **id**
+     - An array containing one or more offering codes.
+   * - commitGrid.\ offerings.\ offering.\ **offeringCode**
      - String
-     - The UUID of the image.
-   * - images.\ **name**
+     - The code for the offering. Example: ``NXTGEN``.
+   * - commitGrid.\ **monthlyCommitTiers**
+     - Object
+     - An info block containing details about any monthly commit tiers.
+   * - commitGrid.\ monthlyCommitTiers.\ **commitTier**
+     - Object
+     - An info block containing details about the commit tier.
+   * - commitGrid.\ monthlyCommitTiers.\ commitTier.\ **commitTierItem**
+     - Array
+     - An info block containing options for the commit tier.
+   * - commitGrid.\ monthlyCommitTiers.\ commitTier.\ commitTierItem.\ **tenureInMonths**
+     - Integer
+     - The number of months to which the customer must commit.
+   * - commitGrid.\ monthlyCommitTiers.\ commitTier.\ commitTierItem.\ **discountPercentage**
      - String
-     - The name of the image.
-   * - images.\ **status**
+     - The discount percentage that is associated with the option.
+   * - commitGrid.\ monthlyCommitTiers.\ commitTier.\ commitTierItem.\ **itemIndex**
+     - Integer
+     - The index that is associated with the option.
+   * - commitGrid.\ monthlyCommitTiers.\ commitTier.\ **minAmount**
      - String
-     - The status of the image. For possible image statuses,
-       see :ref:`Statuses <statuses>`.
-   * - images.\ **visibility**
+     - The minimum amount of the discount.
+   * - commitGrid.\ monthlyCommitTiers.\ commitTier.\ **maxAmount**
      - String
-     - Specifies image visibility as ``public``, ``private``, or ``shared``.
-   * - images.\ **size**
+     - The maximum amount of the discount.
+   * - commitGrid.\ monthlyCommitTiers.\ commitTier.\ **tierIndex**
+     - Integer
+     - The index that is associated with the tier.
+   * - commitGrid.\ **prepayCommitTiers**
+     - Object
+     - An info block containing details about any prepay commit tiers.
+   * - commitGrid.\ prepayCommitTiers.\ **commitTier**
+     - Object
+     - An info block containing details about the commit tier.
+   * - commitGrid.\ prepayCommitTiers.\ commitTier.\ **commitTierItem**
+     - Array
+     - An info block containing options for the commit tier.
+   * - commitGrid.\ prepayCommitTiers.\ commitTier.\ commitTierItem.\ **tenureInMonths**
+     - Integer
+     - The number of months to which the customer must commit.
+   * - commitGrid.\ prepayCommitTiers.\ commitTier.\ commitTierItem.\ **discountPercentage**
      - String
-     - The size of the image in bytes.
-   * - images.\ **checksum**
+     - The discount percentage that is associated with the option.
+   * - commitGrid.\ prepayCommitTiers.\ commitTier.\ commitTierItem.\ **itemIndex**
+     - Integer
+     - The index that is associated with the option.
+   * - commitGrid.\ prepayCommitTiers.\ commitTier.\ **minAmount**
      - String
-     - The checksum of this image.
-   * - images.\ **self**
+     - The minimum amount of the discount.
+   * - commitGrid.\ prepayCommitTiers.\ commitTier.\ **maxAmount**
      - String
-     - The link to the image.
-   * - images.\ **file**
+     - The maximum amount of the discount.
+   * - commitGrid.\ prepayCommitTiers.\ commitTier.\ **tierIndex**
+     - Integer
+     - The index that is associated with the tier.
+   * - commitGrid.\ **id**
      - String
-     - The image file.
-   * - **first**
+     - The ID for the commit grid. Example: ``STANDARD_AUS_COMMIT_GRID_001``.
+   * - commitGrid.\ **geo**
      - String
-     - The URI for the first image in the list.
-   * - **first**
+     -
+       - ``USA``: United States
+       - ``UK``: United Kingdom
+       - ``AUS``: Australia
+       - ``APAC``: Asia-Pacific
+   * - commitGrid.\ **currency**
      - String
-     - The URI for the next image in the list.
-   * - **last**
+     -
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound Sterling
+       - ``AUD``: Australian Dollar
+       - ``EUR``: Euro
+       - ``HKD``: Hong Kong Dollar
+   * - commitGrid.\ **gridType**
      - String
-     - The URI for the last image in the list.
+     - The type of grid. By default only ``STANDARD`` grids are returned.
+   * - commitGrid.\ **gridVersion**
+     - String
+     - The version of the commit grid. Example: ``1``.
+   * - commitGrid.\ **gridStartDate**
+     - String
+     - The date and time that the commit grid begins. Example:
+       ``2013-05-30-05:00``.
+   * - commitGrid.\ **gridEndDate**
+     - String
+     - The date and time that the commit grid ends. Example:
+       ``2013-05-30-05:00``.
 
 **Example response: JSON**
 

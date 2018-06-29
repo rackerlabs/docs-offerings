@@ -25,23 +25,31 @@ The request has the following query parameters.
      - Description
    * - ``X-Auth-Token``
      - Header string *(Required)*
-     - A valid authentication token
+     - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``geo`` *(Required)*
      - Geographical RegionType
-     - Eaxmples include ``USA``, ``UK``, ``AUS``, and ``APAC``.
+     -
+       - ``USA``: United States
+       - ``UK``: United Kingdom
+       - ``AUS``: Australia
+       - ``APAC``: Asia-Pacific
    * - ``gridType``
      - String
-     - Valid values are ``STANDARD`` and ``PRESET``. By default only ``STANDARD`` grids are returned.
+     - Valid value is ``STANDARD``. By default only ``STANDARD`` grids are
+       returned.
    * - ``currency``
      - String
-     - This parameter is used to filter and retrieve products with only prices
-       for specific currency. Valid values are ``USD``, ``GBP``, ``AUD``, and ``EUR``. By default only ``STANDARD`` grids are returned.
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound Sterling
+       - ``AUD``: Australian Dollar
+       - ``EUR``: Euro
+       - ``HKD``: Hong Kong Dollar
 
 This operation does not accept a request body.
 
@@ -55,7 +63,6 @@ The following example shows the header information.
    Content-Type: application/json
    Accept: application/json
 
-
 Response
 --------
 
@@ -68,43 +75,65 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **images**\.[]
-     - Array
-     - An array of images in the list.
-   * - images.\ **id**
+   * - **commitGrids**
+     - Object
+     - An object containing information about the commit grids.
+   * - commitGrids.\ **commitGrid**
+     - Object
+     - An object containing information about an individual commit grid.
+   * - commitGrids.\ commitGrid.\ **link**
+     - Object
+     - An info block that contains details about the link for the commit grid.
+   * - commitGrids.\ commitGrid.\ link.\ **href**
      - String
-     - The UUID of the image.
-   * - images.\ **name**
+     - The URL for the commit grid.
+   * - commitGrids.\ commitGrid.\ link.\ **rel**
      - String
-     - The name of the image.
-   * - images.\ **status**
+     - The relationship between the current document and the linked document.
+   * - commitGrids.\ commitGrid.\ **id**
      - String
-     - The status of the image. For possible image statuses,
-       see :ref:`Statuses <statuses>`.
-   * - images.\ **visibility**
+     - The ID for the commit grid. Example: ``STANDARD_AUS_COMMIT_GRID_001``.
+   * - commitGrids.\ commitGrid.\ **geo**
      - String
-     - Specifies image visibility as ``public``, ``private``, or ``shared``.
-   * - images.\ **size**
+     -
+       - ``USA``: United States
+       - ``UK``: United Kingdom
+       - ``AUS``: Australia
+       - ``APAC``: Asia-Pacific
+   * - commitGrids.\ commitGrid.\ **currency**
      - String
-     - The size of the image in bytes.
-   * - images.\ **checksum**
+     -
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound Sterling
+       - ``AUD``: Australian Dollar
+       - ``EUR``: Euro
+       - ``HKD``: Hong Kong Dollar
+   * - commitGrids.\ commitGrid.\ **gridType**
      - String
-     - The checksum of this image.
-   * - images.\ **self**
+     - The type of grid. By default only ``STANDARD`` grids are returned.
+   * - commitGrids.\ commitGrid.\ **discountType**
      - String
-     - The link to the image.
-   * - images.\ **file**
+     - The type of discount. Example: ``COMMIT``.
+   * - commitGrids.\ commitGrid.\ **gridVersion**
      - String
-     - The image file.
-   * - **first**
+     - The version of the commit grid. Example: ``1``.
+   * - commitGrids.\ commitGrid.\ **gridStartDate**
      - String
-     - The URI for the first image in the list.
-   * - **first**
+     - The date and time that the commit grid begins. Example:
+       ``2013-05-30-05:00``.
+   * - commitGrids.\ commitGrid.\ **gridEndDate**
      - String
-     - The URI for the next image in the list.
-   * - **last**
+     - The date and time that the commit grid ends. Example:
+       ``2013-05-30-05:00``.
+   * - commitGrids.\ **link**
+     - Object
+     - An info block that contains details about the link for the commit grids.
+   * - commitGrids.\ link.\ **href**
      - String
-     - The URI for the last image in the list.
+     - The URL for the commit grid.
+   * - commitGrids.\ link.\ **rel**
+     - String
+     - The relationship between the current document and the linked document.
 
 **Example response: JSON**
 

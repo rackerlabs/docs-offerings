@@ -85,12 +85,7 @@ The response has the following body parameters.
    * - offerings.\ *offering*.\ *id*
      - String
      - The universally unique identifier (UUID) for the offering. Example:
-       046b6c7f-0b8a-43b9-b35d-6489e6daee91.
-   * - offerings.\ *offering*.\ *status*
-     - String (enumerated)
-     - The status of the offering. Valid values are ``ACTIVE`` (default) and
-       ``INACTIVE``. An offering becomes  ``INACTIVE`` when Rackspace
-       introduces a new version of the offering.
+       ``046b6c7f-0b8a-43b9-b35d-6489e6daee91``.
    * - offerings.\ *offering*.\ *offeringCode*
      - String (enumerated)
      - A business identifier for the offering. This identifier remains
@@ -103,16 +98,43 @@ The response has the following body parameters.
      - String
      - A short, human-readable name for the offering. Example: Cloud Servers
        Open Stack.
-   * - offerings.\ *offering*.\ *description*
+   * - offerings.\ offering.\ *status*
+     - String (enumerated)
+     - The status of the offering. Valid values are ``ACTIVE`` (default) and
+       ``INACTIVE``. An offering becomes  ``INACTIVE`` when Rackspace
+       introduces a new version of the offering.
+   * - offerings.\ offering.\ *description*
      - String
      - A human-readable description of the offering.
-   * - offerings.\ *offering*.\ *lineOfBusiness*
+   * - offerings.\ offering.\ *lineOfBusinesses*
+     - Complex type
+     - An info block that contains details about the Rackspace lines of
+       business that are associated with the offering.
+   * - offerings.\ offering.\ lineOfBusinesses.\ *lineOfBusiness*
+     - Object
+     - Information on the Rackspace lines of business that are associated with
+       the offering.
+   * - offerings.\ offering.\ *link*\.[]
+     - Object
+     - An info block containing details about the link for the offering.
+   * - offerings.\ offering.\ link\. *title*
      - String
-     - Identifies an offering based on the Rackspace line of business.
-  * - offerings.\ *offering*.\ *link*\.[]
-    - Array
-    - An info block containing details about the link for the offering,
-      including its URL.
+     - The title of the link. Example: ``NEXT GENERATION CLOUD SERVERS``.
+   * - offerings.\ offering.\ link\. *href*
+     - String
+     - The URL for the link.
+   * - offerings.\ offering.\ link\. *rel*
+     - String
+     - The relationship between the current document and the linked document.
+   * - **offerings**.\ *link*
+     - Object
+     - An info block containing details about the link for the offering.
+   * - offerings.\ link\. *href*
+     - String
+     - The URL for the link.
+   * - offerings.\ link\. *rel*
+     - String
+     - The relationship between the current document and the linked document.
 
 **Example response: JSON**
 

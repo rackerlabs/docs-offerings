@@ -25,23 +25,32 @@ The request has the following query parameters.
      - Description
    * - ``X-Auth-Token``
      - Header string *(Required)*
-     - A valid authentication token
+     - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``geo`` *(Required)*
      - Geographical RegionType
-     - Eaxmples include ``USA``, ``UK``, ``AUS``, and ``APAC``.
+     -
+       - ``USA``: United States
+       - ``UK``: United Kingdom
+       - ``AUS``: Australia
+       - ``APAC``: Asia-Pacific
    * - ``gridType``
      - String
-     - Valid values are ``STANDARD`` and ``PRESET``. By default only ``STANDARD`` grids are returned.
+     - Valid value is ``STANDARD``. By default only ``STANDARD`` grids are
+       returned.
    * - ``currency``
      - String
-     - This parameter is used to filter and retrieve products with only prices
-       for specific currency. Valid values are ``USD``, ``GBP``, ``AUD``, and ``EUR``. By default only ``STANDARD`` grids are returned.
+     -
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound Sterling
+       - ``AUD``: Australian Dollar
+       - ``EUR``: Euro
+       - ``HKD``: Hong Kong Dollar
 
 This operation does not accept a request body.
 
@@ -68,43 +77,62 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **images**\.[]
-     - Array
-     - An array of images in the list.
-   * - images.\ **id**
+   * - **volumeGrids**
+     - Object
+     - An object containing information about the volume grids.
+   * - volumeGrids.\ **volumeGrid**
+     - Object
+     - An object containing information about an individual volume grid.
+   * - volumeGrids.\ volumeGrid.\ **link**
+     - Object
+     - An info block that contains details about the link for the volume grid.
+   * - volumeGrids.\ volumeGrid.\ link.\ **href**
      - String
-     - The UUID of the image.
-   * - images.\ **name**
+     - The URL for the volume grid.
+   * - volumeGrids.\ volumeGrid.\ link.\ **rel**
      - String
-     - The name of the image.
-   * - images.\ **status**
+     - The relationship between the current document and the linked document.
+   * - volumeGrids.\ volumeGrid.\ **id**
      - String
-     - The status of the image. For possible image statuses,
-       see :ref:`Statuses <statuses>`.
-   * - images.\ **visibility**
+     - The ID for the volume grid.
+   * - volumeGrids.\ volumeGrid.\ **geo**
+     - Geographical RegionType
+     -
+       - ``USA``: United States
+       - ``UK``: United Kingdom
+       - ``AUS``: Australia
+       - ``APAC``: Asia-Pacific
+   * - volumeGrids.\ volumeGrid.\ **currency**
      - String
-     - Specifies image visibility as ``public``, ``private``, or ``shared``.
-   * - images.\ **size**
+     -
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound Sterling
+       - ``AUD``: Australian Dollar
+       - ``EUR``: Euro
+       - ``HKD``: Hong Kong Dollar
+   * - volumeGrids.\ volumeGrid.\ **gridType**
      - String
-     - The size of the image in bytes.
-   * - images.\ **checksum**
+     - The type of grid. By default only ``STANDARD`` grids are returned.
+   * - volumeGrids.\ volumeGrid.\ **gridVersion**
      - String
-     - The checksum of this image.
-   * - images.\ **self**
+     - The version of the commit grid. Example: ``1``.
+   * - volumeGrids.\ volumeGrid.\ **gridStartDate**
      - String
-     - The link to the image.
-   * - images.\ **file**
+     - The date and time that the commit grid begins. Example:
+       ``2013-05-30-05:00``.
+   * - volumeGrids.\ volumeGrid.\ **gridEndDate**
      - String
-     - The image file.
-   * - **first**
+     - The date and time that the commit grid ends. Example:
+       ``2013-05-30-05:00``.
+   * - volumeGrids.\ **link**
+     - Object
+     - An info block that contains details about the link for the volume grids.
+   * - volumeGrids.\ link.\ **href**
      - String
-     - The URI for the first image in the list.
-   * - **first**
+     - The URL for the volume grids.
+   * - volumeGrids.\ link.\ **rel**
      - String
-     - The URI for the next image in the list.
-   * - **last**
-     - String
-     - The URI for the last image in the list.
+     - The relationship between the current document and the linked document.
 
 **Example response: JSON**
 

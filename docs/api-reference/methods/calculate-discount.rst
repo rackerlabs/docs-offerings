@@ -5,7 +5,7 @@ Calculate a discount
 
 .. code::
 
-    GET /v2/discountGrids/commitGrids/{commitGridId}/commitDiscountCalculation
+    POST /v2/discountGrids/commitGrids/{commitGridId}/commitDiscountCalculation
 
 Calculate a discount.
 
@@ -35,6 +35,27 @@ The request has the following query parameters.
    * - ``commitGridId`` *(Required)*
      - String
      - The ID for the commit grid.
+
+The request has the following body parameters.
+
+.. list-table::
+   :widths: 15 10 30
+   :header-rows: 1
+
+   * - **commitDiscountCalculation**.[]
+     - Object *(Required)*
+     - An info block containing information about the commit discount
+       calculation.
+   * - commitDiscountCalculation.\ *commitMonths*
+     - Integer
+     - The number of months of commitment that are required in order to
+       receive the discount.
+   * - commitDiscountCalculation.\ *commitUsageAmountPerMonth*
+     - String
+     - The amount of usage the customer may use during the commitment period.
+   * - commitDiscountCalculation.\ *isPrePayOpted*
+     - Boolean
+     - Whether prepayments are opted.
 
 **Example Request: header**
 
@@ -106,14 +127,14 @@ The response has the following body parameters.
      - Description
    * - **commitDiscountCalculation**\.[]
      - Object
-     - An object containing information about the discount calculation.
+     - An object containing information about the commit discount calculation.
    * - commitDiscountCalculation.\ *commitMonths*
      - Integer
      - The number of months of commitment that are required in order to
        receive the discount.
-   * - commitDiscountCalculation.\ *commitPaymentAmountPerMonth*
+   * - commitDiscountCalculation.\ *commitPaymentAmount*
      - String
-     - The montly payment that is associated with the discount.
+     - The payment that is associated with the discount.
    * - commitDiscountCalculation.\ *discountPercent*
      - String
      - The percent of the discount.

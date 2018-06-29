@@ -25,17 +25,17 @@ The request has the following query parameters.
      - Description
    * - ``X-Auth-Token``
      - Header string *(Required)*
-     - A valid authentication token
+     - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``limit``
      - String
      - The maximum number of items that can be returned. This parameter is
-       used to control the pagination. For example, a limit value of 50
+       used to control pagination. For example, a limit value of 50
        specifies that a maximum of 50 product offering items can be returned.
    * - ``marker``
      - String
@@ -67,43 +67,39 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **images**\.[]
+   * - **currencies**
+     - Object
+     - An info block containing details about supported currencies.
+   * - currencies.\ **currency**
      - Array
-     - An array of images in the list.
-   * - images.\ **id**
+     - An info block containing details about currencies.
+   * - currencies.\ currency.\ **code**
      - String
-     - The UUID of the image.
-   * - images.\ **name**
+     -
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound Sterling
+       - ``AUD``: Australian Dollar
+       - ``EUR``: Euro
+       - ``HKD``: Hong Kong Dollar
+   * - currencies.\ currency.\ **description**
      - String
-     - The name of the image.
-   * - images.\ **status**
+     - A description of the currency. Example: ``Pound Sterling``.
+   * - currencies.\ currency.\ **symbol**
      - String
-     - The status of the image. For possible image statuses,
-       see :ref:`Statuses <statuses>`.
-   * - images.\ **visibility**
+     - The symbol for the currency. Example: ``\\u00A3``.
+   * - currencies.\ currency.\ **subdivision**
      - String
-     - Specifies image visibility as ``public``, ``private``, or ``shared``.
-   * - images.\ **size**
+     - The subdivision of the currency. Example: ``pence``.
+   * - currencies.\ **link**
      - String
-     - The size of the image in bytes.
-   * - images.\ **checksum**
+     - An info block that contains details about the link for the supported
+       currencies.
+   * - currencies.\ link.\ **href**
      - String
-     - The checksum of this image.
-   * - images.\ **self**
+     - The URL for the commit grid.
+   * - currencies.\ link.\ **rel**
      - String
-     - The link to the image.
-   * - images.\ **file**
-     - String
-     - The image file.
-   * - **first**
-     - String
-     - The URI for the first image in the list.
-   * - **first**
-     - String
-     - The URI for the next image in the list.
-   * - **last**
-     - String
-     - The URI for the last image in the list.
+     - The relationship between the current document and the linked document.
 
 **Example response: JSON**
 

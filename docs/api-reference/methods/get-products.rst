@@ -36,7 +36,7 @@ The request has the following query parameters.
    * - ``offeringId``
      - String
      - The ID for the offering. Example:
-       046b6c7f-0b8a-43b9-b35d-6489e6daee91.
+       ``046b6c7f-0b8a-43b9-b35d-6489e6daee91``.
    * - ``limit``
      - String
      - The maximum number of items to return. This parameter
@@ -68,27 +68,30 @@ The request has the following query parameters.
      - String
      -
        - ``USD``: United States Dollar
-       - ``GBP``: British Pound
+       - ``GBP``: British Pound Sterling
+       - ``AUD``: Australian Dollar
+       - ``EUR``: Euro
+       - ``HKD``: Hong Kong Dollar
    * - ``unitOfMeasure``
      - String (enumerated)
      -
-       - per hour
-       - per month
-       - per year
-       - per instance
-       - per request
-       - per compute cycle
-       - per transaction
-       - per GB
-       - per GB/month
-       - per instance/month
-       - per check/hour
-       - per CC
-       - per 100 MB
-       - per server/day
-       - per instance/hour
-       - per 100 MB/hour
-       - per 10000 MB
+     - ``per hour``
+     - ``per month``
+     - ``per year``
+     - ``per instance``
+     - ``per request``
+     - ``per compute cycle``
+     - ``per transaction``
+     - ``per GB``
+     - ``per GB/month``
+     - ``per instance/month``
+     - ``per check/hour``
+     - ``per CC``
+     - ``per 100 MB``
+     - ``per server/day``
+     - ``per instance/hour``
+     - ``per 100 MB/hour``
+     - ``per 10000 MB``
 
 This operation does not accept a request body.
 
@@ -120,6 +123,75 @@ The response has the following body parameters.
    * - products.\ **product**
      - Array
      - An info block containing details about a product.
+   * - products.\ product.\ **productOfferingPrice**
+     - Complex type
+     - Provides pricing information specific to a product in an offering
+       through a nested structure.
+   * - products.\ product.\ productOfferingPrice.\ **priceDetails**
+     - Complex type
+     - A collection that provides details specific to pricing for the product.
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ **priceCharacteristic**
+     - Array
+     - An array of JSON strings containing a collection of characteristics
+       that provide additional information about the price. Format is
+       ``Characteristic key : Characteristic value``. This element is used to
+       accommodate business-defined pricing drivers such as ``serviceLevel``,
+       ``serviceType``, ``chargeType``, and other pricing qualifiers where
+       applicable.
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ **prices**
+     - Array
+     - An info block containing information about prices for the product.
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
+       **price**
+     - Complex type
+     - An info block containing information about a price for the product.
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
+       price.\ **amount**
+     - String
+     - The price the product.
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
+       price.\ **geo**
+     - String
+     -
+       - ``USA``: United States
+       - ``UK``: United Kingdom
+       - ``AUS``: Australia
+       - ``APAC``: Asia-Pacific
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
+       price.\ **currency**
+     - String
+     -
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound Sterling
+       - ``AUD``: Australian Dollar
+       - ``EUR``: Euro
+       - ``HKD``: Hong Kong Dollar
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\ **unitOfMeasure**
+     - String (enumerated)
+     -
+       - ``per hour``
+       - ``per month``
+       - ``per year``
+       - ``per instance``
+       - ``per request``
+       - ``per compute cycle``
+       - ``per transaction``
+       - ``per GB``
+       - ``per GB/month``
+       - ``per instance/month``
+       - ``per check/hour``
+       - ``per CC``
+       - ``per 100 MB``
+       - ``per server/day``
+       - ``per instance/hour``
+       - ``per 100 MB/hour``
+       - ``per 10000 MB``
+   * - products.\ product.\ productOfferingPrice.\ **priceType**
+     - String
+     -
+       - ``usage``: Utility pricing.
+       - ``item``: One-time pricing.
+       - ``subscription``: Recurring pricing.
    * - products.\ product.\ **id**
      - String
      - The universally unique identifier (UUID) for the product. Example:
@@ -131,20 +203,7 @@ The response has the following body parameters.
    * - products.\ product.\ **productCode**
      - String (enumerated)
      - A business identifier for the product. This identifier remains
-       consistent when a new version of the product is introduced. This identifier is unique across all of the products within an offering.
-   * - products.\ product.\ **name**
-     - String
-     - A short, human-readable name for the product. Example: ``Windows -
-       30720 MB High Performance I/O 2 Server Instance``.
-   * - products.\ product.\ **description**
-     - String
-     - A short, human-readable description of the product. Example: ``Windows -
-       30720 MB High Performance I/O 2 Server Instance``.
-   * - products.\ product.\ **salesChannel**
-     - String
-     -
-       - ``PUBLIC``
-       - ``PRIVATE``
+       consistent when a new version of the product is introduced. This identifier is unique across all of the products within an offering. Example: ``UPTIME_HIGH_IO_2_WIN_30720MB``.
    * - products.\ product.\ **productCharacteristic**
      - String
      - An array of key-value pairs that contains info on the operating system
@@ -152,117 +211,24 @@ The response has the following body parameters.
       ``Characteristic key : Characteristic value``. This information is
        primarily used to configure information from external applications that
        drive product and pricing. Example: ``"name": "flavor_id", "value":"performance2-30"``.
-   * - products.\ product.\ **productOfferingPrice**
-     - Complex type
-     - Provides pricing information specific to a product in an offering
-       through a nested structure. For more information, see the "Characteristic structure" table on this page.
-
-**Product offering price structure**
-
-* - Name
-  - Type
-  - Description
-* - ``description``
-  - String
-  - A human-readable description of the product. Example: ``Windows - 30720 MB
-    High Performance I/O 2 Server Instance``.
-* - ``priceType``
-  - String (enumerated)
-  -
-    - ``usage``: Utility pricing.
-    - ``item``: One-time pricing.
-    - ``subscription``: Recurring pricing.
-* - ``priceDetails``
-  - Complex type
-  - A collection that provides details specific to pricing for the product.
-    For more information, see the "Price detail structure" table on this page.
-
-**Price detail structure**
-
-* - Name
-  - Type
-  - Description
-* - ``priceDetails``
-  - Complex type
-  - A JSON string containing a collection of characteristics that provide
-    additional information about the price.
-* - ``priceCharacteristic``
-  - String
-  - A JSON string containing a collection of characteristics that provide
-    additional information about the price. Format is
-    ``Characteristic key : Characteristic value``. This element is used to
-    accommodate business-defined pricing drivers such as ``serviceLevel``,
-    ``serviceType``, ``chargeType``, and other pricing qualifiers where
-    applicable. For more information, see the "Price structure" table.
-
-**Price structure**
-
-.. list-table::
- :widths: 15 10 30
- :header-rows: 1
-
-   * - Name
-     - Type
-     - Description
-   * - ``unitOfMeasure``
-     - String (enumerated)
-     -
-       - per hour
-       - per month
-       - per year
-       - per instance
-       - per request
-       - per compute cycle
-       - per transaction
-       - per GB
-       - per GB/month
-       - per instance/month
-       - per check/hour
-       - per CC
-       - per 100 MB
-       - per server/day
-       - per instance/hour
-       - per 100 MB/hour
-       - per 10000 MB
-   * - ``price``
-     - Complex type
-     - Provides details about the price such as currency, geography, tiers, and
-       other characteristics. For more information, see the "Price structure details" table on this page.
-
-       **Price structure**
-
-       .. list-table::
-        :widths: 15 10 30
-        :header-rows: 1
-
-          * - Name
-            - Type
-            - Description
-          * - ``amount``
-            - String
-            - The price of the product.
-          * - ``currency``
-            - String (enumerated)
-            - The monetary currency that is associated with the price.
-          * - ``geo``
-            - String (enumerated)
-            - The geography that is associated with the price.
-          * - ``tierMin``
-            - String
-            - A tier-specific qualifier that specifies the minumum tier value.
-          * - ``tierMax``
-            - String (enumerated)
-            - A tier-specific qualifier that specifies the maximum tier value.
-          * - ``tierIndex``
-           - String
-           - A tier-specific qualifier used to specify the tier index to
-             support the logical ordering of tiers.
-          * - ``tierUnit``
-            - String
-            -
-              - ``TB``
-              - ``PB``
-              - ``REQUESTS``
+   * - products.\ product.\ **description**
+     - String
+     - A short, human-readable description of the product. Example: ``Windows -
+       30720 MB High Performance I/O 2 Server Instance``.
+   * - products.\ product.\ **name**
+     - String
+     - The name of the product. Example: ``Windows -
+       30720 MB High Performance I/O 2 Server Instance``.
+   * - products.\ **link**
+     - Object
+     - An info block that contains details about the link for the products
+       that are associated with the offering.
+   * - products.\ link.\ **href**
+     - String
+     - The URL for the products that are associated with the offering.
+   * - commitGrids.\ commitGrid.\ link.\ **rel**
+     - String
+     - The relationship between the current document and the linked document.
 
 **Example response: JSON**
 

@@ -16,8 +16,8 @@ calculate discounts.
              Use the include directive to add the API operations to this
              topic.
 
-.. include:: methods/get-volume-grid.rst
-.. include:: methods/get-volume-grids.rst
-.. include:: methods/get-commit-grid.rst
 .. include:: methods/get-commit-grids.rst
+.. include:: methods/get-commit-grid.rst
 .. include:: methods/calculate-discount.rst
+.. include:: methods/get-volume-grids.rst
+.. include:: methods/get-volume-grid.rst
