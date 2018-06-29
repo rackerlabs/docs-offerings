@@ -14,7 +14,7 @@ This operation retrieves a list of commit grids.
 Request
 -------
 
-The request has the following query parameters.
+The request has the following URI and header parameters.
 
 .. list-table::
    :widths: 15 10 30
@@ -45,6 +45,7 @@ The request has the following query parameters.
        returned.
    * - ``currency``
      - String
+     -
        - ``USD``: United States Dollar
        - ``GBP``: British Pound Sterling
        - ``AUD``: Australian Dollar
@@ -75,32 +76,32 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **commitGrids**
+   * - commitGrids
      - Object
      - An object containing information about the commit grids.
-   * - commitGrids.\ **commitGrid**
+   * - commitGrids.\ *commitGrid*
      - Object
      - An object containing information about an individual commit grid.
-   * - commitGrids.\ commitGrid.\ **link**
+   * - commitGrids.\ commitGrid.\ *link*
      - Object
      - An info block that contains details about the link for the commit grid.
-   * - commitGrids.\ commitGrid.\ link.\ **href**
+   * - commitGrids.\ commitGrid.\ link.\ *href*
      - String
      - The URL for the commit grid.
-   * - commitGrids.\ commitGrid.\ link.\ **rel**
+   * - commitGrids.\ commitGrid.\ link.\ *rel*
      - String
      - The relationship between the current document and the linked document.
-   * - commitGrids.\ commitGrid.\ **id**
+   * - commitGrids.\ commitGrid.\ *id*
      - String
      - The ID for the commit grid. Example: ``STANDARD_AUS_COMMIT_GRID_001``.
-   * - commitGrids.\ commitGrid.\ **geo**
+   * - commitGrids.\ commitGrid.\ *geo*
      - String
      -
        - ``USA``: United States
        - ``UK``: United Kingdom
        - ``AUS``: Australia
        - ``APAC``: Asia-Pacific
-   * - commitGrids.\ commitGrid.\ **currency**
+   * - commitGrids.\ commitGrid.\ *currency*
      - String
      -
        - ``USD``: United States Dollar
@@ -108,30 +109,30 @@ The response has the following body parameters.
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
        - ``HKD``: Hong Kong Dollar
-   * - commitGrids.\ commitGrid.\ **gridType**
+   * - commitGrids.\ commitGrid.\ *gridType*
      - String
      - The type of grid. By default only ``STANDARD`` grids are returned.
-   * - commitGrids.\ commitGrid.\ **discountType**
+   * - commitGrids.\ commitGrid.\ *discountType*
      - String
      - The type of discount. Example: ``COMMIT``.
-   * - commitGrids.\ commitGrid.\ **gridVersion**
+   * - commitGrids.\ commitGrid.\ *gridVersion*
      - String
      - The version of the commit grid. Example: ``1``.
-   * - commitGrids.\ commitGrid.\ **gridStartDate**
+   * - commitGrids.\ commitGrid.\ *gridStartDate*
      - String
      - The date and time that the commit grid begins. Example:
        ``2013-05-30-05:00``.
-   * - commitGrids.\ commitGrid.\ **gridEndDate**
+   * - commitGrids.\ commitGrid.\ *gridEndDate*
      - String
      - The date and time that the commit grid ends. Example:
        ``2013-05-30-05:00``.
-   * - commitGrids.\ **link**
+   * - commitGrids.\ *link*
      - Object
      - An info block that contains details about the link for the commit grids.
-   * - commitGrids.\ link.\ **href**
+   * - commitGrids.\ link.\ *href*
      - String
      - The URL for the commit grid.
-   * - commitGrids.\ link.\ **rel**
+   * - commitGrids.\ link.\ *rel*
      - String
      - The relationship between the current document and the linked document.
 

@@ -14,7 +14,7 @@ This operation calculates a discount by using a commit grid.
 Request
 -------
 
-The request has the following query parameters.
+The request has the following URI and header parameters.
 
 .. list-table::
    :widths: 15 10 30
@@ -42,19 +42,19 @@ The request has the following body parameters.
    :widths: 15 10 30
    :header-rows: 1
 
-   * - **commitDiscountCalculation**.[]
+   * - commitDiscountCalculation
      - Object *(Required)*
      - An info block containing information about the commit discount
        calculation.
    * - commitDiscountCalculation.\ *commitMonths*
-     - Integer
+     - Integer *(Required)*
      - The number of months of commitment that are required in order to
        receive the discount.
    * - commitDiscountCalculation.\ *commitUsageAmountPerMonth*
-     - String
+     - String *(Required)*
      - The amount of usage the customer may use during the commitment period.
    * - commitDiscountCalculation.\ *isPrePayOpted*
-     - Boolean
+     - Boolean *(Required)*
      - Whether prepayments are opted.
 
 **Example Request: header**
@@ -67,7 +67,8 @@ The following example shows the header information.
   Content-Type: application/json
   Accept: application/json
 
-**Example request for a commit discount calculation request with prepay opted: JSON**
+**Example request for a commit discount calculation request with prepay opted:
+JSON**
 
  .. code::
 
@@ -79,7 +80,8 @@ The following example shows the header information.
      }
    }
 
-**Example request for a commit discount calculation request with prepay opted: XML**
+**Example request for a commit discount calculation request with prepay opted:
+XML**
 
  .. code::
 
@@ -90,7 +92,8 @@ The following example shows the header information.
        <ns3:commitMonths>6</ns3:commitMonths>
      </ns3:commitDiscountCalculation>
 
-**Example request for a commit discount calculation request with no prepay opted: JSON**
+**Example request for a commit discount calculation request with no prepay
+opted: JSON**
 
  .. code::
 
@@ -102,7 +105,8 @@ The following example shows the header information.
     }
   }
 
-**Example request for a commit discount calculation request with no prepay opted: XML**
+**Example request for a commit discount calculation request with no prepay
+opted: XML**
 
   .. code::
 
@@ -125,7 +129,7 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **commitDiscountCalculation**\.[]
+   * - commitDiscountCalculation
      - Object
      - An object containing information about the commit discount calculation.
    * - commitDiscountCalculation.\ *commitMonths*
@@ -145,7 +149,8 @@ The response has the following body parameters.
      - Boolean
      - Whether prepayments are opted.
 
-**Example response to a commit discount calculation request with prepay opted: JSON**
+**Example response to a commit discount calculation request with prepay opted:
+JSON**
 
 The following example shows the JSON response for the request.
 
@@ -169,7 +174,8 @@ The following example shows the JSON response for the request.
     }
   }
 
-**Example response to a commit discount calculation request with prepay opted: XML**
+**Example response to a commit discount calculation request with prepay opted:
+XML**
 
 The following example shows the XML response for the request.
 
@@ -184,7 +190,8 @@ The following example shows the XML response for the request.
      <ns3:discountPercent>12.00</ns3:discountPercent>
   </ns3:commitDiscountCalculation>
 
-**Example response to a commit discount calculation request with no prepay opted: JSON**
+**Example response to a commit discount calculation request with no prepay
+opted: JSON**
 
 .. code::
 
@@ -206,7 +213,8 @@ The following example shows the XML response for the request.
       }
     }
 
-**Example response to a commit discount calculation request with no prepay opted: XML**
+**Example response to a commit discount calculation request with no prepay
+opted: XML**
 
 .. code::
 

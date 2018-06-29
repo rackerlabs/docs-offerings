@@ -14,7 +14,7 @@ This operation retrieves a volume grid.
 Request
 -------
 
-The request has the following query parameters.
+The request has the following URI and header parameters.
 
 .. list-table::
    :widths: 15 10 30
@@ -61,51 +61,51 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **volumeGrid**
+   * - volumeGrid
      - Object
      - An object containing information about the volume grid.
-   * - volumeGrid.\ **description**
+   * - volumeGrid.\ *description*
      - String
      - The description of the volume grid. Example: ``Standard USA On Demand
        Grid for Commit Discounts``.
-   * - volumeGrid.\ **offerings**
+   * - volumeGrid.\ *offerings*
      - Complex type
      - An info block containing details about offerings.
-   * - volumeGrid.\ offerings.\ **offering**
+   * - volumeGrid.\ offerings.\ *offering*
      - Array
      - An array of offering codes.
-   * - volumeGrid.\ offerings.\ offering.\ **offeringCode**
+   * - volumeGrid.\ offerings.\ offering.\ *offeringCode*
      - String
      - A code for the offering. Example: ``FSTGEN``.
-   * - volumeGrid.\ **volumeTiers**
+   * - volumeGrid.\ *volumeTiers*
      - Complex type
      - An info block containing details about volume tiers.
-   * - volumeGrid.\ volumeTiers.\ **volumeTier**
+   * - volumeGrid.\ volumeTiers.\ *volumeTier*
      - Complex type
      - An info block containing details about a volume tier.
-   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **minAmount**
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ *minAmount*
      - String
      - The minimum amount of the discount.
-   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **maxAmount**
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ *maxAmount*
      - String
      - The maximum amount of the discount.
-   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **discountPercentage**
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ *discountPercentage*
      - String
      - The percentage of the discount.
-   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **tierIndex**
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ *tierIndex*
      - Integer
      - The index for the tier. This number is used to organize tiers.
-   * - volumeGrid.\ **id**
+   * - volumeGrid.\ *id*
      - String
      - The ID for the volume grid
-   * - volumeGrid.\ **geo**
+   * - volumeGrid.\ *geo*
      - Geographical RegionType
      -
        - ``USA``: United States
        - ``UK``: United Kingdom
        - ``AUS``: Australia
        - ``APAC``: Asia-Pacific
-   * - volumeGrid.\ **currency**
+   * - volumeGrid.\ *currency*
      - String
      -
        - ``USD``: United States Dollar
@@ -113,17 +113,17 @@ The response has the following body parameters.
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
        - ``HKD``: Hong Kong Dollar
-   * - volumeGrid.\ **gridType**
+   * - volumeGrid.\ *gridType*
      - String
      - The type of grid. By default only ``STANDARD`` grids are returned.
-   * - volumeGrid.\ **gridVersion**
+   * - volumeGrid.\ *gridVersion*
      - String
      - The version of the commit grid. Example: ``1``.
-   * - volumeGrid.\ **gridStartDate**
+   * - volumeGrid.\ *gridStartDate*
      - String
      - The date and time that the commit grid begins. Example:
        ``2013-05-30-05:00``.
-   * - volumeGrid.\ **gridEndDate**
+   * - volumeGrid.\ *gridEndDate*
      - String
      - The date and time that the commit grid ends. Example:
        ``2013-05-30-05:00``.

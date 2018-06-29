@@ -14,7 +14,7 @@ This operation retrieves a list of supported monetary currencies.
 Request
 -------
 
-The request has the following query parameters.
+The request has the following URI and header parameters.
 
 .. list-table::
    :widths: 15 10 30
@@ -67,13 +67,13 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **currencies**
+   * - currencies
      - Object
      - An info block containing details about supported currencies.
-   * - currencies.\ **currency**
+   * - currencies.\ *currency*
      - Array
      - An info block containing details about currencies.
-   * - currencies.\ currency.\ **code**
+   * - currencies.\ currency.\ *code*
      - String
      -
        - ``USD``: United States Dollar
@@ -81,23 +81,23 @@ The response has the following body parameters.
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
        - ``HKD``: Hong Kong Dollar
-   * - currencies.\ currency.\ **description**
+   * - currencies.\ currency.\ *description*
      - String
      - A description of the currency. Example: ``Pound Sterling``.
-   * - currencies.\ currency.\ **symbol**
+   * - currencies.\ currency.\ *symbol*
      - String
      - The symbol for the currency. Example: ``\\u00A3``.
-   * - currencies.\ currency.\ **subdivision**
+   * - currencies.\ currency.\ *subdivision*
      - String
      - The subdivision of the currency. Example: ``pence``.
-   * - currencies.\ **link**
+   * - currencies.\ *link*
      - String
      - An info block that contains details about the link for the supported
        currencies.
-   * - currencies.\ link.\ **href**
+   * - currencies.\ link.\ *href*
      - String
      - The URL for the commit grid.
-   * - currencies.\ link.\ **rel**
+   * - currencies.\ link.\ *rel*
      - String
      - The relationship between the current document and the linked document.
 

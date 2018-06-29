@@ -14,7 +14,7 @@ This operation retrieves a specific product.
 Request
 -------
 
-The request has the following query parameters.
+The request has the following URI and header parameters.
 
 .. list-table::
    :widths: 15 10 30
@@ -64,7 +64,7 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **product**
+   * - product
      - Object
      - An info block containing details about the product.
    * - product.\ *name*
@@ -170,116 +170,116 @@ The following example shows the JSON response for the request.
    x-compute-request-id: req-7b7ffed2-9b1f-46a8-a478-315518d35387
 
    {
-    "product": {
-        "name": "Windows - 30720 MB High Performance I/O 2 Server Instance",
-        "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee91",
-        "description": "Windows - 30720 MB High Performance I/O 2 Server Instance",
-        "productCode": "UPTIME_HIGH_IO_2_WIN_30720MB",
-        "productOfferingPrice": {
-            "description": "Windows - 30720 MB High Performance I/O 2 Server Instance Price",
-            "priceType": "Usage",
-            "priceDetails": [
-                {
-                    "priceCharacteristic": [
-                        {
-                            "name": "serviceLevel",
-                            "value": "MANAGED"
-                        },
-                        {
-                            "name": "serviceType",
-                            "value": "LEGACY"
-                        },
-                        {
-                            "name": "chargeType",
-                            "value": "INFRASTRUCTURE"
-                        }
-                    ],
-                    "prices": [
-                        {
-                            "unitOfMeasure": "per Hour",
-                            "price": [
-                                {
-                                    "amount": "1.480",
-                                    "currency": "GBP",
-                                    "geo": "UK"
-                                },
-                                {
-                                    "amount": "2.000",
-                                    "currency": "USD",
-                                    "geo": "USA"
-                                },
-                                {
-                                    "amount": "2.000",
-                                    "currency": "USD",
-                                    "geo": "APAC"
-                                },
-                                {
-                                    "amount": "2.000",
-                                    "currency": "USD",
-                                    "geo": "AUS"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "priceCharacteristic": [
-                        {
-                            "name": "serviceLevel",
-                            "value": "INFRASTRUCTURE"
-                        },
-                        {
-                            "name": "serviceType",
-                            "value": "LEGACY"
-                        },
-                        {
-                            "name": "chargeType",
-                            "value": "INFRASTRUCTURE"
-                        }
-                    ],
-                    "prices": [
-                        {
-                            "unitOfMeasure": "per Hour",
-                            "price": [
-                                {
-                                    "amount": "1.180",
-                                    "currency": "GBP",
-                                    "geo": "UK"
-                                },
-                                {
-                                    "amount": "1.600",
-                                    "currency": "USD",
-                                    "geo": "USA"
-                                },
-                                {
-                                    "amount": "1.600",
-                                    "currency": "USD",
-                                    "geo": "APAC"
-                                },
-                                {
-                                    "amount": "1.600",
-                                    "currency": "USD",
-                                    "geo": "AUS"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "productCharacteristic": [
-            {
-                "name": "os_type",
-                "value": "windows"
-            },
-            {
-                "name": "FLAVOR_ID",
-                "value": "performance2-30"
-            }
-        ],
-        "status": "ACTIVE"
-    }
-}
+      "product": {
+          "name": "Windows - 30720 MB High Performance I/O 2 Server Instance",
+          "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee91",
+          "description": "Windows - 30720 MB High Performance I/O 2 Server Instance",
+          "productCode": "UPTIME_HIGH_IO_2_WIN_30720MB",
+          "productOfferingPrice": {
+              "description": "Windows - 30720 MB High Performance I/O 2 Server Instance Price",
+              "priceType": "Usage",
+              "priceDetails": [
+                  {
+                      "priceCharacteristic": [
+                          {
+                              "name": "serviceLevel",
+                              "value": "MANAGED"
+                          },
+                          {
+                              "name": "serviceType",
+                              "value": "LEGACY"
+                          },
+                          {
+                              "name": "chargeType",
+                              "value": "INFRASTRUCTURE"
+                          }
+                      ],
+                      "prices": [
+                          {
+                              "unitOfMeasure": "per Hour",
+                              "price": [
+                                  {
+                                      "amount": "1.480",
+                                      "currency": "GBP",
+                                      "geo": "UK"
+                                  },
+                                  {
+                                      "amount": "2.000",
+                                      "currency": "USD",
+                                      "geo": "USA"
+                                  },
+                                  {
+                                      "amount": "2.000",
+                                      "currency": "USD",
+                                      "geo": "APAC"
+                                  },
+                                  {
+                                      "amount": "2.000",
+                                      "currency": "USD",
+                                      "geo": "AUS"
+                                  }
+                              ]
+                          }
+                      ]
+                  },
+                  {
+                      "priceCharacteristic": [
+                          {
+                              "name": "serviceLevel",
+                              "value": "INFRASTRUCTURE"
+                          },
+                          {
+                              "name": "serviceType",
+                              "value": "LEGACY"
+                          },
+                          {
+                              "name": "chargeType",
+                              "value": "INFRASTRUCTURE"
+                          }
+                      ],
+                      "prices": [
+                          {
+                              "unitOfMeasure": "per Hour",
+                              "price": [
+                                  {
+                                      "amount": "1.180",
+                                      "currency": "GBP",
+                                      "geo": "UK"
+                                  },
+                                  {
+                                      "amount": "1.600",
+                                      "currency": "USD",
+                                      "geo": "USA"
+                                  },
+                                  {
+                                      "amount": "1.600",
+                                      "currency": "USD",
+                                      "geo": "APAC"
+                                  },
+                                  {
+                                      "amount": "1.600",
+                                      "currency": "USD",
+                                      "geo": "AUS"
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
+          },
+          "productCharacteristic": [
+              {
+                  "name": "os_type",
+                  "value": "windows"
+              },
+              {
+                  "name": "FLAVOR_ID",
+                  "value": "performance2-30"
+              }
+          ],
+          "status": "ACTIVE"
+      }
+  }
 
 **Example response: XML**
 
@@ -288,49 +288,49 @@ The following example shows the XML response for the request.
 .. code::
 
   <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-  <osl:product productCode="UPTIME_HIGH_IO_2_WIN_30720MB"
-    status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91" xmlns:osl="http://offer.api.rackspacecloud.com/v2"
-    xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ns4="http://docs.openstack.org/common/api/v1.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <osl:name>Windows - 30720 MB High Performance I/O 2 Server Instance</osl:name>
-    <osl:description>Windows - 30720 MB High Performance I/O 2 Server Instance</osl:description>
-    <osl:productOfferingPrice priceType="Usage">
-        <osl:priceDetails>
-            <osl:priceCharacteristic name="serviceLevel"
-                value="MANAGED" />
-            <osl:priceCharacteristic name="serviceType"
-                value="LEGACY" />
-            <osl:priceCharacteristic name="chargeType"
-                value="INFRASTRUCTURE" />
-            <osl:prices>
-                <osl:unitOfMeasure>per Hour</osl:unitOfMeasure>
-                <osl:price amount="1.480" currency="GBP" geo="UK" />
-                <osl:price amount="2.000" currency="USD" geo="USA" />
-                <osl:price amount="2.000" currency="USD" geo="APAC" />
-                <osl:price amount="2.000" currency="USD" geo="AUS" />
-            </osl:prices>
-        </osl:priceDetails>
-        <osl:priceDetails>
-            <osl:priceCharacteristic name="serviceLevel"
-                value="INFRASTRUCTURE" />
-            <osl:priceCharacteristic name="serviceType"
-                value="LEGACY" />
-            <osl:priceCharacteristic name="chargeType"
-                value="INFRASTRUCTURE" />
-            <osl:prices>
-                <osl:unitOfMeasure>per Hour</osl:unitOfMeasure>
-                <osl:price amount="1.600" currency="GBP" geo="UK" />
-                <osl:price amount="1.600" currency="USD" geo="USA" />
-                <osl:price amount="1.600" currency="USD" geo="APAC" />
-                <osl:price amount="1.600" currency="USD" geo="AUS" />
-            </osl:prices>
-        </osl:priceDetails>
-    </osl:productOfferingPrice>
-    <osl:productCharacteristic name="os_type"
-        value="windows" />
-    <osl:productCharacteristic name="FLAVOR_ID"
-        value="performance2-30" />
-</osl:product>
+    <osl:product productCode="UPTIME_HIGH_IO_2_WIN_30720MB"
+      status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91" xmlns:osl="http://offer.api.rackspacecloud.com/v2"
+      xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ns4="http://docs.openstack.org/common/api/v1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <osl:name>Windows - 30720 MB High Performance I/O 2 Server Instance</osl:name>
+      <osl:description>Windows - 30720 MB High Performance I/O 2 Server Instance</osl:description>
+      <osl:productOfferingPrice priceType="Usage">
+          <osl:priceDetails>
+              <osl:priceCharacteristic name="serviceLevel"
+                  value="MANAGED" />
+              <osl:priceCharacteristic name="serviceType"
+                  value="LEGACY" />
+              <osl:priceCharacteristic name="chargeType"
+                  value="INFRASTRUCTURE" />
+              <osl:prices>
+                  <osl:unitOfMeasure>per Hour</osl:unitOfMeasure>
+                  <osl:price amount="1.480" currency="GBP" geo="UK" />
+                  <osl:price amount="2.000" currency="USD" geo="USA" />
+                  <osl:price amount="2.000" currency="USD" geo="APAC" />
+                  <osl:price amount="2.000" currency="USD" geo="AUS" />
+              </osl:prices>
+          </osl:priceDetails>
+          <osl:priceDetails>
+              <osl:priceCharacteristic name="serviceLevel"
+                  value="INFRASTRUCTURE" />
+              <osl:priceCharacteristic name="serviceType"
+                  value="LEGACY" />
+              <osl:priceCharacteristic name="chargeType"
+                  value="INFRASTRUCTURE" />
+              <osl:prices>
+                  <osl:unitOfMeasure>per Hour</osl:unitOfMeasure>
+                  <osl:price amount="1.600" currency="GBP" geo="UK" />
+                  <osl:price amount="1.600" currency="USD" geo="USA" />
+                  <osl:price amount="1.600" currency="USD" geo="APAC" />
+                  <osl:price amount="1.600" currency="USD" geo="AUS" />
+              </osl:prices>
+          </osl:priceDetails>
+      </osl:productOfferingPrice>
+      <osl:productCharacteristic name="os_type"
+          value="windows" />
+      <osl:productCharacteristic name="FLAVOR_ID"
+          value="performance2-30" />
+  </osl:product>
 
 Response codes
 --------------

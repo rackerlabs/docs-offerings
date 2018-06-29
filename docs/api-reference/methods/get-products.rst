@@ -15,7 +15,7 @@ Rackspace offering.
 Request
 -------
 
-The request has the following query parameters.
+The request has the following URI and header parameters.
 
 .. list-table::
    :widths: 15 10 30
@@ -75,23 +75,23 @@ The request has the following query parameters.
    * - ``unitOfMeasure``
      - String (enumerated)
      -
-     - ``per hour``
-     - ``per month``
-     - ``per year``
-     - ``per instance``
-     - ``per request``
-     - ``per compute cycle``
-     - ``per transaction``
-     - ``per GB``
-     - ``per GB/month``
-     - ``per instance/month``
-     - ``per check/hour``
-     - ``per CC``
-     - ``per 100 MB``
-     - ``per server/day``
-     - ``per instance/hour``
-     - ``per 100 MB/hour``
-     - ``per 10000 MB``
+       - ``per hour``
+       - ``per month``
+       - ``per year``
+       - ``per instance``
+       - ``per request``
+       - ``per compute cycle``
+       - ``per transaction``
+       - ``per GB``
+       - ``per GB/month``
+       - ``per instance/month``
+       - ``per check/hour``
+       - ``per CC``
+       - ``per 100 MB``
+       - ``per server/day``
+       - ``per instance/hour``
+       - ``per 100 MB/hour``
+       - ``per 10000 MB``
 
 This operation does not accept a request body.
 
@@ -117,20 +117,21 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **products**\.[]
+   * - products
      - Array
      - An array of products.
-   * - products.\ **product**
+   * - products.\ *product*
      - Array
      - An info block containing details about a product.
-   * - products.\ product.\ **productOfferingPrice**
+   * - products.\ product.\ *productOfferingPrice*
      - Complex type
      - Provides pricing information specific to a product in an offering
        through a nested structure.
-   * - products.\ product.\ productOfferingPrice.\ **priceDetails**
+   * - products.\ product.\ productOfferingPrice.\ *priceDetails*
      - Complex type
      - A collection that provides details specific to pricing for the product.
-   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ **priceCharacteristic**
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\
+       *priceCharacteristic*
      - Array
      - An array of JSON strings containing a collection of characteristics
        that provide additional information about the price. Format is
@@ -138,19 +139,19 @@ The response has the following body parameters.
        accommodate business-defined pricing drivers such as ``serviceLevel``,
        ``serviceType``, ``chargeType``, and other pricing qualifiers where
        applicable.
-   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ **prices**
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ *prices*
      - Array
      - An info block containing information about prices for the product.
-   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
-       **price**
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\
+       prices.\ *price*
      - Complex type
      - An info block containing information about a price for the product.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
-       price.\ **amount**
+       price.\ *amount*
      - String
      - The price the product.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
-       price.\ **geo**
+       price.\ *geo*
      - String
      -
        - ``USA``: United States
@@ -158,7 +159,7 @@ The response has the following body parameters.
        - ``AUS``: Australia
        - ``APAC``: Asia-Pacific
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
-       price.\ **currency**
+       price.\ *currency*
      - String
      -
        - ``USD``: United States Dollar
@@ -166,7 +167,8 @@ The response has the following body parameters.
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
        - ``HKD``: Hong Kong Dollar
-   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\ **unitOfMeasure**
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
+       *unitOfMeasure*
      - String (enumerated)
      -
        - ``per hour``
@@ -186,47 +188,48 @@ The response has the following body parameters.
        - ``per instance/hour``
        - ``per 100 MB/hour``
        - ``per 10000 MB``
-   * - products.\ product.\ productOfferingPrice.\ **priceType**
+   * - products.\ product.\ productOfferingPrice.\ *priceType*
      - String
      -
        - ``usage``: Utility pricing.
        - ``item``: One-time pricing.
        - ``subscription``: Recurring pricing.
-   * - products.\ product.\ **id**
+   * - products.\ product.\ *id*
      - String
      - The universally unique identifier (UUID) for the product. Example:
        ``046b6c7f-0b8a-43b9-b35d-6489e6daee91``.
-   * - products.\ product.\ **status**
+   * - products.\ product.\ *status*
      - String
      - The status of the product. The default is ``ACTIVE``. When an offering
        becomes ``INACTIVE``, all of the products that belong to that offering also become ``INACTIVE``.
-   * - products.\ product.\ **productCode**
+   * - products.\ product.\ *productCode*
      - String (enumerated)
      - A business identifier for the product. This identifier remains
        consistent when a new version of the product is introduced. This identifier is unique across all of the products within an offering. Example: ``UPTIME_HIGH_IO_2_WIN_30720MB``.
-   * - products.\ product.\ **productCharacteristic**
+   * - products.\ product.\ *productCharacteristic*
      - String
      - An array of key-value pairs that contains info on the operating system
        and flavor that are associated with the product. Format is
-      ``Characteristic key : Characteristic value``. This information is
+       ``Characteristic key : Characteristic value``. This information is
        primarily used to configure information from external applications that
-       drive product and pricing. Example: ``"name": "flavor_id", "value":"performance2-30"``.
-   * - products.\ product.\ **description**
+       drive product and pricing.
+       Example: ``"name": "flavor_id", "value":"performance2-30"``.
+   * - products.\ product.\ *description*
      - String
      - A short, human-readable description of the product. Example: ``Windows -
        30720 MB High Performance I/O 2 Server Instance``.
-   * - products.\ product.\ **name**
+   * - products.\ product.\ *name*
      - String
      - The name of the product. Example: ``Windows -
        30720 MB High Performance I/O 2 Server Instance``.
-   * - products.\ **link**
+   * - products.\ *link*
      - Object
      - An info block that contains details about the link for the products
        that are associated with the offering.
-   * - products.\ link.\ **href**
+   * - products.\ link.\ *href*
      - String
      - The URL for the products that are associated with the offering.
-   * - commitGrids.\ commitGrid.\ link.\ **rel**
+   * - commitGrids.\ commitGrid.\ link.\ *rel*
      - String
      - The relationship between the current document and the linked document.
 
@@ -246,75 +249,75 @@ The following example shows the JSON response for the request.
 
 
    {
-  "products": {
-    "product": [
-      {
-        "productOfferingPrice": {
-          "priceDetails": [
-            {
-              "priceCharacteristic": [
+      "products": {
+        "product": [
+          {
+            "productOfferingPrice": {
+              "priceDetails": [
                 {
-                  "name": "serviceType",
-                  "value": "INFRASTRUCTURE"
-                },
-                {
-                  "name": "serviceLevel",
-                  "value": "LEGACY"
-                },
-                {
-                  "name": "chargeType",
-                  "value": "INFRASTRUCTURE"
-                }
-              ],
-              "prices": [
-                {
-                  "price": [
+                  "priceCharacteristic": [
                     {
-                      "amount": "1.6",
-                      "geo": "USA",
-                      "currency": "USD"
+                      "name": "serviceType",
+                      "value": "INFRASTRUCTURE"
+                    },
+                    {
+                      "name": "serviceLevel",
+                      "value": "LEGACY"
+                    },
+                    {
+                      "name": "chargeType",
+                      "value": "INFRASTRUCTURE"
                     }
                   ],
-                  "unitOfMeasure": "per Hour"
+                  "prices": [
+                    {
+                      "price": [
+                        {
+                          "amount": "1.6",
+                          "geo": "USA",
+                          "currency": "USD"
+                        }
+                      ],
+                      "unitOfMeasure": "per Hour"
+                    }
+                  ]
                 }
-              ]
-            }
-          ],
-          "priceType": "Usage"
-        },
-        "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee91",
-        "status": "ACTIVE",
-        "productCode": "UPTIME_HIGH_IO_2_WIN_30720MB",
-        "productCharacteristic": [
-          {
-            "name": "os_type",
-            "value": "windows"
-          },
-          {
-            "name": "flavor_id",
-            "value": "performance2-30"
-          },
-          {
-            "name": "class",
-            "value": "performance2"
+              ],
+              "priceType": "Usage"
+            },
+            "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee91",
+            "status": "ACTIVE",
+            "productCode": "UPTIME_HIGH_IO_2_WIN_30720MB",
+            "productCharacteristic": [
+              {
+                "name": "os_type",
+                "value": "windows"
+              },
+              {
+                "name": "flavor_id",
+                "value": "performance2-30"
+              },
+              {
+                "name": "class",
+                "value": "performance2"
+              }
+            ],
+            "description": "Windows - 30720 MB High Performance I/O 2 Server Instance",
+            "name": "Windows - 30720 MB High Performance I/O 2 Server Instance"
           }
         ],
-        "description": "Windows - 30720 MB High Performance I/O 2 Server Instance",
-        "name": "Windows - 30720 MB High Performance I/O 2 Server Instance"
+        "link": [
+          {
+            "rel": "prev",
+            "href": "http://offer.api.rackspacecloud.com/v2/offerings/046b6c7f/products?marker\u003d4\u0026amp;limit\u003d3"
+          },
+          {
+            "rel": "next",
+            "href": "http://offer.api.rackspacecloud.com/v2/offerings/046b6c7f/products?marker\u003d4\u0026amp;limit\u003d3"
+          }
+        ]
       }
-    ],
-    "link": [
-      {
-        "rel": "prev",
-        "href": "http://offer.api.rackspacecloud.com/v2/offerings/046b6c7f/products?marker\u003d4\u0026amp;limit\u003d3"
-      },
-      {
-        "rel": "next",
-        "href": "http://offer.api.rackspacecloud.com/v2/offerings/046b6c7f/products?marker\u003d4\u0026amp;limit\u003d3"
-      }
-    ]
-  }
-}
+    }
 
 **Example response: XML** MAYBE THIS SHOULD BE "REFERENCE" INSTEAD???
 

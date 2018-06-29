@@ -15,7 +15,7 @@ the product catalog.
 Request
 -------
 
-The request has the following query parameters.
+The request has the following URI and header parameters.
 
 .. list-table::
    :widths: 15 10 30
@@ -76,10 +76,10 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-  * - **offerings**\.[]
-    - Array
-    - An array of offerings in the list.
-   * - **offerings**.\ *offering*
+   * - offerings
+     - Array
+     - An array of offerings in the list.
+   * - offerings.\ *offering*
      - Array
      - An info block containing details about the offering.
    * - offerings.\ *offering*.\ *id*
@@ -114,7 +114,7 @@ The response has the following body parameters.
      - Object
      - Information on the Rackspace lines of business that are associated with
        the offering.
-   * - offerings.\ offering.\ *link*\.[]
+   * - offerings.\ offering.\ *link*
      - Object
      - An info block containing details about the link for the offering.
    * - offerings.\ offering.\ link\. *title*
@@ -126,7 +126,7 @@ The response has the following body parameters.
    * - offerings.\ offering.\ link\. *rel*
      - String
      - The relationship between the current document and the linked document.
-   * - **offerings**.\ *link*
+   * - offerings.\ *link*
      - Object
      - An info block containing details about the link for the offering.
    * - offerings.\ link\. *href*

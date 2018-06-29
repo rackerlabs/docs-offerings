@@ -32,7 +32,6 @@ access between products and services.
 
    service-access
    request-response
-   product-specific-general-api-content
    paginated-collections
    limits
    faults

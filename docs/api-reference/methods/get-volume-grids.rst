@@ -14,7 +14,7 @@ This operation retrieves a list of volume grids.
 Request
 -------
 
-The request has the following query parameters.
+The request has the following URI and header parameters.
 
 .. list-table::
    :widths: 15 10 30
@@ -77,32 +77,32 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **volumeGrids**
+   * - volumeGrids
      - Object
      - An object containing information about the volume grids.
-   * - volumeGrids.\ **volumeGrid**
+   * - volumeGrids.\ *volumeGrid*
      - Object
      - An object containing information about an individual volume grid.
-   * - volumeGrids.\ volumeGrid.\ **link**
+   * - volumeGrids.\ volumeGrid.\ *link*
      - Object
      - An info block that contains details about the link for the volume grid.
-   * - volumeGrids.\ volumeGrid.\ link.\ **href**
+   * - volumeGrids.\ volumeGrid.\ link.\ *href*
      - String
      - The URL for the volume grid.
-   * - volumeGrids.\ volumeGrid.\ link.\ **rel**
+   * - volumeGrids.\ volumeGrid.\ link.\ *rel*
      - String
      - The relationship between the current document and the linked document.
-   * - volumeGrids.\ volumeGrid.\ **id**
+   * - volumeGrids.\ volumeGrid.\ *id*
      - String
      - The ID for the volume grid.
-   * - volumeGrids.\ volumeGrid.\ **geo**
+   * - volumeGrids.\ volumeGrid.\ *geo*
      - Geographical RegionType
      -
        - ``USA``: United States
        - ``UK``: United Kingdom
        - ``AUS``: Australia
        - ``APAC``: Asia-Pacific
-   * - volumeGrids.\ volumeGrid.\ **currency**
+   * - volumeGrids.\ volumeGrid.\ *currency*
      - String
      -
        - ``USD``: United States Dollar
@@ -110,27 +110,27 @@ The response has the following body parameters.
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
        - ``HKD``: Hong Kong Dollar
-   * - volumeGrids.\ volumeGrid.\ **gridType**
+   * - volumeGrids.\ volumeGrid.\ *gridType*
      - String
      - The type of grid. By default only ``STANDARD`` grids are returned.
-   * - volumeGrids.\ volumeGrid.\ **gridVersion**
+   * - volumeGrids.\ volumeGrid.\ *gridVersion*
      - String
      - The version of the commit grid. Example: ``1``.
-   * - volumeGrids.\ volumeGrid.\ **gridStartDate**
+   * - volumeGrids.\ volumeGrid.\ *gridStartDate*
      - String
      - The date and time that the commit grid begins. Example:
        ``2013-05-30-05:00``.
-   * - volumeGrids.\ volumeGrid.\ **gridEndDate**
+   * - volumeGrids.\ volumeGrid.\ *gridEndDate*
      - String
      - The date and time that the commit grid ends. Example:
        ``2013-05-30-05:00``.
-   * - volumeGrids.\ **link**
+   * - volumeGrids.\ *link*
      - Object
      - An info block that contains details about the link for the volume grids.
-   * - volumeGrids.\ link.\ **href**
+   * - volumeGrids.\ link.\ *href*
      - String
      - The URL for the volume grids.
-   * - volumeGrids.\ link.\ **rel**
+   * - volumeGrids.\ link.\ *rel*
      - String
      - The relationship between the current document and the linked document.
 
