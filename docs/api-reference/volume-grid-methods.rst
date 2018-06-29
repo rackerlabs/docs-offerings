@@ -18,6 +18,3 @@ delete volume grids.
 
 .. include:: methods/get-volume-grid.rst
 .. include:: methods/get-volume-grids.rst
-.. include:: methods/create-volume-grids.rst
-.. include:: methods/update-volume-grid.rst
-.. include:: methods/delete-volume-grid.rst

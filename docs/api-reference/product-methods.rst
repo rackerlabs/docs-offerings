@@ -18,6 +18,3 @@ delete products.
 
 .. include:: methods/get-product.rst
 .. include:: methods/get-products.rst
-.. include:: methods/create-product.rst
-.. include:: methods/update-product.rst
-.. include:: methods/delete-product.rst

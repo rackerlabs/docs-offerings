@@ -25,13 +25,13 @@ The request has the following query parameters.
      - Description
    * - ``X-Auth-Token``
      - Header string *(Required)*
-     - A valid authentication token
+     - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``commitGridId`` *(Required)*
      - String
      - The ID for the commit grid.
@@ -104,43 +104,25 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **images**\.[]
-     - Array
-     - An array of images in the list.
-   * - images.\ **id**
+   * - **commitDiscountCalculation**\.[]
+     - Object
+     - An object containing information about the discount calculation.
+   * - commitDiscountCalculation.\ *commitMonths*
+     - Integer
+     - The number of months of commitment that are required in order to
+       receive the discount.
+   * - commitDiscountCalculation.\ *commitPaymentAmountPerMonth*
      - String
-     - The UUID of the image.
-   * - images.\ **name**
+     - The montly payment that is associated with the discount.
+   * - commitDiscountCalculation.\ *discountPercent*
      - String
-     - The name of the image.
-   * - images.\ **status**
+     - The percent of the discount.
+   * - commitDiscountCalculation.\ *commitUsageAmountPerMonth*
      - String
-     - The status of the image. For possible image statuses,
-       see :ref:`Statuses <statuses>`.
-   * - images.\ **visibility**
-     - String
-     - Specifies image visibility as ``public``, ``private``, or ``shared``.
-   * - images.\ **size**
-     - String
-     - The size of the image in bytes.
-   * - images.\ **checksum**
-     - String
-     - The checksum of this image.
-   * - images.\ **self**
-     - String
-     - The link to the image.
-   * - images.\ **file**
-     - String
-     - The image file.
-   * - **first**
-     - String
-     - The URI for the first image in the list.
-   * - **first**
-     - String
-     - The URI for the next image in the list.
-   * - **last**
-     - String
-     - The URI for the last image in the list.
+     - The amount of usage the customer may use during the commitment period.
+   * - commitDiscountCalculation.\ *isPrePayOpted*
+     - Boolean
+     - Whether prepayments are opted.
 
 **Example response to a commit discount calculation request with prepay opted: JSON**
 

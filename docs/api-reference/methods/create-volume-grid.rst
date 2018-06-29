@@ -25,13 +25,13 @@ The request has the following query parameters.
      - Description
    * - ``X-Auth-Token``
      - Header string *(Required)*
-     - A valid authentication token
+     - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
 
     The request has the following body parameters.
 
@@ -39,7 +39,7 @@ The request has the following query parameters.
       :widths: 15 10 30
       :header-rows: 1
 
-   * - ``volumeGrid`` *(Required)*
+   * - **volumeGrid**.[] *(Required)*
      - Object
      - An info block containing information about the commit grid.
    * - volumeGrid.\ *description*
@@ -55,21 +55,25 @@ The request has the following query parameters.
      - String
      - The ID for the volume grid.
    * - ``geo``
-     - String
-     - This parameter is used to filter and retrieve products with only prices
-       for specific geography where the Offering is available. Valid values
-       are ``USA``, ``UK``, ``AUS`, and ``APAC``.
+     - String (enumerated)
+     -
+       - ``USA``: United States
+       - ``UK``: United Kingdom
+       - ``AUS``: Australia
+       - ``APAC``: Asia-Pacific
    * - ``currency``
-     - String
-     - This parameter is used to filter and retrieve products with only prices
-       for specific currency. Valid values are ``USD`` and ``GBP``.
+     - String (enumerated)
+     -
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound
    * - ``gridType``
      - String
-     - Valid values are ``STANDARD`` and ``PRESET``. By default only
-       ``STANDARD`` grids are returned.
+     -
+       - ``STANDARD`` (By default only ``STANDARD`` grids are returned.)
+       - ``PRESET``
    * - ``gridVersion``
      - String
-     - The version of the grid. Example: 1.
+     - The version of the grid. Example: ``1``.
    * - ``gridStartDate``
      - String
      - The date and time that the grid begins.
@@ -201,43 +205,70 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **images**\.[]
+   * - **volumeGrid**\.[]
+     - Object
+     - An info block containing details about the volume grid.
+   * - volumeGrid.\ **description**
+     - String
+     - The description for the volume grid.
+   * - volumeGrid.\ **offerings**
      - Array
-     - An array of images in the list.
-   * - images.\ **id**
+     - The offerings that are associated with the volume grid.
+   * - volumeGrid.\ **offering**
      - String
-     - The UUID of the image.
-   * - images.\ **name**
+     - An array of key-value pairs containing information about an offering.
+   * - volumeGrid.\ offering.\ **offeringCode**
+     - A key-value pair that contains the business identifier for the
+       offering. This identifier remains
+       consistent when a new version of the offering is introduced. Only
+       one version of an ``offeringCode`` may have an ``ACTIVE`` status. Example: ``"offeringCode": "FSTGEN"``.
+   * - volumeGrid.\ **volumeTiers**
+     - Object
+     - An object containing information on any volume tiers.
+   * - volumeGrid.\ volumeTiers.\ **volumeTier**
+     - Object
+     - An object containing information on an individual volume tier.
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **minAmount**
      - String
-     - The name of the image.
-   * - images.\ **status**
+     - The minimum cost that is associated with the volume tier.
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **maxAmount**
      - String
-     - The status of the image. For possible image statuses,
-       see :ref:`Statuses <statuses>`.
-   * - images.\ **visibility**
+     - The maximum cost that is associated with the volume tier.
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **discountPercentage**
      - String
-     - Specifies image visibility as ``public``, ``private``, or ``shared``.
-   * - images.\ **size**
+     - The discount percentage that is associated with the volume tier.
+   * - volumeGrid.\ volumeTiers.\ volumeTier.\ **tierIndex**
+     - Integer
+     - The index that is associated with the volume tier.
+   * - volumeGrid.\ **id**
      - String
-     - The size of the image in bytes.
-   * - images.\ **checksum**
+     - The universally unique identifier (UUID) for the volume grid.
+   * - volumeGrid.\ **geo**
      - String
-     - The checksum of this image.
-   * - images.\ **self**
+     -
+       - ``USA``: United States
+       - ``UK``: United Kingdom
+       - ``AUS``: Australia
+       - ``APAC``: Asia-Pacific
+   * - volumeGrid.\ **currency**
      - String
-     - The link to the image.
-   * - images.\ **file**
+     -
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound
+   * - volumeGrid.\ **gridType**
      - String
-     - The image file.
-   * - **first**
+     -
+       - ``STANDARD`` (By default only ``STANDARD`` grids are returned.)
+       - ``PRESET``
+   * - volumeGrid.\ **gridVersion**
      - String
-     - The URI for the first image in the list.
-   * - **first**
+     - The version of the grid. Example: ``1``.
+   * - volumeGrid.\ **gridStartDate**
      - String
-     - The URI for the next image in the list.
-   * - **last**
+     - The date and time that the grid begins.
+   * - volumeGrid.\ **gridEndDate**
      - String
-     - The URI for the last image in the list.
+     - The date and time that the grid ends.
 
 **Example response: JSON**
 

@@ -26,31 +26,30 @@ The request has the following query parameters.
      - Description
    * - ``X-Auth-Token``
      - Header string *(Required)*
-     - A valid authentication token
+     - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``Accept``
      - Header string
-     - Value: vapplication/json`` or ``application/xml``
+     - Value: vapplication/json`` or ``application/xml``.
    * - ``lineOfBusiness``
      - String
-     - The location of the offering. This parameter is used to get a list of
-       offerings for a Line of Business. For example, a ``lineOfBusiness``
-       value of ``US_CLOUD`` returns the products for ``US_CLOUD``.
+     - The Rackspace line of business that is associated with the offering.
+       For example, a ``lineOfBusiness`` value of ``US_CLOUD`` returns the products for ``US_CLOUD``.
    * - ``status``
      - String
-     - This parameter is used to get a list of offerings with a given status.
-       Valid values of the status parameter are ACTIVE/INACTIVE.
+     - Retrieves offerings with a given status. Valid values are ``ACTIVE``
+       and ``INACTIVE``.
    * - ``limit``
      - String
-     - The maximum number of items that can be returned. This parameter is
-       used to control the pagination. For example, a limit value of 50
-       specifies that a maximum of 50 product offering items can be returned.
+     - The maximum number of items that can be returned. This parameter
+       controls pagination. For example, a ``limit`` value of 50
+       specifies that a maximum of 50 product offering items is returned.
    * - ``marker``
      - String
-     - The starting point for the return data. This parameter is used to
-       control the pagination.
+     - The starting point for the return data. This parameter controls
+       pagination.
 
 This operation does not accept a request body.
 
@@ -68,7 +67,7 @@ The following example shows the header information.
 Response
 --------
 
-The request has the following body parameters.
+The response has the following body parameters.
 
 .. list-table::
    :widths: 15 10 30
@@ -77,44 +76,43 @@ The request has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **images**\.[]
+  * - **offerings**\.[]
+    - Array
+    - An array of offerings in the list.
+   * - **offerings**.\ *offering*
      - Array
-     - An array of images in the list.
-   * - images.\ **id**
+     - An info block containing details about the offering.
+   * - offerings.\ *offering*.\ *id*
      - String
-     - The UUID of the image.
-   * - images.\ **name**
+     - The universally unique identifier (UUID) for the offering. Example:
+       046b6c7f-0b8a-43b9-b35d-6489e6daee91.
+   * - offerings.\ *offering*.\ *status*
+     - String (enumerated)
+     - The status of the offering. Valid values are ``ACTIVE`` (default) and
+       ``INACTIVE``. An offering becomes  ``INACTIVE`` when Rackspace
+       introduces a new version of the offering.
+   * - offerings.\ *offering*.\ *offeringCode*
+     - String (enumerated)
+     - A business identifier for the offering. This identifier remains
+       consistent when a new version of the offering is introduced. Only
+       one version of an ``offeringCode`` may have an ``ACTIVE`` status.
+   * - offerings.\ *offering*.\ *offeringVersion*
+     - Integer
+     - The business version of the offering.
+   * - offerings.\ *offering*.\ *name*
      - String
-     - The name of the image.
-   * - images.\ **status**
+     - A short, human-readable name for the offering. Example: Cloud Servers
+       Open Stack.
+   * - offerings.\ *offering*.\ *description*
      - String
-     - The status of the image. For possible image statuses,
-       see :ref:`Statuses <statuses>`.
-   * - images.\ **visibility**
+     - A human-readable description of the offering.
+   * - offerings.\ *offering*.\ *lineOfBusiness*
      - String
-     - Specifies image visibility as ``public``, ``private``, or ``shared``.
-   * - images.\ **size**
-     - String
-     - The size of the image in bytes.
-   * - images.\ **checksum**
-     - String
-     - The checksum of this image.
-   * - images.\ **self**
-     - String
-     - The link to the image.
-   * - images.\ **file**
-     - String
-     - The image file.
-   * - **first**
-     - String
-     - The URI for the first image in the list.
-   * - **first**
-     - String
-     - The URI for the next image in the list.
-   * - **last**
-     - String
-     - The URI for the last image in the list.
-
+     - Identifies an offering based on the Rackspace line of business.
+  * - offerings.\ *offering*.\ *link*\.[]
+    - Array
+    - An info block containing details about the link for the offering,
+      including its URL.
 
 **Example response: JSON**
 

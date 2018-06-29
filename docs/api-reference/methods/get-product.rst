@@ -25,18 +25,18 @@ The request has the following query parameters.
      - Description
    * - ``X-Auth-Token``
      - Header string *(Required)*
-     - A valid authentication token
+     - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``offeringId``
      - String
      - The ID for the offering. Example:
        046b6c7f-0b8a-43b9-b35d-6489e6daee91.
-   * - ``productID``
+   * - ``productId``
      - String
      - The ID for the product.
 
@@ -52,7 +52,6 @@ The following example shows the header information.
    Content-Type: application/json
    Accept: application/json
 
-
 Response
 --------
 
@@ -65,43 +64,94 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **images**\.[]
+   * - **product**
+     - Object
+     - An info block containing details about the product.
+   * - product.\ *name*
+     - String
+     - A short, human-readable name for the product. Example: ``Windows -
+       30720 MB High Performance I/O 2 Server Instance``.
+   * - product.\ *id*
+     - String
+     - The universally unique identifier (UUID) for the product. Example:
+       ``046b6c7f-0b8a-43b9-b35d-6489e6daee91``.
+   * - product.\ *description*
+     - String
+     - A short, human-readable description of the product. Example: ``Windows -
+       30720 MB High Performance I/O 2 Server Instance``.
+   * - product.\ *productCode*
+     - String (enumerated)
+     - A business identifier for the product. This identifier remains
+       consistent when a new version of the product is introduced. This
+       identifier is unique across all of the products within an offering.
+   * - product.\ *productOfferingPrice*
+     - Complex type
+     - Provides pricing information specific to a product in an offering
+       through a nested structure. For more information, see the
+       a"Characteristic structure" table on this page.
+   * - product.\ productOfferingPrice.\ *description*
+     - String
+     - A short, human-readable description of the price. Example: ``Windows -
+       30720 MB High Performance I/O 2 Server Instance Price``.
+   * - product.\ productOfferingPrice.\ *priceType*
+     - String
+     - The type of price or billing. Example: ``Usage``.
+   * - product.\ productOfferingPrice.\ *priceDetails*
+     - Complex type
+     - A collection that provides details specific to pricing for the product.
+   * - product.\ productOfferingPrice.\ priceDetails.\ *priceCharacteristic*
+     - String
+     - A JSON string containing a collection of characteristics that provide
+       additional information about the price. Format is
+       ``Characteristic key : Characteristic value``. This element is used to
+       accommodate business-defined pricing drivers such as ``serviceLevel``,
+       ``serviceType``, ``chargeType``, and other pricing qualifiers. These
+       pricing qualifiers are present where applicable.
+   * - product.\ productOfferingPrice.\ priceDetails.\ *prices*
      - Array
-     - An array of images in the list.
-   * - images.\ **id**
+     - An info block containing information about the product prices.
+   * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ *unitOfMeasure*
+     - String (enumerated)
+     -
+       - per hour
+       - per month
+       - per year
+       - per instance
+       - per request
+       - per compute cycle
+       - per transaction
+       - per GB
+       - per GB/month
+       - per instance/month
+       - per check/hour
+       - per CC
+       - per 100 MB
+       - per server/day
+       - per instance/hour
+       - per 100 MB/hour
+       - per 10000 MB
+   * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ *price*
+     - Complex type
+     - An info block containing information about a price.
+   * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ price.\ *amount*
      - String
-     - The UUID of the image.
-   * - images.\ **name**
+     - The price of the product.
+   * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ price.\ *currency*
+     - String (enumerated)
+     - The monetary currency that is associated with the price.
+   * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ price.\ *geo*
+     - String (enumerated)
+     - The geography that is associated with the price.
+   * - product.\ *productCharacteristic*
+     - Array
+     - An array of key-value pairs that contains info on the operating system
+       and flavor that are associated with the product. Format is
+       ``Characteristic key : Characteristic value``. This information is
+       primarily used to configure information from external applications that
+       drive product and pricing. Example: ``"name": "flavor_id", "value":"performance2-30"``.
+   * - product.\ *status*
      - String
-     - The name of the image.
-   * - images.\ **status**
-     - String
-     - The status of the image. For possible image statuses,
-       see :ref:`Statuses <statuses>`.
-   * - images.\ **visibility**
-     - String
-     - Specifies image visibility as ``public``, ``private``, or ``shared``.
-   * - images.\ **size**
-     - String
-     - The size of the image in bytes.
-   * - images.\ **checksum**
-     - String
-     - The checksum of this image.
-   * - images.\ **self**
-     - String
-     - The link to the image.
-   * - images.\ **file**
-     - String
-     - The image file.
-   * - **first**
-     - String
-     - The URI for the first image in the list.
-   * - **first**
-     - String
-     - The URI for the next image in the list.
-   * - **last**
-     - String
-     - The URI for the last image in the list.
+     - Whether the product is ``ACTIVE`` (default) or ``INACTIVE``.
 
 **Example response: JSON**
 
@@ -229,7 +279,7 @@ The following example shows the JSON response for the request.
     }
 }
 
-**Example response: XML** MAYBE THIS SHOULD BE "REFERENCE" INSTEAD???
+**Example response: XML**
 
 The following example shows the XML response for the request.
 

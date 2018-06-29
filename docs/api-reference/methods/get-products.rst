@@ -26,50 +26,69 @@ The request has the following query parameters.
      - Description
    * - ``X-Auth-Token``
      - Header string *(Required)*
-     - A valid authentication token
+     - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``
+     - Value: ``application/json`` or ``application/xml``.
    * - ``offeringId``
      - String
      - The ID for the offering. Example:
        046b6c7f-0b8a-43b9-b35d-6489e6daee91.
    * - ``limit``
      - String
-     - The maximum number of items that can be returned. This parameter is
-       used to control the pagination. For example, a limit value of 50
-       specifies that a maximum of 50 product offering items can be returned.
+     - The maximum number of items to return. This parameter
+       controls pagination. For example, a limit value of 50
+       specifies that a maximum of 50 product offering items is returned.
    * - ``marker``
      - String
-     - The starting point for the return data. This parameter is used to
-       control the pagination.
+     - The starting point for the return data. This parameter controls
+       pagination.
    * - ``serviceLevel``
      - String
-     - This parameter is used to filter and retrieve products with only prices
-       for specific service levels. Valid values are ``INFRASTRUCTURE`` and
-       ``MANAGED``.
+     -
+       - ``INFRASTRUCTURE``
+       - ``MANAGED``
    * - ``serviceType``
      - String
-     - This parameter is used to filter and retrieve products with only prices
-       for specific service types. Valid values are ``SYSOPS``, ``LEGACY``,
-       and ``DEVOPS``.
+     -
+       - ``SYSOPS``
+       - ``LEGACY``
+       - ``DEVOPS``
    * - ``geo``
      - String
-     - This parameter is used to filter and retrieve products with only prices
-       for specific geography where the Offering is available. Valid values
-       are ``USA``, ``UK``, ``AUS`, and ``APAC``.
+     -
+       - ``USA``: United States
+       - ``UK``: United Kingdom
+       - ``AUS``: Australia
+       - ``APAC``: Asia-Pacific
    * - ``currency``
      - String
-     - This parameter is used to filter and retrieve products with only prices
-       for specific currency. Valid values are ``USD`` and ``GBP``.
+     -
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound
    * - ``unitOfMeasure``
-     - String
-     - This parameter is used to filter and retrieve products with only prices
-       for specific unit of measure. If not provided, the default unit of
-       measure for every product is returned.
+     - String (enumerated)
+     -
+       - per hour
+       - per month
+       - per year
+       - per instance
+       - per request
+       - per compute cycle
+       - per transaction
+       - per GB
+       - per GB/month
+       - per instance/month
+       - per check/hour
+       - per CC
+       - per 100 MB
+       - per server/day
+       - per instance/hour
+       - per 100 MB/hour
+       - per 10000 MB
 
 This operation does not accept a request body.
 
@@ -83,7 +102,6 @@ The following example shows the header information.
    Content-Type: application/json
    Accept: application/json
 
-
 Response
 --------
 
@@ -96,44 +114,155 @@ The response has the following body parameters.
    * - Name
      - Type
      - Description
-   * - **images**\.[]
+   * - **products**\.[]
      - Array
-     - An array of images in the list.
-   * - images.\ **id**
+     - An array of products.
+   * - products.\ **product**
+     - Array
+     - An info block containing details about a product.
+   * - products.\ product.\ **id**
      - String
-     - The UUID of the image.
-   * - images.\ **name**
+     - The universally unique identifier (UUID) for the product. Example:
+       ``046b6c7f-0b8a-43b9-b35d-6489e6daee91``.
+   * - products.\ product.\ **status**
      - String
-     - The name of the image.
-   * - images.\ **status**
+     - The status of the product. The default is ``ACTIVE``. When an offering
+       becomes ``INACTIVE``, all of the products that belong to that offering also become ``INACTIVE``.
+   * - products.\ product.\ **productCode**
+     - String (enumerated)
+     - A business identifier for the product. This identifier remains
+       consistent when a new version of the product is introduced. This identifier is unique across all of the products within an offering.
+   * - products.\ product.\ **name**
      - String
-     - The status of the image. For possible image statuses,
-       see :ref:`Statuses <statuses>`.
-   * - images.\ **visibility**
+     - A short, human-readable name for the product. Example: ``Windows -
+       30720 MB High Performance I/O 2 Server Instance``.
+   * - products.\ product.\ **description**
      - String
-     - Specifies image visibility as ``public``, ``private``, or ``shared``.
-   * - images.\ **size**
+     - A short, human-readable description of the product. Example: ``Windows -
+       30720 MB High Performance I/O 2 Server Instance``.
+   * - products.\ product.\ **salesChannel**
      - String
-     - The size of the image in bytes.
-   * - images.\ **checksum**
+     -
+       - ``PUBLIC``
+       - ``PRIVATE``
+   * - products.\ product.\ **productCharacteristic**
      - String
-     - The checksum of this image.
-   * - images.\ **self**
-     - String
-     - The link to the image.
-   * - images.\ **file**
-     - String
-     - The image file.
-   * - **first**
-     - String
-     - The URI for the first image in the list.
-   * - **first**
-     - String
-     - The URI for the next image in the list.
-   * - **last**
-     - String
-     - The URI for the last image in the list.
+     - An array of key-value pairs that contains info on the operating system
+       and flavor that are associated with the product. Format is
+      ``Characteristic key : Characteristic value``. This information is
+       primarily used to configure information from external applications that
+       drive product and pricing. Example: ``"name": "flavor_id", "value":"performance2-30"``.
+   * - products.\ product.\ **productOfferingPrice**
+     - Complex type
+     - Provides pricing information specific to a product in an offering
+       through a nested structure. For more information, see the "Characteristic structure" table on this page.
 
+**Product offering price structure**
+
+* - Name
+  - Type
+  - Description
+* - ``description``
+  - String
+  - A human-readable description of the product. Example: ``Windows - 30720 MB
+    High Performance I/O 2 Server Instance``.
+* - ``priceType``
+  - String (enumerated)
+  -
+    - ``usage``: Utility pricing.
+    - ``item``: One-time pricing.
+    - ``subscription``: Recurring pricing.
+* - ``priceDetails``
+  - Complex type
+  - A collection that provides details specific to pricing for the product.
+    For more information, see the "Price detail structure" table on this page.
+
+**Price detail structure**
+
+* - Name
+  - Type
+  - Description
+* - ``priceDetails``
+  - Complex type
+  - A JSON string containing a collection of characteristics that provide
+    additional information about the price.
+* - ``priceCharacteristic``
+  - String
+  - A JSON string containing a collection of characteristics that provide
+    additional information about the price. Format is
+    ``Characteristic key : Characteristic value``. This element is used to
+    accommodate business-defined pricing drivers such as ``serviceLevel``,
+    ``serviceType``, ``chargeType``, and other pricing qualifiers where
+    applicable. For more information, see the "Price structure" table.
+
+**Price structure**
+
+.. list-table::
+ :widths: 15 10 30
+ :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - ``unitOfMeasure``
+     - String (enumerated)
+     -
+       - per hour
+       - per month
+       - per year
+       - per instance
+       - per request
+       - per compute cycle
+       - per transaction
+       - per GB
+       - per GB/month
+       - per instance/month
+       - per check/hour
+       - per CC
+       - per 100 MB
+       - per server/day
+       - per instance/hour
+       - per 100 MB/hour
+       - per 10000 MB
+   * - ``price``
+     - Complex type
+     - Provides details about the price such as currency, geography, tiers, and
+       other characteristics. For more information, see the "Price structure details" table on this page.
+
+       **Price structure**
+
+       .. list-table::
+        :widths: 15 10 30
+        :header-rows: 1
+
+          * - Name
+            - Type
+            - Description
+          * - ``amount``
+            - String
+            - The price of the product.
+          * - ``currency``
+            - String (enumerated)
+            - The monetary currency that is associated with the price.
+          * - ``geo``
+            - String (enumerated)
+            - The geography that is associated with the price.
+          * - ``tierMin``
+            - String
+            - A tier-specific qualifier that specifies the minumum tier value.
+          * - ``tierMax``
+            - String (enumerated)
+            - A tier-specific qualifier that specifies the maximum tier value.
+          * - ``tierIndex``
+           - String
+           - A tier-specific qualifier used to specify the tier index to
+             support the logical ordering of tiers.
+          * - ``tierUnit``
+            - String
+            -
+              - ``TB``
+              - ``PB``
+              - ``REQUESTS``
 
 **Example response: JSON**
 

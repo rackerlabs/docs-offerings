@@ -18,7 +18,4 @@ delete commit grids.
 
 .. include:: methods/get-commit-grid.rst
 .. include:: methods/get-commit-grids.rst
-.. include:: methods/create-commit-grid.rst
-.. include:: methods/update-commit-grid.rst
-.. include:: methods/delete-commit-grid.rst
 .. include:: methods/calculate-discount.rst
