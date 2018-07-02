@@ -149,10 +149,10 @@ request, prefix the variable name with a ``$``, for example ``$ENDPOINT``.
    in the authentication response.
 
 #. In the ``service catalog`` section of the authentication response, copy the
-   ``publicURL`` value for the |apiservice|, version, and region that you want
+   ``publicURL`` value for the |api-service|, version, and region that you want
    to access.
 
-   This example shows the endpoints available for the |apiservice|.
+   This example shows the endpoints available for the |api-service|.
 
    .. include:: ../common-gs/samples/service-catalog-endpoint.rst
 

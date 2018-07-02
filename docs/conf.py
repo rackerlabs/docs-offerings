@@ -118,7 +118,7 @@ release = "version 2.0"
 # process.
 rst_epilog = """
 .. |service| replace:: Offer Service
-.. |apiservice| replace:: Offer Service API
+.. |api-service| replace:: Offer Service API
 .. |contract version| replace:: 2.0
 .. |product name| replace:: Offer
 """

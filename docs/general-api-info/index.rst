@@ -8,8 +8,8 @@ The information in this section is relevant to all operations of the API.
 For details about specific operations, see the
 :ref:`API reference <api-reference>`.
 
-The |apiservice| is implemented using a RESTful web service interface. All
-requests to authenticate and operate against the |apiservice| are performed
+The |api-service| is implemented using a RESTful web service interface. All
+requests to authenticate and operate against the |api-service| are performed
 using SSL over HTTP (HTTPS) on TCP port 443.
 
 

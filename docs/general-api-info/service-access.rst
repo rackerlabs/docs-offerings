@@ -4,7 +4,7 @@
 Service access endpoints
 ========================
 
-The |apiservice| can be accessed at https://offer.api.rackspace.com/.
+The |api-service| can be accessed at https://offer.api.rackspace.com/.
 
 Versions
 ~~~~~~~~

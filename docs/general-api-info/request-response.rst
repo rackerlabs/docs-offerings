@@ -7,7 +7,7 @@ Request and response types
 .. COMMENT: Adapt this topic to provide information that is relevant for your
    product.
 
-The |apiservice| supports both the JSON and XML data
+The |api-service| supports both the JSON and XML data
 serialization formats.
 
 The request format is specified by using the ``Content-Type`` header and is

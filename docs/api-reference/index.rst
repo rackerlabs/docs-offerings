@@ -4,8 +4,8 @@
 API reference
 =============
 
-Learn about the following |apiservice| resources and operations, and
-see request and response examples. You can use the |apiservice| operations
+Learn about the following |api-service| resources and operations, and
+see request and response examples. You can use the |api-service| operations
 to interact directly with the service.
 
 .. note::

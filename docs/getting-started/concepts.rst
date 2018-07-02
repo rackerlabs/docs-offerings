@@ -4,7 +4,7 @@
 |service| concepts
 ==================
 
-To use the |apiservice| effectively, you should understand several key
+To use the |api-service| effectively, you should understand several key
 concepts.
 
 .. COMMENT: The following concepts are provided as examples only. Replace

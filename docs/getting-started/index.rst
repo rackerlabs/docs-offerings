@@ -5,7 +5,7 @@ Getting started
 ===============
 
 Use the following information to learn how to authenticate, send API requests,
-and complete basic operations by using the |apiservice|.
+and complete basic operations by using the |api-service|.
 
 .. COMMENT: Replace the using-cloud-load-balancers topic with relevant content
 .. To include CLI instructions, add topics or content for CLI auth, requests, \

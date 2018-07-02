@@ -31,7 +31,7 @@ the |product name| service REST API:
 
 .. note::
 
-   You can also use |product name| from the Cloud Control Panel.
+   You can also use the Offer service from the Cloud Control Panel.
 
 
 .. toctree::
