@@ -34,13 +34,12 @@ The request has the following URI and header parameters.
      - Value: ``application/json`` or ``application/xml``.
    * - ``limit``
      - String
-     - The maximum number of items that can be returned. This parameter is
-       used to control pagination. For example, a limit value of 50
-       specifies that a maximum of 50 product offering items can be returned.
+     - The maximum number of items to return. This value should be ``100`` or
+       less. The default value is ``100``.
    * - ``marker``
      - String
      - The starting point for the return data. This parameter is used to
-       control the pagination.
+       control pagination.
 
 This operation does not accept a request body.
 
@@ -80,7 +79,6 @@ The response has the following body parameters.
        - ``GBP``: British Pound Sterling
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
-       - ``HKD``: Hong Kong Dollar
    * - currencies.\ currency.\ *description*
      - String
      - A description of the currency. Example: ``Pound Sterling``.
@@ -162,7 +160,7 @@ The following example shows the JSON response for the request.
         }
       }
 
-**Example response: XML** MAYBE THIS SHOULD BE "REFERENCE" INSTEAD???
+**Example response: XML**
 
 The following example shows the XML response for the request.
 

@@ -32,9 +32,9 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``commitGridId`` *(Required)*
-     - String
-     - The ID for the commit grid.
+   * - ``commitGridId``
+     - String *(Required)*
+     - The ID for the commit grid. Example: ``STANDARD_AUS_COMMIT_GRID_001``.
 
 This operation does not accept a request body.
 
@@ -153,10 +153,13 @@ The response has the following body parameters.
        - ``GBP``: British Pound Sterling
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
-       - ``HKD``: Hong Kong Dollar
    * - commitGrid.\ *gridType*
      - String
-     - The type of grid. By default only ``STANDARD`` grids are returned.
+     -
+       - ``STANDARD``: Offers pre-defined discounts based on the length of the
+         commitment. By default only ``STANDARD`` grids are returned.
+       - ``CUSTOM``: Offers a customized discount based on a customer's
+         request.
    * - commitGrid.\ *gridVersion*
      - String
      - The version of the commit grid. Example: ``1``.

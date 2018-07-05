@@ -32,7 +32,7 @@ The request has the following URI and header parameters.
      - Value: ``application/json`` or ``application/xml``.
    * - ``Accept``
      - Header string
-     - Value: vapplication/json`` or ``application/xml``.
+     - Value: ``application/json`` or ``application/xml``.
    * - ``lineOfBusiness``
      - String
      - The Rackspace line of business that is associated with the offering.
@@ -43,9 +43,8 @@ The request has the following URI and header parameters.
        and ``INACTIVE``.
    * - ``limit``
      - String
-     - The maximum number of items that can be returned. This parameter
-       controls pagination. For example, a ``limit`` value of 50
-       specifies that a maximum of 50 product offering items is returned.
+     - The maximum number of items to return. This value should be ``100`` or
+       less. The default value is ``100``.
    * - ``marker``
      - String
      - The starting point for the return data. This parameter controls
@@ -85,9 +84,9 @@ The response has the following body parameters.
    * - offerings.\ *offering*.\ *id*
      - String
      - The universally unique identifier (UUID) for the offering. Example:
-       ``046b6c7f-0b8a-43b9-b35d-6489e6daee91``.
+       ``fd2c2294-0498-3791-9df7-1d4ed883a939``.
    * - offerings.\ *offering*.\ *offeringCode*
-     - String (enumerated)
+     - String
      - A business identifier for the offering. This identifier remains
        consistent when a new version of the offering is introduced. Only
        one version of an ``offeringCode`` may have an ``ACTIVE`` status.
@@ -99,7 +98,7 @@ The response has the following body parameters.
      - A short, human-readable name for the offering. Example: Cloud Servers
        Open Stack.
    * - offerings.\ offering.\ *status*
-     - String (enumerated)
+     - String
      - The status of the offering. Valid values are ``ACTIVE`` (default) and
        ``INACTIVE``. An offering becomes  ``INACTIVE`` when Rackspace
        introduces a new version of the offering.

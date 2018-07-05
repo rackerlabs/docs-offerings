@@ -36,5 +36,4 @@ access between products and services.
    limits
    faults
    date-time-format
-   api-behavior
    role-based-access-control

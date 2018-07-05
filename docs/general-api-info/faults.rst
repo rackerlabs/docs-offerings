@@ -136,3 +136,19 @@ supported.
     <unsupportedMediaType code="415" xmlns="https://offer.api.rackspacecloud.com/v2/">
         <message>The payload type is not supported.</message>
     </unsupportedMediaType>
+
+.. _faults-notacceptable:
+
+notAcceptable
+~~~~~~~~~~~~~
+
+The ``notAcceptable`` fault is returned when the value in the ``Accept``
+header is not supported.
+
+**Example: notAcceptable fault response**
+
+.. code::
+
+    <notAcceptable code="406" xmlns="https://offer.api.rackspacecloud.com/v2/">
+        <message>The value in the ``Accept`` header is not supported.</message>
+    </notAcceptable>

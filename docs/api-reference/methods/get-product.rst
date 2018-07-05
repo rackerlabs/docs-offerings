@@ -35,10 +35,11 @@ The request has the following URI and header parameters.
    * - ``offeringId``
      - String
      - The ID for the offering. Example:
-       046b6c7f-0b8a-43b9-b35d-6489e6daee91.
+       ``fd2c2294-0498-3791-9df7-1d4ed883a939``.
    * - ``productId``
-     - String
-     - The ID for the product.
+     - String *(Required)*
+     - The ID for the product. Example:
+       ``0a1239ca-19ae-39e7-a7a3-887dfcc8ea85``.
 
 This operation does not accept a request body.
 
@@ -74,13 +75,13 @@ The response has the following body parameters.
    * - product.\ *id*
      - String
      - The universally unique identifier (UUID) for the product. Example:
-       ``046b6c7f-0b8a-43b9-b35d-6489e6daee91``.
+       ``0a1239ca-19ae-39e7-a7a3-887dfcc8ea85``.
    * - product.\ *description*
      - String
      - A short, human-readable description of the product. Example: ``Windows -
        30720 MB High Performance I/O 2 Server Instance``.
    * - product.\ *productCode*
-     - String (enumerated)
+     - String
      - A business identifier for the product. This identifier remains
        consistent when a new version of the product is introduced. This
        identifier is unique across all of the products within an offering.
@@ -113,7 +114,7 @@ The response has the following body parameters.
      - Array
      - An info block containing information about the product prices.
    * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ *unitOfMeasure*
-     - String (enumerated)
+     - String
      -
        - ``per hour``
        - ``per month``
@@ -139,10 +140,10 @@ The response has the following body parameters.
      - String
      - The price of the product.
    * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ price.\ *currency*
-     - String (enumerated)
+     - String
      - The monetary currency that is associated with the price.
    * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ price.\ *geo*
-     - String (enumerated)
+     - String
      - The geography that is associated with the price.
    * - product.\ *productCharacteristic*
      - Array

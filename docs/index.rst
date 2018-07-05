@@ -27,7 +27,6 @@ the |product name| service REST API:
 - :ref:`Getting started <getting-started-guide>`
 - :ref:`General API information <general-api-info>`
 - :ref:`API reference <api-reference>`
-- :ref:`Release notes <release-notes-collection>`
 
 .. note::
 
@@ -39,7 +38,7 @@ the |product name| service REST API:
    :maxdepth: 3
 
 
-   Product name v# <https://developer.rackspace.com/docs/{product-name}/{v#}/>
+   Offer Service 2.0 <self>
    getting-started/index
    general-api-info/index
    api-reference/index

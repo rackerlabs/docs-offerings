@@ -5,7 +5,7 @@ List commit grids
 
 .. code::
 
-    GET /v2/discountGrids/commitGrids
+    GET /v2/discountGrids/commitGrids?geo={string}
 
 Gets information on commit grids.
 
@@ -32,8 +32,8 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``geo`` *(Required)*
-     - Geographical RegionType
+   * - ``geo``
+     - String *(Required)*
      -
        - ``USA``: United States
        - ``UK``: United Kingdom
@@ -41,8 +41,11 @@ The request has the following URI and header parameters.
        - ``APAC``: Asia-Pacific
    * - ``gridType``
      - String
-     - Valid value is ``STANDARD``. By default only ``STANDARD`` grids are
-       returned.
+     -
+       - ``STANDARD``: Offers pre-defined discounts based on the length of the
+         commitment. By default only ``STANDARD`` grids are returned.
+       - ``CUSTOM``: Offers a customized discount based on a customer's
+         request.
    * - ``currency``
      - String
      -
@@ -50,7 +53,6 @@ The request has the following URI and header parameters.
        - ``GBP``: British Pound Sterling
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
-       - ``HKD``: Hong Kong Dollar
 
 This operation does not accept a request body.
 

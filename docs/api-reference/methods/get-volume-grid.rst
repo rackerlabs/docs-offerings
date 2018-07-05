@@ -32,9 +32,9 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``volumeGridId`` *(Required)*
-     - String
-     - The ID for the volume grid.
+   * - ``volumeGridId``
+     - String *(Required)*
+     - The ID for the volume grid. Example: ``STANDARD_USA_ONDEMAND_GRID_001``.
 
 This operation does not accept a request body.
 
@@ -97,9 +97,9 @@ The response has the following body parameters.
      - The index for the tier. This number is used to organize tiers.
    * - volumeGrid.\ *id*
      - String
-     - The ID for the volume grid
+     - The ID for the volume grid. Example: ``STANDARD_USA_ONDEMAND_GRID_001``.
    * - volumeGrid.\ *geo*
-     - Geographical RegionType
+     - String
      -
        - ``USA``: United States
        - ``UK``: United Kingdom
@@ -112,10 +112,13 @@ The response has the following body parameters.
        - ``GBP``: British Pound Sterling
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
-       - ``HKD``: Hong Kong Dollar
    * - volumeGrid.\ *gridType*
      - String
-     - The type of grid. By default only ``STANDARD`` grids are returned.
+     -
+       - ``STANDARD``: Offers pre-defined discounts based on the length of the
+         commitment. By default only ``STANDARD`` grids are returned.
+       - ``CUSTOM``: Offers a customized discount based on a customer's
+         request.
    * - volumeGrid.\ *gridVersion*
      - String
      - The version of the commit grid. Example: ``1``.

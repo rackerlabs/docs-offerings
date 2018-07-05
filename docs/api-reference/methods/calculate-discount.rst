@@ -32,9 +32,9 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``commitGridId`` *(Required)*
-     - String
-     - The ID for the commit grid.
+   * - ``commitGridId``
+     - String *(Required)*
+     - The ID for the commit grid. Example: ``STANDARD_AUS_COMMIT_GRID_001``.
 
 The request has the following body parameters.
 
@@ -193,6 +193,8 @@ The following example shows the XML response for the request.
 **Example response to a commit discount calculation request with no prepay
 opted: JSON**
 
+The following example shows the JSON response for the request.
+
 .. code::
 
    Status Code: 200 OK
@@ -215,6 +217,8 @@ opted: JSON**
 
 **Example response to a commit discount calculation request with no prepay
 opted: XML**
+
+The following example shows the XML response for the request.
 
 .. code::
 

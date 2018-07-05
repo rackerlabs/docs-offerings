@@ -39,9 +39,9 @@ The request has the following URI and header parameters.
        ``046b6c7f-0b8a-43b9-b35d-6489e6daee91``.
    * - ``limit``
      - String
-     - The maximum number of items to return. This parameter
-       controls pagination. For example, a limit value of 50
-       specifies that a maximum of 50 product offering items is returned.
+     - The maximum number of items to return. The default value is ``100``.
+       For this method, you may also set the value for this parameter to
+       ``infinite``.
    * - ``marker``
      - String
      - The starting point for the return data. This parameter controls
@@ -71,9 +71,8 @@ The request has the following URI and header parameters.
        - ``GBP``: British Pound Sterling
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
-       - ``HKD``: Hong Kong Dollar
    * - ``unitOfMeasure``
-     - String (enumerated)
+     - String
      -
        - ``per hour``
        - ``per month``
@@ -169,7 +168,7 @@ The response has the following body parameters.
        - ``HKD``: Hong Kong Dollar
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
        *unitOfMeasure*
-     - String (enumerated)
+     - String
      -
        - ``per hour``
        - ``per month``
@@ -197,13 +196,13 @@ The response has the following body parameters.
    * - products.\ product.\ *id*
      - String
      - The universally unique identifier (UUID) for the product. Example:
-       ``046b6c7f-0b8a-43b9-b35d-6489e6daee91``.
+       ``0a1239ca-19ae-39e7-a7a3-887dfcc8ea85``.
    * - products.\ product.\ *status*
      - String
      - The status of the product. The default is ``ACTIVE``. When an offering
        becomes ``INACTIVE``, all of the products that belong to that offering also become ``INACTIVE``.
    * - products.\ product.\ *productCode*
-     - String (enumerated)
+     - String
      - A business identifier for the product. This identifier remains
        consistent when a new version of the product is introduced. This identifier is unique across all of the products within an offering. Example: ``UPTIME_HIGH_IO_2_WIN_30720MB``.
    * - products.\ product.\ *productCharacteristic*
@@ -319,7 +318,7 @@ The following example shows the JSON response for the request.
       }
     }
 
-**Example response: XML** MAYBE THIS SHOULD BE "REFERENCE" INSTEAD???
+**Example response: XML**
 
 The following example shows the XML response for the request.
 
