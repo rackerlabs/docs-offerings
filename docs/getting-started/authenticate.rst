@@ -10,10 +10,6 @@ the ``X-Auth-Token`` header of each request. You get a token by submitting an
 authentication request with valid account credentials to the Rackspace Cloud
 Identity API service.
 
-!!!! NOTE FROM NAVEEN: "Currently, all get calls are supported by offer:admin
-role. But I’m waiting on a confirmation from architects to have customer roles
-get access to the calls." !!!!
-
 To access the Authentication Service, you must know whether your account is
 US-based or UK-based.
 

@@ -20,8 +20,6 @@ Install CLI clients
    the :rax-devdocs:`Cloud Servers` API <#docs-cloud-dns>` provides both
    cURL and CLI examples.
 
-Sample CLI topic
------------------
 If you want to run the examples by using cURL instead of using the CLI, skip
 this step and proceed to the next section "Sending API requests to
 |product name|".
