@@ -32,11 +32,11 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``limit``
+   * - ``{limit}``
      - String
      - The maximum number of items to return. This value should be ``100`` or
        less. The default value is ``100``.
-   * - ``marker``
+   * - ``{marker}``
      - String
      - The starting point for the return data. This parameter is used to
        control pagination.
@@ -81,23 +81,23 @@ The response has the following body parameters.
        - ``EUR``: Euro
    * - currencies.\ currency.\ *description*
      - String
-     - A description of the currency. Example: ``Pound Sterling``.
+     - The description of the currency.
    * - currencies.\ currency.\ *symbol*
      - String
-     - The symbol for the currency. Example: ``\\u00A3``.
+     - The symbol for the currency.
    * - currencies.\ currency.\ *subdivision*
      - String
-     - The subdivision of the currency. Example: ``pence``.
+     - The subdivision of the currency.
    * - currencies.\ *link*
      - String
-     - An info block that contains details about the link for the supported
-       currencies.
+     - An info block that contains details about the links for the results.
    * - currencies.\ link.\ *href*
      - String
-     - The URL for the commit grid.
+     - The URL for a set of results.
    * - currencies.\ link.\ *rel*
      - String
-     - The relationship between the current document and the linked document.
+     - The relationship between the current information and the linked
+       information.
 
 **Example response: JSON**
 

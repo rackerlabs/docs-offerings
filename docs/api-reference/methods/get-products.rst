@@ -33,45 +33,45 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``offeringId``
-     - String
+   * - ``{offeringId}``
+     - String *(Required)*
      - The ID for the offering. Example:
        ``046b6c7f-0b8a-43b9-b35d-6489e6daee91``.
-   * - ``limit``
+   * - ``{limit}``
      - String
      - The maximum number of items to return. The default value is ``100``.
        For this method, you may also set the value for this parameter to
        ``infinite``.
-   * - ``marker``
+   * - ``{marker}``
      - String
      - The starting point for the return data. This parameter controls
        pagination.
-   * - ``serviceLevel``
+   * - ``{serviceLevel}``
      - String
      -
        - ``INFRASTRUCTURE``
        - ``MANAGED``
-   * - ``serviceType``
+   * - ``{serviceType}``
      - String
      -
        - ``SYSOPS``
        - ``LEGACY``
        - ``DEVOPS``
-   * - ``geo``
+   * - ``{geo}``
      - String
      -
        - ``USA``: United States
        - ``UK``: United Kingdom
        - ``AUS``: Australia
        - ``APAC``: Asia-Pacific
-   * - ``currency``
+   * - ``{currency}``
      - String
      -
        - ``USD``: United States Dollar
        - ``GBP``: British Pound Sterling
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
-   * - ``unitOfMeasure``
+   * - ``{unitOfMeasure}``
      - String
      -
        - ``per hour``
@@ -121,7 +121,7 @@ The response has the following body parameters.
      - An array of products.
    * - products.\ *product*
      - Array
-     - An info block containing details about a product.
+     - An info block containing details about a specific product.
    * - products.\ product.\ *productOfferingPrice*
      - Complex type
      - Provides pricing information specific to a product in an offering
@@ -135,9 +135,11 @@ The response has the following body parameters.
      - An array of JSON strings containing a collection of characteristics
        that provide additional information about the price. Format is
        ``Characteristic key : Characteristic value``. This element is used to
-       accommodate business-defined pricing drivers such as ``serviceLevel``,
-       ``serviceType``, ``chargeType``, and other pricing qualifiers where
-       applicable.
+       accommodate business-defined pricing drivers such as ``serviceLevel``
+       (``INFRASTRUCTURE`` or ``MANAGED``), ``serviceType`` (``SYSOPS``,
+       ``DEVOPS``, or ``LEGACY``), ``chargeType`` (``INFRASTRUCTURE`` or
+       ``SUPPORT``), and other pricing qualifiers. These
+       pricing qualifiers are present where applicable. For more information, see the **Service plan details** table on this page.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ *prices*
      - Array
      - An info block containing information about prices for the product.
@@ -148,7 +150,7 @@ The response has the following body parameters.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
        price.\ *amount*
      - String
-     - The price the product.
+     - The price of the product.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
        price.\ *geo*
      - String
@@ -165,7 +167,6 @@ The response has the following body parameters.
        - ``GBP``: British Pound Sterling
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
-       - ``HKD``: Hong Kong Dollar
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
        *unitOfMeasure*
      - String
@@ -195,8 +196,7 @@ The response has the following body parameters.
        - ``subscription``: Recurring pricing.
    * - products.\ product.\ *id*
      - String
-     - The universally unique identifier (UUID) for the product. Example:
-       ``0a1239ca-19ae-39e7-a7a3-887dfcc8ea85``.
+     - The universally unique identifier (UUID) for the product.
    * - products.\ product.\ *status*
      - String
      - The status of the product. The default is ``ACTIVE``. When an offering
@@ -204,7 +204,7 @@ The response has the following body parameters.
    * - products.\ product.\ *productCode*
      - String
      - A business identifier for the product. This identifier remains
-       consistent when a new version of the product is introduced. This identifier is unique across all of the products within an offering. Example: ``UPTIME_HIGH_IO_2_WIN_30720MB``.
+       consistent when a new version of the product is introduced. This identifier is unique across all of the products within an offering.
    * - products.\ product.\ *productCharacteristic*
      - String
      - An array of key-value pairs that contains info on the operating system
@@ -215,12 +215,10 @@ The response has the following body parameters.
        Example: ``"name": "flavor_id", "value":"performance2-30"``.
    * - products.\ product.\ *description*
      - String
-     - A short, human-readable description of the product. Example: ``Windows -
-       30720 MB High Performance I/O 2 Server Instance``.
+     - The description of the product.
    * - products.\ product.\ *name*
      - String
-     - The name of the product. Example: ``Windows -
-       30720 MB High Performance I/O 2 Server Instance``.
+     - The name of the product.
    * - products.\ *link*
      - Object
      - An info block that contains details about the link for the products
@@ -231,6 +229,34 @@ The response has the following body parameters.
    * - commitGrids.\ commitGrid.\ link.\ *rel*
      - String
      - The relationship between the current document and the linked document.
+
+**Service plan details**
+
+The following table shows the service level and service type that is
+associated with each Rackspace service plan.
+
+.. list-table::
+ :widths: 15 10 30
+ :header-rows: 1
+
+ * - Service plan
+   - Service level
+   - Service type
+ * - Infrastructure
+   - Infrastructure
+   - Legacy
+ * - Managed Cloud
+   - Managed
+   - Legacy
+ * - Managed Infrastructure
+   - Infrastructure
+   - SysOps
+ * - Managed Operations
+   - Managed
+   - SysOps
+ * - DevOps
+   - Managed
+   - DevOps
 
 **Example response: JSON**
 

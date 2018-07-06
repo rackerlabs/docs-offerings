@@ -61,10 +61,10 @@ Versions List Response: XML
 
       <versions xmlns="http://docs.openstack.org/common/api/v1.0"
           xmlns:atom="http://www.w3.org/2005/Atom">
-       <version id="v1" status="BETA"
+       <version id="v2" status="BETA"
                 updated="2012-04-25T11:33:21-06:00">
            <atom:link rel="self"
-                      href="http://billing.api.rackspacecloud.com/v1"/>
+                      href="https://offer.api.rackspacecloud.com/v2/"/>
        </version>
       </versions>
 
@@ -76,13 +76,13 @@ Versions List Response: JSON
    {
        "versions": [
            {
-               "id": "v1",
+               "id": "v2",
                "status": "BETA",
                "updated": "2009-10-09T11:30:00Z",
                "links": [
                    {
                        "rel": "self",
-                       "href": "https://offer.api.rackspacecloud.com/v1/"
+                       "href": "https://offer.api.rackspacecloud.com/v2/"
                    }
                ]
            }
@@ -99,7 +99,7 @@ Example version details request
 .. code::
 
    GET HTTP/1.1
-   Host: offer.api.rackspacecloud.com/v1
+   Host: offer.api.rackspacecloud.com/v2
    Accept: application/xml
 
 This operation does not require a request body.
@@ -114,9 +114,9 @@ Example version details response: XML
 .. code::
 
    <?xml version="1.0" encoding="UTF-8"?>
-   <version xmlns="http://docs.openstack.org/common/api/v1.0" xmlns:atom="http://www.w3.org/2005/Atom" id="v1" status="BETA" updated="2012-04-25T11:33:21-06:00">
+   <version xmlns="http://docs.openstack.org/common/api/v1.0" xmlns:atom="http://www.w3.org/2005/Atom" id="v2" status="BETA" updated="2012-04-25T11:33:21-06:00">
     <atom:link rel="describedby" type="application/pdf" href="http://docs-internal.rackspace.com/foundations/offeringdevguide/offeringdevguide.pdf"/>
-    <atom:link rel="describedby" type="application/vnd.sun.wadl+xml" href="http://offer.api.rackspacecloud.com/v1/application.wadl"/>
+    <atom:link rel="describedby" type="application/vnd.sun.wadl+xml" href="http://offer.api.rackspacecloud.com/v2/application.wadl"/>
    </version>
 
 Example version details response: JSON
@@ -126,7 +126,7 @@ Example version details response: JSON
 
    {
        "version" : {
-           "id" : "v1",
+           "id" : "v2",
            "status" : "BETA",
            "updated" : "2012-04-25T11:33:21-06:00",
            "links": [
@@ -138,7 +138,7 @@ Example version details response: JSON
                {
                    "rel" : "describedby",
                    "type" : "application/vnd.sun.wadl+xml",
-                   "href" : "https://offer.api.rackspacecloud.com/v1/application.wadl"
+                   "href" : "https://offer.api.rackspacecloud.com/v2/application.wadl"
                }
             ]
          }

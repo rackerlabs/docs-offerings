@@ -5,7 +5,7 @@ List commit grids
 
 .. code::
 
-    GET /v2/discountGrids/commitGrids?geo={string}
+    GET /v2/discountGrids/commitGrids?geo={location}
 
 Gets information on commit grids.
 
@@ -32,21 +32,21 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``geo``
+   * - ``{geo}``
      - String *(Required)*
      -
        - ``USA``: United States
        - ``UK``: United Kingdom
        - ``AUS``: Australia
        - ``APAC``: Asia-Pacific
-   * - ``gridType``
+   * - ``{gridType}``
      - String
      -
        - ``STANDARD``: Offers pre-defined discounts based on the length of the
          commitment. By default only ``STANDARD`` grids are returned.
        - ``CUSTOM``: Offers a customized discount based on a customer's
          request.
-   * - ``currency``
+   * - ``{currency}``
      - String
      -
        - ``USD``: United States Dollar
@@ -83,7 +83,7 @@ The response has the following body parameters.
      - An object containing information about the commit grids.
    * - commitGrids.\ *commitGrid*
      - Object
-     - An object containing information about an individual commit grid.
+     - An object containing information about a specific commit grid.
    * - commitGrids.\ commitGrid.\ *link*
      - Object
      - An info block that contains details about the link for the commit grid.
@@ -92,10 +92,11 @@ The response has the following body parameters.
      - The URL for the commit grid.
    * - commitGrids.\ commitGrid.\ link.\ *rel*
      - String
-     - The relationship between the current document and the linked document.
+     - The relationship between the current information and the linked
+       information.
    * - commitGrids.\ commitGrid.\ *id*
      - String
-     - The ID for the commit grid. Example: ``STANDARD_AUS_COMMIT_GRID_001``.
+     - The ID for the commit grid.
    * - commitGrids.\ commitGrid.\ *geo*
      - String
      -
@@ -116,27 +117,26 @@ The response has the following body parameters.
      - The type of grid. By default only ``STANDARD`` grids are returned.
    * - commitGrids.\ commitGrid.\ *discountType*
      - String
-     - The type of discount. Example: ``COMMIT``.
+     - The type of discount.
    * - commitGrids.\ commitGrid.\ *gridVersion*
      - String
-     - The version of the commit grid. Example: ``1``.
+     - The version of the commit grid.
    * - commitGrids.\ commitGrid.\ *gridStartDate*
      - String
-     - The date and time that the commit grid begins. Example:
-       ``2013-05-30-05:00``.
+     - The date and time that the commit grid begins.
    * - commitGrids.\ commitGrid.\ *gridEndDate*
      - String
-     - The date and time that the commit grid ends. Example:
-       ``2013-05-30-05:00``.
+     - The date and time that the commit grid ends.
    * - commitGrids.\ *link*
      - Object
-     - An info block that contains details about the link for the commit grids.
+     - An info block that contains details about the links for the results.
    * - commitGrids.\ link.\ *href*
      - String
-     - The URL for the commit grid.
+     - The URL for a set of results.
    * - commitGrids.\ link.\ *rel*
      - String
-     - The relationship between the current document and the linked document.
+     - The relationship between the current information and the linked
+       information.
 
 **Example response: JSON**
 

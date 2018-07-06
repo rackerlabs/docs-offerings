@@ -11,9 +11,14 @@ To reduce load on the service, retrieve operations return a maximum limit of
 100 items at a time. If a request supplies no limit or one that exceeds the
 configured  default limit, the default limit is used instead.
 
-This behavior is called *pagination*. Pagination gives you the ability to
-limit the size of the returned data and to retrieve a specified subset of a
-large data set.  Pagination has two key concepts: limit and marker.
+The single exception is the get products method, which enables you to set the
+limit to a value of ``infinite``. This value returns all of the products that
+are associated with an ``offeringId``.
+
+The limit behavior for all other retrieve operations is called *pagination*.
+Pagination gives you the ability to limit the size of the returned data and to
+retrieve a specified subset of a large data set.  Pagination has two key
+concepts: limit and marker.
 
 * *Limit* is the restriction on the maximum number of items for that type that
   can be returned.

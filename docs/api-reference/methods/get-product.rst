@@ -32,11 +32,11 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``offeringId``
-     - String
+   * - ``{offeringId}``
+     - String *(Required)*
      - The ID for the offering. Example:
        ``fd2c2294-0498-3791-9df7-1d4ed883a939``.
-   * - ``productId``
+   * - ``{productId}``
      - String *(Required)*
      - The ID for the product. Example:
        ``0a1239ca-19ae-39e7-a7a3-887dfcc8ea85``.
@@ -70,16 +70,13 @@ The response has the following body parameters.
      - An info block containing details about the product.
    * - product.\ *name*
      - String
-     - A short, human-readable name for the product. Example: ``Windows -
-       30720 MB High Performance I/O 2 Server Instance``.
+     - The name of the product.
    * - product.\ *id*
      - String
-     - The universally unique identifier (UUID) for the product. Example:
-       ``0a1239ca-19ae-39e7-a7a3-887dfcc8ea85``.
+     - The universally unique identifier (UUID) for the product.
    * - product.\ *description*
      - String
-     - A short, human-readable description of the product. Example: ``Windows -
-       30720 MB High Performance I/O 2 Server Instance``.
+     - The description of the product.
    * - product.\ *productCode*
      - String
      - A business identifier for the product. This identifier remains
@@ -91,8 +88,7 @@ The response has the following body parameters.
        through a nested structure.
    * - product.\ productOfferingPrice.\ *description*
      - String
-     - A short, human-readable description of the price. Example: ``Windows -
-       30720 MB High Performance I/O 2 Server Instance Price``.
+     - The description of the price.
    * - product.\ productOfferingPrice.\ *priceType*
      - String
      -
@@ -103,13 +99,16 @@ The response has the following body parameters.
      - Complex type
      - A collection that provides details specific to pricing for the product.
    * - product.\ productOfferingPrice.\ priceDetails.\ *priceCharacteristic*
-     - String
-     - A JSON string containing a collection of characteristics that provide
-       additional information about the price. Format is
+     - Array
+     - An array of JSON strings containing a collection of characteristics
+       that provide additional information about the price. Format is
        ``Characteristic key : Characteristic value``. This element is used to
-       accommodate business-defined pricing drivers such as ``serviceLevel``,
-       ``serviceType``, ``chargeType``, and other pricing qualifiers. These
-       pricing qualifiers are present where applicable.
+       accommodate business-defined pricing drivers such as ``serviceLevel``
+       (``INFRASTRUCTURE`` or ``MANAGED``), ``serviceType`` (``SYSOPS``,
+       ``DEVOPS``, or ``LEGACY``), ``chargeType`` (``INFRASTRUCTURE`` or
+       ``SUPPORT``), and other pricing qualifiers. These
+       pricing qualifiers are present where applicable. For more information,
+       see the **Service plan details** table on this page.
    * - product.\ productOfferingPrice.\ priceDetails.\ *prices*
      - Array
      - An info block containing information about the product prices.
@@ -155,6 +154,34 @@ The response has the following body parameters.
    * - product.\ *status*
      - String
      - Whether the product is ``ACTIVE`` (default) or ``INACTIVE``.
+
+**Service plan details**
+
+The following table shows the service level and service type that is
+associated with each Rackspace service plan.
+
+.. list-table::
+  :widths: 15 10 30
+  :header-rows: 1
+
+  * - Service plan
+    - Service level
+    - Service type
+  * - Infrastructure
+    - Infrastructure
+    - Legacy
+  * - Managed Cloud
+    - Managed
+    - Legacy
+  * - Managed Infrastructure
+    - Infrastructure
+    - SysOps
+  * - Managed Operations
+    - Managed
+    - SysOps
+  * - DevOps
+    - Managed
+    - DevOps
 
 **Example response: JSON**
 

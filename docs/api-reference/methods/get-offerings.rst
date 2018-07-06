@@ -33,19 +33,19 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``lineOfBusiness``
+   * - ``{lineOfBusiness}``
      - String
      - The Rackspace line of business that is associated with the offering.
        For example, a ``lineOfBusiness`` value of ``US_CLOUD`` returns the products for ``US_CLOUD``.
-   * - ``status``
+   * - ``{status}``
      - String
      - Retrieves offerings with a given status. Valid values are ``ACTIVE``
        and ``INACTIVE``.
-   * - ``limit``
+   * - ``{limit}``
      - String
      - The maximum number of items to return. This value should be ``100`` or
        less. The default value is ``100``.
-   * - ``marker``
+   * - ``{marker}``
      - String
      - The starting point for the return data. This parameter controls
        pagination.
@@ -77,14 +77,13 @@ The response has the following body parameters.
      - Description
    * - offerings
      - Array
-     - An array of offerings in the list.
+     - An array of offerings.
    * - offerings.\ *offering*
      - Array
-     - An info block containing details about the offering.
+     - An info block containing details about a specific offering.
    * - offerings.\ *offering*.\ *id*
      - String
-     - The universally unique identifier (UUID) for the offering. Example:
-       ``fd2c2294-0498-3791-9df7-1d4ed883a939``.
+     - The universally unique identifier (UUID) for the offering.
    * - offerings.\ *offering*.\ *offeringCode*
      - String
      - A business identifier for the offering. This identifier remains
@@ -95,8 +94,7 @@ The response has the following body parameters.
      - The business version of the offering.
    * - offerings.\ *offering*.\ *name*
      - String
-     - A short, human-readable name for the offering. Example: Cloud Servers
-       Open Stack.
+     - The name of the offering.
    * - offerings.\ offering.\ *status*
      - String
      - The status of the offering. Valid values are ``ACTIVE`` (default) and
@@ -104,7 +102,7 @@ The response has the following body parameters.
        introduces a new version of the offering.
    * - offerings.\ offering.\ *description*
      - String
-     - A human-readable description of the offering.
+     - The description of the offering.
    * - offerings.\ offering.\ *lineOfBusinesses*
      - Complex type
      - An info block that contains details about the Rackspace lines of
@@ -118,22 +116,24 @@ The response has the following body parameters.
      - An info block containing details about the link for the offering.
    * - offerings.\ offering.\ link\. *title*
      - String
-     - The title of the link. Example: ``NEXT GENERATION CLOUD SERVERS``.
+     - The title of the link.
    * - offerings.\ offering.\ link\. *href*
      - String
      - The URL for the link.
    * - offerings.\ offering.\ link\. *rel*
      - String
-     - The relationship between the current document and the linked document.
+     - The relationship between the current information and the linked
+       information.
    * - offerings.\ *link*
      - Object
-     - An info block containing details about the link for the offering.
+     - An info block containing details about the links for the results.
    * - offerings.\ link\. *href*
      - String
-     - The URL for the link.
+     - The URL for a set of results.
    * - offerings.\ link\. *rel*
      - String
-     - The relationship between the current document and the linked document.
+     - The relationship between the current information and the linked
+       information.
 
 **Example response: JSON**
 

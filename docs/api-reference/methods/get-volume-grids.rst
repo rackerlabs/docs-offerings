@@ -32,21 +32,21 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``geo``
+   * - ``{geo}``
      - String *(Required)*
      -
        - ``USA``: United States
        - ``UK``: United Kingdom
        - ``AUS``: Australia
        - ``APAC``: Asia-Pacific
-   * - ``gridType``
+   * - ``{gridType}``
      - String
      -
        - ``STANDARD``: Offers pre-defined discounts based on the length of the
          commitment. By default only ``STANDARD`` grids are returned.
        - ``CUSTOM``: Offers a customized discount based on a customer's
          request.
-   * - ``currency``
+   * - ``{currency}``
      - String
      -
        - ``USD``: United States Dollar
@@ -84,7 +84,7 @@ The response has the following body parameters.
      - An object containing information about the volume grids.
    * - volumeGrids.\ *volumeGrid*
      - Object
-     - An object containing information about an individual volume grid.
+     - An object containing information about a specific volume grid.
    * - volumeGrids.\ volumeGrid.\ *link*
      - Object
      - An info block that contains details about the link for the volume grid.
@@ -96,7 +96,7 @@ The response has the following body parameters.
      - The relationship between the current document and the linked document.
    * - volumeGrids.\ volumeGrid.\ *id*
      - String
-     - The ID for the volume grid. Example: ``STANDARD_USA_ONDEMAND_GRID_001``.
+     - The ID for the volume grid.
    * - volumeGrids.\ volumeGrid.\ *geo*
      - Geographical RegionType
      -
@@ -117,15 +117,13 @@ The response has the following body parameters.
      - The type of grid. By default only ``STANDARD`` grids are returned.
    * - volumeGrids.\ volumeGrid.\ *gridVersion*
      - String
-     - The version of the commit grid. Example: ``1``.
+     - The version of the commit grid.
    * - volumeGrids.\ volumeGrid.\ *gridStartDate*
      - String
-     - The date and time that the commit grid begins. Example:
-       ``2013-05-30-05:00``.
+     - The date and time that the commit grid begins.
    * - volumeGrids.\ volumeGrid.\ *gridEndDate*
      - String
-     - The date and time that the commit grid ends. Example:
-       ``2013-05-30-05:00``.
+     - The date and time that the commit grid ends.
    * - volumeGrids.\ *link*
      - Object
      - An info block that contains details about the link for the volume grids.

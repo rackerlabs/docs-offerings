@@ -48,8 +48,8 @@ Standard commit grid
 ####################
 
 A standard commit grid offers pre-defined discounts based on the length of the
-customer's commitment. Rackspace applies a standard commit grid to a new
-account by default.
+customer's commitment. By default, Rackspace applies a standard commit grid to
+new accounts.
 
 Custom commit grid
 ##################
@@ -57,7 +57,7 @@ Custom commit grid
 A custom commit grid offers customized discounts based on a customer's
 request. A payload for the custom commit grid is created and posted to the
 Offer Service with a unique ID. A customer account that is associated with a
-specific geographic region (such as USA, APAC, AUS, or UK) can have only one
+specific geographic region (such as USA or UK) can have only one
 commit grid applied to it.
 
 .. _concept-volume-grid:
@@ -67,8 +67,8 @@ Volume Grid
 
 A volume grid is a matrix that indicates the discounts that can be applied
 based on the volume of cloud services usage. A volume grid is only used when
-an overflow occurs, such as when a customer exceeds the monthly committed
-maximum amount (``maxAmount``).
+an overflow occurs, such as when a customer exceeds the monthly maximum amount
+(``maxAmount``) that is associated with the commitment.
 
 Rackspace has the following types of volume discount grids:
 
@@ -77,12 +77,12 @@ Standard volume grid
 
 A standard volume grid offers pre-defined discounts based on the volume of
 cloud services usage. If an overflow occurs, Rackspace applies a standard
-commit grid to the account by default.
+volume grid to the account by default.
 
 Custom volume grid
 ##################
 
-A custom commit grid offers customized volume discounts. Custom volume grids
+A custom volume grid offers customized volume discounts. Custom volume grids
 are further classified into the following types:
 
 * **Preset grid**: Offers customized volume discounts.

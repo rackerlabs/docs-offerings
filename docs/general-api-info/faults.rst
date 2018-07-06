@@ -149,6 +149,7 @@ header is not supported.
 
 .. code::
 
-    <notAcceptable code="406" xmlns="https://offer.api.rackspacecloud.com/v2/">
+    <notAcceptable code="406"
+    xmlns="https://offer.api.rackspacecloud.com/v2/">
         <message>The value in the ``Accept`` header is not supported.</message>
     </notAcceptable>

@@ -32,7 +32,7 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``commitGridId``
+   * - ``{commitGridId}``
      - String *(Required)*
      - The ID for the commit grid. Example: ``STANDARD_AUS_COMMIT_GRID_001``.
 
@@ -75,7 +75,7 @@ The response has the following body parameters.
      - An array containing one or more offering codes.
    * - commitGrid.\ offerings.\ offering.\ *offeringCode*
      - String
-     - The code for the offering. Example: ``NXTGEN``.
+     - The code for the offering.
    * - commitGrid.\ *monthlyCommitTiers*
      - Object
      - An info block containing details about any monthly commit tiers.
@@ -138,7 +138,7 @@ The response has the following body parameters.
      - The index that is associated with the tier.
    * - commitGrid.\ *id*
      - String
-     - The ID for the commit grid. Example: ``STANDARD_AUS_COMMIT_GRID_001``.
+     - The ID for the commit grid.
    * - commitGrid.\ *geo*
      - String
      -
@@ -165,12 +165,10 @@ The response has the following body parameters.
      - The version of the commit grid. Example: ``1``.
    * - commitGrid.\ *gridStartDate*
      - String
-     - The date and time that the commit grid begins. Example:
-       ``2013-05-30-05:00``.
+     - The date and time that the commit grid begins.
    * - commitGrid.\ *gridEndDate*
      - String
-     - The date and time that the commit grid ends. Example:
-       ``2013-05-30-05:00``.
+     - The date and time that the commit grid ends.
 
 **Example response: JSON**
 

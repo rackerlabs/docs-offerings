@@ -32,7 +32,7 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``commitGridId``
+   * - ``{commitGridId}``
      - String *(Required)*
      - The ID for the commit grid. Example: ``STANDARD_AUS_COMMIT_GRID_001``.
 
@@ -49,10 +49,11 @@ The request has the following body parameters.
    * - commitDiscountCalculation.\ *commitMonths*
      - Integer *(Required)*
      - The number of months of commitment that are required in order to
-       receive the discount.
+       receive the discount. Example: ``6```.
    * - commitDiscountCalculation.\ *commitUsageAmountPerMonth*
      - String *(Required)*
      - The amount of usage the customer may use during the commitment period.
+       Example: ``8000``.
    * - commitDiscountCalculation.\ *isPrePayOpted*
      - Boolean *(Required)*
      - Whether prepayments are opted.
@@ -90,31 +91,6 @@ XML**
        <ns3:commitUsageAmountPerMonth>8000</ns3:commitUsageAmountPerMonth>
        <ns3:isPrePayOpted>true</ns3:isPrePayOpted>
        <ns3:commitMonths>6</ns3:commitMonths>
-     </ns3:commitDiscountCalculation>
-
-**Example request for a commit discount calculation request with no prepay
-opted: JSON**
-
- .. code::
-
-  {
-    "commitDiscountCalculation": {
-      "commitMonths": 6,
-      "commitUsageAmountPerMonth": "8000",
-      "isPrePayOpted": false
-    }
-  }
-
-**Example request for a commit discount calculation request with no prepay
-opted: XML**
-
-  .. code::
-
-     <?xml version="1.0" encoding="UTF-8"?>
-     <ns3:commitDiscountCalculation xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ns3="http://offer.api.rackspacecloud.com/v2">
-        <ns3:commitUsageAmountPerMonth>8000</ns3:commitUsageAmountPerMonth>
-        <ns3:isPrePayOpted>false</ns3:isPrePayOpted>
-        <ns3:commitMonths>6</ns3:commitMonths>
      </ns3:commitDiscountCalculation>
 
 Response
@@ -189,55 +165,6 @@ The following example shows the XML response for the request.
      <ns3:commitPaymentAmount>45000.00</ns3:commitPaymentAmount>
      <ns3:discountPercent>12.00</ns3:discountPercent>
   </ns3:commitDiscountCalculation>
-
-**Example response to a commit discount calculation request with no prepay
-opted: JSON**
-
-The following example shows the JSON response for the request.
-
-.. code::
-
-   Status Code: 200 OK
-   Content-Length: 4543
-   Content-Type: application/json
-   Date: Wed, 03 Dec 2014 17:13:30 GMT
-   Server: Jetty(8.0.y.z-SNAPSHOT)
-   Via: 1.1 Repose (Repose/2.12)
-   x-compute-request-id: req-7b7ffed2-9b1f-46a8-a478-315518d35387
-
-   {
-      "commitDiscountCalculation": {
-        "commitMonths": 6,
-        "commitPaymentAmountPerMonth": "9000.00",
-        "discountPercent": "12.00",
-        "commitUsageAmountPerMonth": "8000.00",
-        "isPrePayOpted": false
-      }
-    }
-
-**Example response to a commit discount calculation request with no prepay
-opted: XML**
-
-The following example shows the XML response for the request.
-
-.. code::
-
-   Status Code: 200 OK
-   Content-Length: 4543
-   Content-Type: application/json
-   Date: Wed, 03 Dec 2014 17:13:30 GMT
-   Server: Jetty(8.0.y.z-SNAPSHOT)
-   Via: 1.1 Repose (Repose/2.12)
-   x-compute-request-id: req-7b7ffed2-9b1f-46a8-a478-315518d35387
-
-   <?xml version="1.0" encoding="UTF-8"?>
-   <ns3:commitDiscountCalculation xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ns3="http://offer.api.rackspacecloud.com/v2">
-     <ns3:commitUsageAmountPerMonth>8000.00</ns3:commitUsageAmountPerMonth>
-     <ns3:isPrePayOpted>false</ns3:isPrePayOpted>
-     <ns3:commitMonths>6</ns3:commitMonths>
-     <ns3:commitPaymentAmountPerMonth>9000.00</ns3:commitPaymentAmountPerMonth>
-     <ns3:discountPercent>12.00</ns3:discountPercent>
-   </ns3:commitDiscountCalculation>
 
 Response codes
 --------------

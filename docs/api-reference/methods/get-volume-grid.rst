@@ -32,7 +32,7 @@ The request has the following URI and header parameters.
    * - ``Accept``
      - Header string
      - Value: ``application/json`` or ``application/xml``.
-   * - ``volumeGridId``
+   * - ``{volumeGridId}``
      - String *(Required)*
      - The ID for the volume grid. Example: ``STANDARD_USA_ONDEMAND_GRID_001``.
 
@@ -66,8 +66,7 @@ The response has the following body parameters.
      - An object containing information about the volume grid.
    * - volumeGrid.\ *description*
      - String
-     - The description of the volume grid. Example: ``Standard USA On Demand
-       Grid for Commit Discounts``.
+     - The description of the volume grid.
    * - volumeGrid.\ *offerings*
      - Complex type
      - An info block containing details about offerings.
@@ -76,7 +75,7 @@ The response has the following body parameters.
      - An array of offering codes.
    * - volumeGrid.\ offerings.\ offering.\ *offeringCode*
      - String
-     - A code for the offering. Example: ``FSTGEN``.
+     - The code for the offering.
    * - volumeGrid.\ *volumeTiers*
      - Complex type
      - An info block containing details about volume tiers.
@@ -97,7 +96,7 @@ The response has the following body parameters.
      - The index for the tier. This number is used to organize tiers.
    * - volumeGrid.\ *id*
      - String
-     - The ID for the volume grid. Example: ``STANDARD_USA_ONDEMAND_GRID_001``.
+     - The ID for the volume grid.
    * - volumeGrid.\ *geo*
      - String
      -
@@ -121,15 +120,13 @@ The response has the following body parameters.
          request.
    * - volumeGrid.\ *gridVersion*
      - String
-     - The version of the commit grid. Example: ``1``.
+     - The version of the commit grid.
    * - volumeGrid.\ *gridStartDate*
      - String
-     - The date and time that the commit grid begins. Example:
-       ``2013-05-30-05:00``.
+     - The date and time that the commit grid begins.
    * - volumeGrid.\ *gridEndDate*
      - String
-     - The date and time that the commit grid ends. Example:
-       ``2013-05-30-05:00``.
+     - The date and time that the commit grid ends.
 
 **Example response: JSON**
 

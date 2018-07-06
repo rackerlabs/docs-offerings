@@ -50,7 +50,7 @@ expression ``^/v1.0/1234/loadbalancers`` would match the
      - 5 per second
    * - GET
      - ``/v1.0/*``
-     - `^/1.0/.*``
+     - ``^/1.0/.*``
      - 100 per minute
    * - POST
      - ``/v1.0/*``
@@ -62,7 +62,7 @@ expression ``^/v1.0/1234/loadbalancers`` would match the
      - 25 per minute
    * - PUT
      - ``/v1.0/*``
-     - `^/1.0/.*``
+     - ``^/1.0/.*``
      - 5 per second
    * - PUT
      - ``/v1.0/*``
@@ -70,7 +70,7 @@ expression ``^/v1.0/1234/loadbalancers`` would match the
      - 50 per minute
    * - DELETE
      - ``/v1.0/*``
-     - `^/1.0/.*``
+     - ``^/1.0/.*``
      - 2 per second
    * - DELETE
      - ``/v1.0/*``
