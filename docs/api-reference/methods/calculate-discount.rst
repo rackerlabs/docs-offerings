@@ -44,12 +44,12 @@ The request has the following body parameters.
 
    * - commitDiscountCalculation
      - Object *(Required)*
-     - An info block containing information about the commit discount
+     - An info block that contains information about the commit discount
        calculation.
    * - commitDiscountCalculation.\ *commitMonths*
      - Integer *(Required)*
      - The number of months of commitment that are required in order to
-       receive the discount. Example: ``6```.
+       receive the discount. Example: ``6``.
    * - commitDiscountCalculation.\ *commitUsageAmountPerMonth*
      - String *(Required)*
      - The amount of usage the customer may use during the commitment period.
@@ -58,7 +58,7 @@ The request has the following body parameters.
      - Boolean *(Required)*
      - Whether prepayments are opted.
 
-**Example Request: header**
+**Example request: header**
 
 The following example shows the header information.
 
@@ -107,7 +107,8 @@ The response has the following body parameters.
      - Description
    * - commitDiscountCalculation
      - Object
-     - An object containing information about the commit discount calculation.
+     - An object that contains information about the commit discount
+       calculation.
    * - commitDiscountCalculation.\ *commitMonths*
      - Integer
      - The number of months of commitment that are required in order to

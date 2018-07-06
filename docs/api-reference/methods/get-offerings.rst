@@ -52,7 +52,7 @@ The request has the following URI and header parameters.
 
 This operation does not accept a request body.
 
-**Example Request: header**
+**Example request: header**
 
 The following example shows the header information.
 
@@ -80,7 +80,7 @@ The response has the following body parameters.
      - An array of offerings.
    * - offerings.\ *offering*
      - Array
-     - An info block containing details about a specific offering.
+     - An info block that contains details about a specific offering.
    * - offerings.\ *offering*.\ *id*
      - String
      - The universally unique identifier (UUID) for the offering.
@@ -113,7 +113,7 @@ The response has the following body parameters.
        the offering.
    * - offerings.\ offering.\ *link*
      - Object
-     - An info block containing details about the link for the offering.
+     - An info block that contains details about the link for the offering.
    * - offerings.\ offering.\ link\. *title*
      - String
      - The title of the link.
@@ -126,7 +126,7 @@ The response has the following body parameters.
        information.
    * - offerings.\ *link*
      - Object
-     - An info block containing details about the links for the results.
+     - An info block that contains details about the links for the results.
    * - offerings.\ link\. *href*
      - String
      - The URL for a set of results.

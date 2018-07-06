@@ -43,7 +43,7 @@ The request has the following URI and header parameters.
 
 This operation does not accept a request body.
 
-**Example Request: header**
+**Example request: header**
 
 The following example shows the header information.
 
@@ -68,10 +68,10 @@ The response has the following body parameters.
      - Description
    * - currencies
      - Object
-     - An info block containing details about supported currencies.
+     - An info block that contains details about supported currencies.
    * - currencies.\ *currency*
      - Array
-     - An info block containing details about currencies.
+     - An info block that contains details about currencies.
    * - currencies.\ currency.\ *code*
      - String
      -

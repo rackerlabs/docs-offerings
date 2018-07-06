@@ -43,7 +43,7 @@ The request has the following URI and header parameters.
 
 This operation does not accept a request body.
 
-**Example Request: header**
+**Example request: header**
 
 The following example shows the header information.
 
@@ -67,7 +67,7 @@ The response has the following body parameters.
      - Description
    * - product
      - Object
-     - An info block containing details about the product.
+     - An info block that contains details about the product.
    * - product.\ *name*
      - String
      - The name of the product.
@@ -100,7 +100,7 @@ The response has the following body parameters.
      - A collection that provides details specific to pricing for the product.
    * - product.\ productOfferingPrice.\ priceDetails.\ *priceCharacteristic*
      - Array
-     - An array of JSON strings containing a collection of characteristics
+     - An array of JSON strings that contains a collection of characteristics
        that provide additional information about the price. Format is
        ``Characteristic key : Characteristic value``. This element is used to
        accommodate business-defined pricing drivers such as ``serviceLevel``
@@ -111,7 +111,7 @@ The response has the following body parameters.
        see the **Service plan details** table on this page.
    * - product.\ productOfferingPrice.\ priceDetails.\ *prices*
      - Array
-     - An info block containing information about the product prices.
+     - An info block that contains information about the product prices.
    * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ *unitOfMeasure*
      - String
      -
@@ -134,7 +134,7 @@ The response has the following body parameters.
        - ``per 10000 MB``
    * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ *price*
      - Complex type
-     - An info block containing information about a price.
+     - An info block that contains information about a price.
    * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ price.\ *amount*
      - String
      - The price of the product.
@@ -143,12 +143,11 @@ The response has the following body parameters.
      - The monetary currency that is associated with the price.
    * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ price.\ *geo*
      - String
-     - The geography that is associated with the price.
+     - The geographic region that is associated with the price.
    * - product.\ *productCharacteristic*
      - Array
      - An array of key-value pairs that contains info on the operating system
-       and flavor that are associated with the product. Format is
-       ``Characteristic key : Characteristic value``. This information is
+       and flavor that are associated with the product. This information is
        primarily used to configure information from external applications that
        drive product and pricing. Example: ``"name": "flavor_id", "value":"performance2-30"``.
    * - product.\ *status*

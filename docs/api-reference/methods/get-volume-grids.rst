@@ -43,7 +43,7 @@ The request has the following URI and header parameters.
      - String
      -
        - ``STANDARD``: Offers pre-defined discounts based on the length of the
-         commitment. By default only ``STANDARD`` grids are returned.
+         commitment. By default, only ``STANDARD`` grids are returned.
        - ``CUSTOM``: Offers a customized discount based on a customer's
          request.
    * - ``{currency}``
@@ -56,7 +56,7 @@ The request has the following URI and header parameters.
 
 This operation does not accept a request body.
 
-**Example Request: header**
+**Example request: header**
 
 The following example shows the header information.
 
@@ -81,10 +81,10 @@ The response has the following body parameters.
      - Description
    * - volumeGrids
      - Object
-     - An object containing information about the volume grids.
+     - An object that contains information about the volume grids.
    * - volumeGrids.\ *volumeGrid*
      - Object
-     - An object containing information about a specific volume grid.
+     - An object that contains information about a specific volume grid.
    * - volumeGrids.\ volumeGrid.\ *link*
      - Object
      - An info block that contains details about the link for the volume grid.
@@ -111,19 +111,18 @@ The response has the following body parameters.
        - ``GBP``: British Pound Sterling
        - ``AUD``: Australian Dollar
        - ``EUR``: Euro
-       - ``HKD``: Hong Kong Dollar
    * - volumeGrids.\ volumeGrid.\ *gridType*
      - String
-     - The type of grid. By default only ``STANDARD`` grids are returned.
+     - The type of grid. By default, only ``STANDARD`` grids are returned.
    * - volumeGrids.\ volumeGrid.\ *gridVersion*
      - String
-     - The version of the commit grid.
+     - The version of the volume grid.
    * - volumeGrids.\ volumeGrid.\ *gridStartDate*
      - String
-     - The date and time that the commit grid begins.
+     - The date and time that the volume grid begins.
    * - volumeGrids.\ volumeGrid.\ *gridEndDate*
      - String
-     - The date and time that the commit grid ends.
+     - The date and time that the volume grid ends.
    * - volumeGrids.\ *link*
      - Object
      - An info block that contains details about the link for the volume grids.

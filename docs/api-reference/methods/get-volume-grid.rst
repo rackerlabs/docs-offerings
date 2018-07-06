@@ -38,7 +38,7 @@ The request has the following URI and header parameters.
 
 This operation does not accept a request body.
 
-**Example Request: header**
+**Example request: header**
 
 The following example shows the header information.
 
@@ -63,13 +63,13 @@ The response has the following body parameters.
      - Description
    * - volumeGrid
      - Object
-     - An object containing information about the volume grid.
+     - An object that contains information about the volume grid.
    * - volumeGrid.\ *description*
      - String
      - The description of the volume grid.
    * - volumeGrid.\ *offerings*
      - Complex type
-     - An info block containing details about offerings.
+     - An info block that contains details about offerings.
    * - volumeGrid.\ offerings.\ *offering*
      - Array
      - An array of offering codes.
@@ -78,10 +78,10 @@ The response has the following body parameters.
      - The code for the offering.
    * - volumeGrid.\ *volumeTiers*
      - Complex type
-     - An info block containing details about volume tiers.
+     - An info block that contains details about volume tiers.
    * - volumeGrid.\ volumeTiers.\ *volumeTier*
      - Complex type
-     - An info block containing details about a volume tier.
+     - An info block that contains details about a volume tier.
    * - volumeGrid.\ volumeTiers.\ volumeTier.\ *minAmount*
      - String
      - The minimum amount of the discount.
@@ -115,18 +115,18 @@ The response has the following body parameters.
      - String
      -
        - ``STANDARD``: Offers pre-defined discounts based on the length of the
-         commitment. By default only ``STANDARD`` grids are returned.
+         commitment. By default, only ``STANDARD`` grids are returned.
        - ``CUSTOM``: Offers a customized discount based on a customer's
          request.
    * - volumeGrid.\ *gridVersion*
      - String
-     - The version of the commit grid.
+     - The version of the volume grid.
    * - volumeGrid.\ *gridStartDate*
      - String
-     - The date and time that the commit grid begins.
+     - The date and time that the volume grid begins.
    * - volumeGrid.\ *gridEndDate*
      - String
-     - The date and time that the commit grid ends.
+     - The date and time that the volume grid ends.
 
 **Example response: JSON**
 

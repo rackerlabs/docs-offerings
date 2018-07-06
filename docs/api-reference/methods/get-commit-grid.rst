@@ -38,7 +38,7 @@ The request has the following URI and header parameters.
 
 This operation does not accept a request body.
 
-**Example Request: header**
+**Example request: header**
 
 The following example shows the header information.
 
@@ -63,28 +63,28 @@ The response has the following body parameters.
      - Description
    * - commitGrid
      - Object
-     - An object containing information about the commit grid.
+     - An object that contains information about the commit grid.
    * - commitGrid.\ *description*
      - String
      - A description of the commit grid.
    * - commitGrid.\ *offerings*
      - Object
-     - An object containing one or more offerings.
+     - An object that contains one or more offerings.
    * - commitGrid.\ offerings.\ *offering*
      - Array
-     - An array containing one or more offering codes.
+     - An array that contains one or more offering codes.
    * - commitGrid.\ offerings.\ offering.\ *offeringCode*
      - String
      - The code for the offering.
    * - commitGrid.\ *monthlyCommitTiers*
      - Object
-     - An info block containing details about any monthly commit tiers.
+     - An info block that contains details about any monthly commit tiers.
    * - commitGrid.\ monthlyCommitTiers.\ *commitTier*
      - Object
-     - An info block containing details about the commit tier.
+     - An info block that contains details about the commit tier.
    * - commitGrid.\ monthlyCommitTiers.\ commitTier.\ *commitTierItem*
      - Array
-     - An info block containing options for the commit tier.
+     - An info block that contains options for the commit tier.
    * - commitGrid.\ monthlyCommitTiers.\ commitTier.\ commitTierItem.\
        *tenureInMonths*
      - Integer
@@ -108,13 +108,13 @@ The response has the following body parameters.
      - The index that is associated with the tier.
    * - commitGrid.\ *prepayCommitTiers*
      - Object
-     - An info block containing details about any prepay commit tiers.
+     - An info block that contains details about any prepay commit tiers.
    * - commitGrid.\ prepayCommitTiers.\ *commitTier*
      - Object
-     - An info block containing details about the commit tier.
+     - An info block that contains details about the commit tier.
    * - commitGrid.\ prepayCommitTiers.\ commitTier.\ *commitTierItem*
      - Array
-     - An info block containing options for the commit tier.
+     - An info block that contains options for the commit tier.
    * - commitGrid.\ prepayCommitTiers.\ commitTier.\ commitTierItem.\
        *tenureInMonths*
      - Integer
@@ -157,7 +157,7 @@ The response has the following body parameters.
      - String
      -
        - ``STANDARD``: Offers pre-defined discounts based on the length of the
-         commitment. By default only ``STANDARD`` grids are returned.
+         commitment. By default, only ``STANDARD`` grids are returned.
        - ``CUSTOM``: Offers a customized discount based on a customer's
          request.
    * - commitGrid.\ *gridVersion*

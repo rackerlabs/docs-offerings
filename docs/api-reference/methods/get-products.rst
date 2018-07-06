@@ -94,7 +94,7 @@ The request has the following URI and header parameters.
 
 This operation does not accept a request body.
 
-**Example Request: header**
+**Example request: header**
 
 The following example shows the header information.
 
@@ -121,7 +121,7 @@ The response has the following body parameters.
      - An array of products.
    * - products.\ *product*
      - Array
-     - An info block containing details about a specific product.
+     - An info block that contains details about a specific product.
    * - products.\ product.\ *productOfferingPrice*
      - Complex type
      - Provides pricing information specific to a product in an offering
@@ -132,7 +132,7 @@ The response has the following body parameters.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\
        *priceCharacteristic*
      - Array
-     - An array of JSON strings containing a collection of characteristics
+     - An array of JSON strings that contains a collection of characteristics
        that provide additional information about the price. Format is
        ``Characteristic key : Characteristic value``. This element is used to
        accommodate business-defined pricing drivers such as ``serviceLevel``
@@ -142,11 +142,11 @@ The response has the following body parameters.
        pricing qualifiers are present where applicable. For more information, see the **Service plan details** table on this page.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ *prices*
      - Array
-     - An info block containing information about prices for the product.
+     - An info block that contains information about prices for the product.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\
        prices.\ *price*
      - Complex type
-     - An info block containing information about a price for the product.
+     - An info block that contains information about a price for the product.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
        price.\ *amount*
      - String
@@ -208,8 +208,7 @@ The response has the following body parameters.
    * - products.\ product.\ *productCharacteristic*
      - String
      - An array of key-value pairs that contains info on the operating system
-       and flavor that are associated with the product. Format is
-       ``Characteristic key : Characteristic value``. This information is
+       and flavor that are associated with the product. This information is
        primarily used to configure information from external applications that
        drive product and pricing.
        Example: ``"name": "flavor_id", "value":"performance2-30"``.
