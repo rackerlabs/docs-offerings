@@ -34,13 +34,20 @@ integer. The fault wraps validation errors.
 
 .. code::
 
-    <badRequest xmlns="https://offer.api.rackspacecloud.com/v2/" code="400">
-        <message>Validation fault</message>
-        <details>The object is not valid</details>
-            <validationErrors>
-                <message>Node IP is invalid. Please specify a valid IP.</message>
-            </validationErrors>
-    </badRequest>
+    {
+      "badRequest": {
+        "message": "Resource Not Found",
+        "category": "example",
+        "referenceCode": "afsgghasgahs12",
+        "details": [
+          {
+            "faultCode": "REQUIRED",
+            "resourceProperty": "resourceProperty0",
+            "resourceName": "resourceName0"
+          }
+        ]
+      }
+    }
 
 .. _faults-serviceunavailable:
 

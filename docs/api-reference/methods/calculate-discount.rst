@@ -28,10 +28,10 @@ The request has the following URI and header parameters.
      - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``{commitGridId}``
      - String *(Required)*
      - The ID for the commit grid. Example: ``STANDARD_AUS_COMMIT_GRID_001``.
@@ -68,8 +68,7 @@ The following example shows the header information.
   Content-Type: application/json
   Accept: application/json
 
-**Example request for a commit discount calculation request with prepay opted:
-JSON**
+**Example request for a commit discount calculation request with prepay opted**
 
  .. code::
 
@@ -80,18 +79,6 @@ JSON**
        "isPrePayOpted": true
      }
    }
-
-**Example request for a commit discount calculation request with prepay opted:
-XML**
-
- .. code::
-
-   <?xml version="1.0" encoding="UTF-8"?>
-     <ns3:commitDiscountCalculation xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ns3="http://offer.api.rackspacecloud.com/v2">
-       <ns3:commitUsageAmountPerMonth>8000</ns3:commitUsageAmountPerMonth>
-       <ns3:isPrePayOpted>true</ns3:isPrePayOpted>
-       <ns3:commitMonths>6</ns3:commitMonths>
-     </ns3:commitDiscountCalculation>
 
 Response
 --------
@@ -126,10 +113,9 @@ The response has the following body parameters.
      - Boolean
      - Whether prepayments are opted.
 
-**Example response to a commit discount calculation request with prepay opted:
-JSON**
+**Example response to a commit discount calculation request with prepay opted**
 
-The following example shows the JSON response for the request.
+The following example shows the response for the request.
 
 .. code::
 
@@ -150,22 +136,6 @@ The following example shows the JSON response for the request.
       "isPrePayOpted": true
     }
   }
-
-**Example response to a commit discount calculation request with prepay opted:
-XML**
-
-The following example shows the XML response for the request.
-
-.. code::
-
-  <?xml version="1.0" encoding="UTF-8"?>
-  <ns3:commitDiscountCalculation xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ns3="http://offer.api.rackspacecloud.com/v2">
-     <ns3:commitUsageAmountPerMonth>80000.00</ns3:commitUsageAmountPerMonth>
-     <ns3:isPrePayOpted>true</ns3:isPrePayOpted>
-     <ns3:commitMonths>6</ns3:commitMonths>
-     <ns3:commitPaymentAmount>45000.00</ns3:commitPaymentAmount>
-     <ns3:discountPercent>12.00</ns3:discountPercent>
-  </ns3:commitDiscountCalculation>
 
 Response codes
 --------------

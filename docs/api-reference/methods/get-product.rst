@@ -28,10 +28,10 @@ The request has the following URI and header parameters.
      - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``{offeringId}``
      - String *(Required)*
      - The ID for the offering. Example:
@@ -182,9 +182,9 @@ associated with each Rackspace service plan.
     - Managed
     - DevOps
 
-**Example response: JSON**
+**Example response**
 
-The following example shows the JSON response for the request.
+The following example shows the response for the request.
 
 .. code::
 
@@ -308,56 +308,6 @@ The following example shows the JSON response for the request.
       }
   }
 
-**Example response: XML**
-
-The following example shows the XML response for the request.
-
-.. code::
-
-  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <osl:product productCode="UPTIME_HIGH_IO_2_WIN_30720MB"
-      status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91" xmlns:osl="http://offer.api.rackspacecloud.com/v2"
-      xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ns4="http://docs.openstack.org/common/api/v1.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <osl:name>Windows - 30720 MB High Performance I/O 2 Server Instance</osl:name>
-      <osl:description>Windows - 30720 MB High Performance I/O 2 Server Instance</osl:description>
-      <osl:productOfferingPrice priceType="Usage">
-          <osl:priceDetails>
-              <osl:priceCharacteristic name="serviceLevel"
-                  value="MANAGED" />
-              <osl:priceCharacteristic name="serviceType"
-                  value="LEGACY" />
-              <osl:priceCharacteristic name="chargeType"
-                  value="INFRASTRUCTURE" />
-              <osl:prices>
-                  <osl:unitOfMeasure>per Hour</osl:unitOfMeasure>
-                  <osl:price amount="1.480" currency="GBP" geo="UK" />
-                  <osl:price amount="2.000" currency="USD" geo="USA" />
-                  <osl:price amount="2.000" currency="USD" geo="APAC" />
-                  <osl:price amount="2.000" currency="USD" geo="AUS" />
-              </osl:prices>
-          </osl:priceDetails>
-          <osl:priceDetails>
-              <osl:priceCharacteristic name="serviceLevel"
-                  value="INFRASTRUCTURE" />
-              <osl:priceCharacteristic name="serviceType"
-                  value="LEGACY" />
-              <osl:priceCharacteristic name="chargeType"
-                  value="INFRASTRUCTURE" />
-              <osl:prices>
-                  <osl:unitOfMeasure>per Hour</osl:unitOfMeasure>
-                  <osl:price amount="1.600" currency="GBP" geo="UK" />
-                  <osl:price amount="1.600" currency="USD" geo="USA" />
-                  <osl:price amount="1.600" currency="USD" geo="APAC" />
-                  <osl:price amount="1.600" currency="USD" geo="AUS" />
-              </osl:prices>
-          </osl:priceDetails>
-      </osl:productOfferingPrice>
-      <osl:productCharacteristic name="os_type"
-          value="windows" />
-      <osl:productCharacteristic name="FLAVOR_ID"
-          value="performance2-30" />
-  </osl:product>
 
 Response codes
 --------------

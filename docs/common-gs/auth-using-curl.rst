@@ -152,7 +152,7 @@ request, prefix the variable name with a ``$``, for example ``$ENDPOINT``.
    ``publicURL`` value for the |api-service|, version, and region that you want
    to access.
 
-   This example shows the endpoints that are available for the |api-service|.
+   The following response section shows example endpoints only.
 
    .. include:: ../common-gs/samples/service-catalog-endpoint.rst
 

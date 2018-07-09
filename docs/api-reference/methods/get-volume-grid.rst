@@ -28,10 +28,10 @@ The request has the following URI and header parameters.
      - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``{volumeGridId}``
      - String *(Required)*
      - The ID for the volume grid. Example: ``STANDARD_USA_ONDEMAND_GRID_001``.
@@ -128,9 +128,9 @@ The response has the following body parameters.
      - String
      - The date and time that the volume grid ends.
 
-**Example response: JSON**
+**Example response**
 
-The following example shows the JSON response for the request.
+The following example shows the response for the request.
 
 .. code::
 
@@ -215,31 +215,6 @@ The following example shows the JSON response for the request.
       }
     }
 
-**Example response: XML**
-
-The following example shows the XML response for the request.
-
-.. code::
-
-  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-  <ns2:volumeGrid id="USACOMPUTECOMMITSTANDARDGRID_001" geo="USA" currency="USD"
-    gridType="STANDARD" gridVersion="1" gridStartDate="2002-09-24-06:00" gridEndDate="2002-09-24-06:00" xmlns:ns2="http://offer.api.rackspacecloud.com/v2">
-    <ns2:description>Standard US Volume Grid</ns2:description>
-    <ns2:offerings>
-        <ns2:offering offeringCode="NXTGEN" />
-        <ns2:offering offeringCode="MNXTGEN"/>
-        <ns2:offering offeringCode="FSTGEN"/>
-        <ns2:offering offeringCode="MFSTGEN"/>
-    </ns2:offerings>
-    <ns2:volumeTiers>
-        <ns2:volumeTier minAmount="0" maxAmount="5000" discountPercentage="12.00" tierIndex="1"/>
-        <ns2:volumeTier minAmount="5001" maxAmount="10000" discountPercentage="14.00" tierIndex="2"/>
-        <ns2:volumeTier minAmount="10001" maxAmount="25000" discountPercentage="16.00" tierIndex="3"/>
-        <ns2:volumeTier minAmount="25001" maxAmount="50000" discountPercentage="18.00" tierIndex="4"/>
-        <ns2:volumeTier minAmount="50001" maxAmount="100000" discountPercentage="20.00" tierIndex="5"/>
-        <ns2:volumeTier minAmount="100001" maxAmount="200000" discountPercentage="22.00" tierIndex="6"/>
-    </ns2:volumeTiers>
-  </ns2:volumeGrid>
 
 Response codes
 --------------

@@ -3,7 +3,7 @@ Service Access/Endpoints
 ========================
 
 Specify a region to operate against by selecting an endpoint from the
-table below to use for your Cloud Load Balancer API calls.
+table below to use for your Offer API calls.
 
 .. tip::
    To help you decide which regionalized endpoint to use, read about
@@ -30,7 +30,7 @@ Sydney (SYD)
 Hong Kong (HKG)
 ``https://hkg.loadbalancers.api.rackspacecloud.com/v1.0/``\ *``1234``*/
 
-**Since you are load balancing Cloud Servers** in this guide, you can
+**Because you are load balancing Cloud Servers** in this guide, you can
 determine the appropriate endpoint to select by viewing your Cloud
 Servers list and creating a load balancer within the same region as the
 datacenter in which your Cloud Server resides. When your resources

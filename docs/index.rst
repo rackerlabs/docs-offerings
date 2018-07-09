@@ -19,7 +19,7 @@ familiar with the following technologies:
 
 * RESTful web services
 * HTTP/1.1
-* JSON or XML serialization formats
+* JSON serialization formats
 
 Use the following links to jump directly to user and reference information for
 the |product name| service REST API:
@@ -42,7 +42,6 @@ the |product name| service REST API:
    getting-started/index
    general-api-info/index
    api-reference/index
-   release-notes/index
    service-updates
    additional-resources
    disclaimer

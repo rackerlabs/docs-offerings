@@ -28,10 +28,10 @@ The request has the following URI and header parameters.
      - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``{limit}``
      - String
      - The maximum number of items to return. This value should be ``100`` or
@@ -99,9 +99,9 @@ The response has the following body parameters.
      - The relationship between the current information and the linked
        information.
 
-**Example response: JSON**
+**Example response**
 
-The following example shows the JSON response for the request.
+The following example shows the response for the request.
 
 .. code::
 
@@ -160,23 +160,6 @@ The following example shows the JSON response for the request.
         }
       }
 
-**Example response: XML**
-
-The following example shows the XML response for the request.
-
-.. code::
-
-  <?xml version="1.0" encoding="UTF-8"?>
-  <tns:currencies xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:atom="http://www.w3.org/2005/Atom"
-    xmlns:tns="http://offer.api.rackspacecloud.com/v2">
-      <tns:currency code="AUD" description="Australian Dollar" symbol="\u0041\u0024" subDivision="cents"/>
-      <tns:currency code="EUR" description="Euro" symbol="\u20AC" subDivision="cents"/>
-      <tns:currency code="HKD" description="Hong Kong Dollar" symbol="\u0048\u004B\u0024" subDivision="cents"/>
-      <tns:currency code="USD" description="US Dollar" symbol="\u0024" subDivision="cents"/>
-      <tns:currency code="GBP" description="Pound Sterling" symbol="\u00A3" subDivision="pence"/>
-      <atom:link href="http://offer.api.rackspacecloud.com/v2/currencies" rel="previous" />
-  </tns:currencies>
 
 Response codes
 --------------

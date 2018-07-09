@@ -29,10 +29,10 @@ The request has the following URI and header parameters.
      - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``{offeringId}``
      - String *(Required)*
      - The ID for the offering. Example:
@@ -257,9 +257,9 @@ associated with each Rackspace service plan.
    - Managed
    - DevOps
 
-**Example response: JSON**
+**Example response**
 
-The following example shows the JSON response for the request.
+The following example shows the response for the request.
 
 .. code::
 
@@ -343,38 +343,6 @@ The following example shows the JSON response for the request.
       }
     }
 
-**Example response: XML**
-
-The following example shows the XML response for the request.
-
-.. code::
-
-  <?xml version="1.0" encoding="UTF-8"?>
-  <ns3:products xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ns3="http://offer.api.rackspacecloud.com/v2">
-     <ns3:product id="046b6c7f-0b8a-43b9-b35d-6489e6daee91"
-          productCode="UPTIME_HIGH_IO_2_WIN_30720MB" status="ACTIVE">
-          <ns3:name>Windows - 30720 MB High Performance I/O 2 Server Instance</ns3:name>
-          <ns3:description>Windows - 30720 MB High Performance I/O 2 Server Instance</ns3:description>
-          <ns3:productOfferingPrice priceType="Usage">
-               <ns3:priceDetails>
-                    <ns3:priceCharacteristic name="serviceType" value="INFRASTRUCTURE"/>
-                    <ns3:priceCharacteristic name="serviceLevel" value="LEGACY"/>
-                    <ns3:priceCharacteristic name="chargeType" value="INFRASTRUCTURE"/>
-                    <ns3:prices>
-                         <ns3:unitOfMeasure>per Hour</ns3:unitOfMeasure>
-                         <ns3:price amount="1.6" currency="USD" geo="USA"/>
-                    </ns3:prices>
-               </ns3:priceDetails>
-          </ns3:productOfferingPrice>
-          <ns3:productCharacteristic name="os_type" value="windows"/>
-          <ns3:productCharacteristic name="flavor_id" value="performance2-30"/>
-          <ns3:productCharacteristic name="class" value="performance2"/>
-     </ns3:product>
-     <atom:link
-          href="http://offer.api.rackspacecloud.com/v2/offerings/046b6c7f/products?marker=4&amp;amp;limit=3" rel="prev"/>
-     <atom:link
-          href="http://offer.api.rackspacecloud.com/v2/offerings/046b6c7f/products?marker=4&amp;amp;limit=3" rel="next"/>
-  </ns3:products>
 
 Response codes
 --------------

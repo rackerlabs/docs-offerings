@@ -26,3 +26,4 @@ to interact directly with the service.
    discount-grid-methods
    offering-methods
    product-methods
+   responses-by-product/index

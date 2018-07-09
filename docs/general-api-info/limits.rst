@@ -161,23 +161,6 @@ Possible error response codes for these operations are ``loadbalancerFault
 
 These operations do not require a request body.
 
-**Example: Retrieve rate limits: XML response**
-
-.. code::
-
-    <limits xmlns="http://docs.openstack.org/common/api/v1.0">
-        <rates>
-            <rate uri="/v1.0/*" regex="^/1.0/.*">
-                <limit
-                    verb="GET"
-                    value="600000"
-                    remaining="426852"
-                    unit="HOUR"
-                    next-available="2011-02-22T19:32:43.835Z"/>
-            </rate>
-        </rates>
-    </limits>
-
 **Example: Retrieve rate limits: JSON response**
 
 .. code::
@@ -203,20 +186,6 @@ These operations do not require a request body.
             }
         }
     }
-
-**Example: Retrieve absolute limits: XML response**
-
-.. code::
-
-    <limits xmlns="http://docs.openstack.org/loadbalancers/api/v1.0">
-        <absolute>
-            <limit name="IPV6_LIMIT" value="25"/>
-            <limit name="LOADBALANCER_LIMIT" value="25"/>
-            <limit name="BATCH_DELETE_LIMIT" value="10"/>
-            <limit name="ACCESS_LIST_LIMIT" value="100"/>
-            <limit name="NODE_LIMIT" value="25"/>
-        </absolute>
-    </limits>
 
 **Example: Retrieve absolute limits: JSON response**
 

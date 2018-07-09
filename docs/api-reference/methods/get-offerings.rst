@@ -29,10 +29,10 @@ The request has the following URI and header parameters.
      - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``{lineOfBusiness}``
      - String
      - The Rackspace line of business that is associated with the offering.
@@ -135,9 +135,9 @@ The response has the following body parameters.
      - The relationship between the current information and the linked
        information.
 
-**Example response: JSON**
+**Example response**
 
-The following example shows the JSON response for the request.
+The following example shows the response for the request.
 
 .. code::
 
@@ -436,179 +436,6 @@ The following example shows the JSON response for the request.
     }
    }
 
-**Example response: XML**
-
-The following example shows the XML response for the request.
-
-.. code::
-
-  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-  <ns2:offerings xmlns:ns2="http://offer.api.rackspacecloud.com/v2"
-     xmlns:ns3="http://www.w3.org/2005/Atom">
-     <ns2:offering status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>NXTGEN</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>NEXT GENERATION CLOUD SERVERS</ns2:name>
-      <ns2:description>NEXT GENERATION CLOUD SERVERS</ns2:description>
-      <ns2:lineOfBusinesses>
-         <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-         <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="NEXT GENERATION CLOUD SERVERS" href="https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products"
-         rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>DBAAS</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>CLOUD DATABASES</ns2:name>
-      <ns2:description>CLOUD DATABASES</ns2:description>
-      <ns2:lineOfBusinesses>
-       <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-       <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="CLOUD DATABASES" href="https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products"
-         rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>MAAS</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>CLOUD MONITORING</ns2:name>
-      <ns2:description>CLOUD MONITORING</ns2:description>
-      <ns2:lineOfBusinesses>
-       <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-       <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="CLOUD MONITORING" href="https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products"
-         rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>CBS</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>CLOUD BLOCK STORAGE</ns2:name>
-      <ns2:description>CLOUD BLOCK STORAGE</ns2:description>
-      <ns2:lineOfBusinesses>
-       <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-       <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="CLOUD BLOCK STORAGE"
-         href="https://offer.api.rackspacecloud.com/v1/offerings/16" rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>CBCKUP</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>CLOUD BACKUP</ns2:name>
-      <ns2:description>CLOUD BACKUP</ns2:description>
-      <ns2:lineOfBusinesses>
-       <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-       <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="CLOUD BACKUP" href="https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products"
-         rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>FSTGEN</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>FIRST GENERATION CLOUD SERVERS</ns2:name>
-      <ns2:description>FIRST GENERATION CLOUD SERVERS</ns2:description>
-      <ns2:lineOfBusinesses>
-       <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-       <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="FIRST GENERATION CLOUD SERVERS"
-         href="https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products" rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>LBAAS</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>CLOUD LOAD BALANCER</ns2:name>
-      <ns2:description>CLOUD LOAD BALANCER</ns2:description>
-      <ns2:lineOfBusinesses>
-       <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-       <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="CLOUD LOAD BALANCER"
-         href="https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products" rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="986b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>LBAAS2.0</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>CLOUD LOAD BALANCER 2.0</ns2:name>
-      <ns2:description>CLOUD LOAD BALANCER 2.0</ns2:description>
-      <ns2:lineOfBusinesses>
-          <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-          <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="CLOUD LOAD BALANCER 2.0"
-         href="https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products" rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>CFILES</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>CLOUD FILES</ns2:name>
-      <ns2:description>CLOUD FILES</ns2:description>
-      <ns2:lineOfBusinesses>
-       <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-       <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="CLOUD FILES" href="https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products"
-         rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>CSITES</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>CLOUD SITES</ns2:name>
-      <ns2:description>CLOUD SITES</ns2:description>
-      <ns2:lineOfBusinesses>
-         <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-         <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="CLOUD SITES" href="https://test.offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products"
-         rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>CLOUDBIGDATA</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>BIG DATA (HADOOP AS A SERVICE)</ns2:name>
-      <ns2:description>BIG DATA (HADOOP AS A SERVICE)</ns2:description>
-      <ns2:lineOfBusinesses>
-         <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-         <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="BIG DATA (HADOOP AS A SERVICE)" href="https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products"
-         rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="046b6c7f-0b8a-43b9-b35d-6489e6daee91">
-      <ns2:offeringCode>NEWTON</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>Newton</ns2:name>
-      <ns2:description>Newton</ns2:description>
-      <ns2:lineOfBusinesses>
-         <ns2:lineOfBusiness>DEDICATED</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="Newton" href="https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products"
-         rel="self"/>
-   </ns2:offering>
-   <ns2:offering status="ACTIVE" id="28">
-      <ns2:offeringCode>CLOUDQUEUES</ns2:offeringCode>
-      <ns2:offeringVersion>1</ns2:offeringVersion>
-      <ns2:name>CLOUD QUEUES</ns2:name>
-      <ns2:description>CLOUD QUEUES</ns2:description>
-      <ns2:lineOfBusinesses>
-       <ns2:lineOfBusiness>US_CLOUD</ns2:lineOfBusiness>
-       <ns2:lineOfBusiness>UK_CLOUD</ns2:lineOfBusiness>
-      </ns2:lineOfBusinesses>
-      <ns3:link title="CLOUD QUEUES" href="https://dev.offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products"
-         rel="self"/>
-   </ns2:offering>
-   <ns3:link href="https://offer.api.rackspacecloud.com/v1/offerings?marker=0&amp;limit=100"
-      rel="self"/>
-   <ns3:link href="https://offer.api.rackspacecloud.com/v1/offerings?marker=0&amp;limit=100"
-      rel="self"/>
-   <ns3:link href="https://offer.api.rackspacecloud.com/v1/offerings?marker=0&amp;limit=100"
-      rel="last"/>
-   <ns3:link href="https://offer.api.rackspacecloud.com/v1/offerings?marker=0&amp;limit=100"
-      rel="first"/>
-  </ns2:offerings>
 
 Response codes
 --------------

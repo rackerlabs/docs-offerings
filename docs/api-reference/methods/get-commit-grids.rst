@@ -28,10 +28,10 @@ The request has the following URI and header parameters.
      - A valid authentication token.
    * - ``Content-type``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``Accept``
      - Header string
-     - Value: ``application/json`` or ``application/xml``.
+     - Value: ``application/json``.
    * - ``{geo}``
      - String *(Required)*
      -
@@ -137,9 +137,9 @@ The response has the following body parameters.
      - The relationship between the current information and the linked
        information.
 
-**Example response: JSON**
+**Example response**
 
-The following example shows the JSON response for the request.
+The following example shows the response for the request.
 
 .. code::
 
@@ -206,31 +206,6 @@ The following example shows the JSON response for the request.
         }
       }
 
-**Example response: XML**
-
-The following example shows the XML response for the request.
-
-.. code::
-
-  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-  <tns:commitGrids xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:atom="http://www.w3.org/2005/Atom"
-    xmlns:tns="http://offer.api.rackspacecloud.com/v2">
-    <tns:commitGrid id="USACOMPUTECOMMITSTANDARDGRID_001" geo="geo0" currency="USD" gridType="STANDARD" gridVersion="1" gridStartDate="2006-05-04"
-        gridEndDate="2006-05-04">
-        <atom:link href="https://offer.api.rackspacecloud.com/v1/discountGrids/commitGrids/A0001" rel="self"/>
-    </tns:commitGrid>
-    <tns:commitGrid id="id1" geo="geo1" currency="currency1" gridType="STANDARD" gridVersion="gridVersion1" gridStartDate="2006-05-04"
-        gridEndDate="2006-05-04">
-        <atom:link href="https://offer.api.rackspacecloud.com/v1/discountGrids/commitGrids/A0001" rel="self"/>
-    </tns:commitGrid>
-    <atom:link
-        href="https://offer.api.rackspacecloud.com/v1/discountGrids/commitGrids?marker=0&amp;limit=100"
-        rel="next"/>
-    <atom:link
-        href="https://offer.api.rackspacecloud.com/v1/discountGrids/commitGrids?marker=0&amp;limit=100"
-        rel="prev"/>
-  </tns:commitGrids>
 
 Response codes
 --------------

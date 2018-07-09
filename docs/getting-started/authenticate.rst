@@ -23,7 +23,7 @@ UK-based accounts authenticate through the following endpoint:
 
 .. code::
 
-       https://lon.identity.api.rackspacecloud.com/v2.0/.
+       https://lon.identity.api.rackspacecloud.com/v2.0/
 
 Your account may be based in either the US or the UK. The location that is
 associated with your account is not determined by your physical location but

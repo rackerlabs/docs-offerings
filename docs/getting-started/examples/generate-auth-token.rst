@@ -1,19 +1,17 @@
 ================================
-Generate an Authentication Token
+Generate an authentication token
 ================================
 
 You need to generate a token whether you use cURL or a ReST client.
 
 In order to use the ReST API, you will first need to obtain an
-authentication token, which will need to be passed in for each request
+authentication token, which must be passed in for each request by
 using the ``X-Auth-Token`` header.
 
 The following example demonstrates how to use cURL to obtain the
-authentication token and the account number. You will need to supply the
-authentication token and account number when making subsequent Cloud
-Load Balancer API calls.
+authentication token. You will need to supply the authentication token when making subsequent Offer API calls.
 
-Remember to replace the names in the Authenticate Request examples below
+Remember to replace the names in the authenticate request examples below
 with their respective values:
 
 -  **your\_username** — The username is your common Rackspace Cloud
@@ -28,15 +26,15 @@ with their respective values:
    #. On the upper-right side of the top navigation pane, click your
       username.
 
-   #. From the menu, select Account Settings.
+   #. From the menu, select **Account Settings**.
 
-   #. In the Login Details section of the Account Settings page, locate
-      the API Key field and click Show.
+   #. In the **Login Details** section of the **Account Settings** page, locate
+      the **API Key** field and click **Show**.
 
    #. Copy the value of the API Key and paste it into a text editor of
       your choice.
 
-   #. Click Hide to hide the value of the API Key. 
+   #. Click **Hide** to hide the value of the API Key. 
 
    You also need your cloud account number. In the documentation, the
    account number is often referred to as your tenant name or tenant ID
@@ -54,8 +52,8 @@ regardless of US or UK identities:
 
 -  https://identity.api.rackspacecloud.com/v2.0/
 
-Your account may be based in either the US or the UK; this is not
-determined by your physical location but by the location of the
+Your account may be based in either the US or the UK. This is not
+determined by your physical location, but by the location of the
 Rackspace retail site which was used to create your account:
 
 -  If your account was created via http://www.rackspacecloud.com, it is
@@ -64,14 +62,14 @@ Rackspace retail site which was used to create your account:
 -  If your account was created via http://www.rackspace.co.uk, it is a
    UK-based account.
 
-Notice that you authenticate using a special URL for Cloud
+Notice that you authenticate by using a special URL for Cloud
 authentication services. For example, you may use
 ``https://identity.api.rackspacecloud.com/v2.0/tokens``, as shown in the
 following Authenticate Request examples. Note that the ``v2.0``
 component in the URL indicates that you are using version 2.0 of the
 Cloud Auth API.
 
-**Example: cURL Authenticate Request: XML**
+**Example: cURL authenticate request: XML**
 
 .. code::
 
@@ -87,7 +85,7 @@ Cloud Auth API.
     -H 'Accept: application/xml' \
     'https://identity.api.rackspacecloud.com/v2.0/tokens' | ppxml
 
-**Example: cURL Authenticate Request: JSON**
+**Example: cURL authenticate request: JSON**
 
 .. code::
 
@@ -104,7 +102,7 @@ Cloud Auth API.
     -H 'Content-Type: application/json' \
     'https://identity.api.rackspacecloud.com/v2.0/tokens' | python -m json.tool
 
-**Example: Authenticate Response: XML**
+**Example: Authenticate response: XML**
 
 .. code::
 
@@ -183,7 +181,7 @@ Cloud Auth API.
       </serviceCatalog>
     </access>
 
-**Example: Authenticate Response: JSON**
+**Example: Authenticate response: JSON**
 
 .. code::
 
@@ -366,10 +364,10 @@ attribute that specifies when the token expires.
    in the *Cloud Identity Client Developer Guide*.
 
 -  For all response examples in this guide, the field values you receive
-   in your responses will vary from those shown here since they will be
+   in your responses will vary from those shown here because they will be
    specific to your account.
 
--  The ``id`` attribute in the Authenticate Response specifies the
+-  The ``id`` attribute in the Authenticate response specifies the
    authentication token. Tokens are valid for a finite duration.
 
    Remember to supply your authentication token wherever you see the
@@ -389,19 +387,16 @@ The ``publicURL`` endpoints for the services (for example
 ``https://servers.api.rackspacecloud.com/v1.0/1100111``) are also
 returned in the response.
 
-You will find the actual account number after the final '/' in the
+The actual account number appears after the final '/' in the
 ``publicURL`` field. In this example, you can see that the account
-number is 1100111. You need to specify your account number on most of
-the Cloud Load Balancers API calls, wherever you see the field
-**your\_acct\_id** specified in the examples in this guide.
+number is 1100111.
 
-Load balancer service endpoints are published in the service catalog in
-the Auth response with the account number, which is a required element
-of the service endpoints. The examples shown here are for authentication
+Offer service endpoints are published in the service catalog in
+the Auth response. The examples shown here are for authentication
 for US customers. Customers with UK-based accounts will see different
 values in the service catalog. Refer to `Chapter 5, *Service
 Access/Endpoints* <ch05.xhtml>`__ for more information about service
 endpoints.
 
-After authentication, you can use cURL to perform **GET**, **DELETE**,
-**PUT**, and **POST** requests for the Cloud Load Balancer API.
+After authentication, you can use cURL to make **GET** and
+**POST** requests to the Offer API.
