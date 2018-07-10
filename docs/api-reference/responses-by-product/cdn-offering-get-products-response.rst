@@ -1,8 +1,8 @@
 .. _cdn-offering-get-products-response:
 
-============================================
-Rackspace CDN offering get products response
-============================================
+===================================
+Rackspace CDN get products response
+===================================
 
 The following example shows the response for a request to retrieve the
 CDN products that are associated with an offering.

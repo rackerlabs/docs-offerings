@@ -1,8 +1,8 @@
 .. _common-cloud-offering-get-products-response:
 
-===========================================
-Common Cloud offering get products response
-===========================================
+==================================
+Common Cloud get products response
+==================================
 
 The following example shows the response for a request to retrieve the
 Common Cloud Backup products that are associated with an offering.
