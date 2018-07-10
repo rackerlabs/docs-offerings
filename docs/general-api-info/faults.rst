@@ -81,9 +81,12 @@ an attempted operation.
 
 .. code::
 
- <unauthorized code="404" xmlns="https://offer.api.rackspacecloud.com/v2/">
-     <message>You are not authorized to execute this operation.</message>
- </unauthorized>
+  {
+    "Error" : {
+        "code" : 401,
+        "message" : "Unauthorized"
+    }
+  }
 
 .. _faults-forbidden:
 
@@ -97,9 +100,12 @@ forbidden, regardless of authorization.
 
 .. code::
 
- <forbidden code="403" xmlns="https://offer.api.rackspacecloud.com/v2/">
-    <message>Access is forbidden.</message>
- </forbidden>
+    {
+      "Error" : {
+          "code" : 403,
+          "message" : "Access is forbidden."
+      }
+    }
 
 .. _faults-itemnotfound:
 
@@ -112,9 +118,12 @@ The ``itemNotFound`` fault is returned when a requested resource is not found.
 
 .. code::
 
-    <itemNotFound code="404" xmlns="https://offer.api.rackspacecloud.com/v2/">
-        <message>Object not found.</message>
-    </itemNotFound>
+    {
+      "notFound": {
+      "message": "Product not found",
+      "referenceCode": "1d37a4e4-9e4d-45f5-b2ee-09957e92fb76"
+      }
+    }
 
 .. _faults-methodnotallowed:
 
@@ -128,9 +137,13 @@ for the resource that you are calling.
 
 .. code::
 
-    <methodNotAllowed code="405" xmlns="https://offer.api.rackspacecloud.com/v2/">
-        <message>The method you are attempting to use is not allowed for this resource.</message>
-    </methodNotAllowed>
+
+    {
+      "methodNotAllowed": {
+        "message": "The method you are attempting to use is not allowed for this resource",
+        "referenceCode": "1d37a4e4-9e4d-45f5-b2ee-09957e92fb76"
+      }
+    }
 
 .. _faults-unsupportedmediatype:
 
@@ -144,9 +157,13 @@ supported.
 
 .. code::
 
-    <unsupportedMediaType code="415" xmlns="https://offer.api.rackspacecloud.com/v2/">
-        <message>The payload type is not supported.</message>
-    </unsupportedMediaType>
+
+    {
+      "unsupportedMediaType": {
+        "message": "The payload type is not supported.",
+        "referenceCode": "1d37a4e4-9e4d-45f5-b2ee-09957e92fb76"
+      }
+    }
 
 .. _faults-notacceptable:
 
@@ -164,3 +181,11 @@ header is not supported.
     xmlns="https://offer.api.rackspacecloud.com/v2/">
         <message>The value in the ``Accept`` header is not supported.</message>
     </notAcceptable>
+
+
+    {
+      "notAcceptable": {
+        "message": "The value in the ``Accept`` header is not supported.",
+        "referenceCode": "1d37a4e4-9e4d-45f5-b2ee-09957e92fb76"
+      }
+    }
