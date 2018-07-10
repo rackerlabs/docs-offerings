@@ -6,7 +6,7 @@ Request and response types
 
 The |api-service| supports JSON data serialization formats.
 
-The request format is specified by using the ``Content-Type`` header and is
+The request format is specified by using the ``Content-Type`` header. It is
 required for operations that have a request body.
 
 The response format can be specified in requests either by using the ``Accept``
