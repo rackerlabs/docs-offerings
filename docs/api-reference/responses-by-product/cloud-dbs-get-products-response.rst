@@ -5,7 +5,7 @@ Cloud Databases get products response
 =====================================
 
 The following example shows the response for a request to retrieve the
-Cloud Databases products that are associated with an offering.
+Rackspace Cloud Databases products that are associated with an offering.
 
 .. code::
 

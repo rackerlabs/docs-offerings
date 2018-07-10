@@ -5,7 +5,7 @@ Cloud Backup get products response
 ==================================
 
 The following example shows the response for a request to retrieve the
-Cloud Backup products that are associated with an offering.
+Rackspace Cloud Backup products that are associated with an offering.
 
 .. code::
 

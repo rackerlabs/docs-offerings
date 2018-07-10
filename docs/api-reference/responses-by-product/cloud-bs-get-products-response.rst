@@ -5,7 +5,7 @@ Cloud Block Storage get products response
 =========================================
 
 The following example shows the response for a request to retrieve the
-Cloud Block Storage products that are associated with an offering.
+Rackspace Cloud Block Storage products that are associated with an offering.
 
 .. code::
 

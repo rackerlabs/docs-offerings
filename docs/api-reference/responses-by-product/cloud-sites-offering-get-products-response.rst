@@ -5,7 +5,7 @@ Cloud Sites get products response
 =================================
 
 The following example shows the response for a request to retrieve the
-Cloud Sites products that are associated with an offering.
+Rackspace Cloud Sites products that are associated with an offering.
 
 .. code::
 
