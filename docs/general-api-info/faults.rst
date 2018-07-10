@@ -61,9 +61,13 @@ such as when the service is undergoing maintenance.
 
 .. code::
 
-  <serviceUnavailable code="500" xmlns="https://offer.api.rackspacecloud.com/v2/">
-      <message>The Offer Service is currently not available.</message>
-  </serviceUnavailable>
+    {
+       "serviceUnavailable":
+         {
+            "code": 500,
+            "message": "The Offer Service is currently not available."
+         }
+    }
 
 .. _faults-unauthorized:
 

@@ -1,7 +1,7 @@
 .. _common-cloud-offering-get-products-responses:
 
 ============================================
-Common cloud offering get products responses
+Common Cloud offering get products responses
 ============================================
 
 .. code::

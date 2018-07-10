@@ -30,7 +30,7 @@ access between products and services.
 .. toctree::
    :maxdepth: 1
 
-   behavior-api
+   api-behavior
    service-access
    request-response
    paginated-collections
