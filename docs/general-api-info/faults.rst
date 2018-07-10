@@ -120,7 +120,7 @@ The ``itemNotFound`` fault is returned when a requested resource is not found.
 
     {
       "notFound": {
-      "message": "Product not found",
+      "message": "Product not found.",
       "referenceCode": "1d37a4e4-9e4d-45f5-b2ee-09957e92fb76"
       }
     }
@@ -140,7 +140,7 @@ for the resource that you are calling.
 
     {
       "methodNotAllowed": {
-        "message": "The method you are attempting to use is not allowed for this resource",
+        "message": "The method you are attempting to use is not allowed for this resource.",
         "referenceCode": "1d37a4e4-9e4d-45f5-b2ee-09957e92fb76"
       }
     }
@@ -176,11 +176,6 @@ header is not supported.
 **Example: notAcceptable fault response**
 
 .. code::
-
-    <notAcceptable code="406"
-    xmlns="https://offer.api.rackspacecloud.com/v2/">
-        <message>The value in the ``Accept`` header is not supported.</message>
-    </notAcceptable>
 
 
     {
