@@ -122,10 +122,19 @@ The response has the following body parameters.
    * - products.\ *product*
      - Array
      - An info block that contains details about a specific product.
+   * - products.\ product.\ *name*
+     - String
+     - The name of the product.
+   * - products.\ product.\ *description*
+     - String
+     - The description of the product.
    * - products.\ product.\ *productOfferingPrice*
      - Complex type
      - Provides pricing information specific to a product in an offering
        through a nested structure.
+   * - products.\ product.\ productOfferingPrice.\ *description*
+     - String
+     - A description of the product offering price.
    * - products.\ product.\ productOfferingPrice.\ *priceDetails*
      - Complex type
      - A collection that provides details specific to pricing for the product.
@@ -143,30 +152,6 @@ The response has the following body parameters.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ *prices*
      - Array
      - An info block that contains information about prices for the product.
-   * - products.\ product.\ productOfferingPrice.\ priceDetails.\
-       prices.\ *price*
-     - Complex type
-     - An info block that contains information about a price for the product.
-   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
-       price.\ *amount*
-     - String
-     - The price of the product.
-   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
-       price.\ *geo*
-     - String
-     -
-       - ``USA``: United States
-       - ``UK``: United Kingdom
-       - ``AUS``: Australia
-       - ``APAC``: Asia-Pacific
-   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
-       price.\ *currency*
-     - String
-     -
-       - ``USD``: United States Dollar
-       - ``GBP``: British Pound Sterling
-       - ``AUD``: Australian Dollar
-       - ``EUR``: Euro
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
        *unitOfMeasure*
      - String
@@ -188,12 +173,52 @@ The response has the following body parameters.
        - ``per instance/hour``
        - ``per 100 MB/hour``
        - ``per 10000 MB``
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\
+       prices.\ *price*
+     - Complex type
+     - An info block that contains information about a price for the product.
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
+       price.\ *currency*
+     - String
+     -
+       - ``USD``: United States Dollar
+       - ``GBP``: British Pound Sterling
+       - ``AUD``: Australian Dollar
+       - ``EUR``: Euro
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
+       price.\ *amount*
+     - String
+     - The price of the product.
+   * - products.\ product.\ productOfferingPrice.\ priceDetails.\ prices.\
+       price.\ *geo*
+     - String
+     -
+       - ``USA``: United States
+       - ``UK``: United Kingdom
+       - ``AUS``: Australia
+       - ``APAC``: Asia-Pacific
    * - products.\ product.\ productOfferingPrice.\ *priceType*
      - String
      -
        - ``usage``: Utility pricing.
        - ``item``: One-time pricing.
        - ``subscription``: Recurring pricing.
+   * - products.\ product.\ *productCharacteristic*
+     - String
+     - An array of key-value pairs that contains info on the operating system
+       and flavor that are associated with the product. This information is
+       primarily used to configure information from external applications that
+       drive product and pricing.
+       Example: ``"name": "flavor_id", "value":"performance2-30"``.
+   * - products.\ product.\ *link*
+     - Object
+     - An info block that contains details about the link for the product.
+   * - products.\ product.\ link.\ *rel*
+     - String
+     - The relationship between the current document and the linked document.
+   * - products.\ product.\ link.\ *href*
+     - String
+     - The URL for the product.
    * - products.\ product.\ *id*
      - String
      - The universally unique identifier (UUID) for the product.
@@ -205,29 +230,21 @@ The response has the following body parameters.
      - String
      - A business identifier for the product. This identifier remains
        consistent when a new version of the product is introduced. This identifier is unique across all of the products within an offering.
-   * - products.\ product.\ *productCharacteristic*
+   * - products.\ product.\ *salesChannel*
      - String
-     - An array of key-value pairs that contains info on the operating system
-       and flavor that are associated with the product. This information is
-       primarily used to configure information from external applications that
-       drive product and pricing.
-       Example: ``"name": "flavor_id", "value":"performance2-30"``.
-   * - products.\ product.\ *description*
-     - String
-     - The description of the product.
-   * - products.\ product.\ *name*
-     - String
-     - The name of the product.
+     -
+       - ``PUBLIC``: The product or plan is available to the public. In
+         addition, if the value is blank, it is publicly available.
+       - ``PRIVATE``: The product or plan is not available to the public.
    * - products.\ *link*
      - Object
-     - An info block that contains details about the link for the products
-       that are associated with the offering.
-   * - products.\ link.\ *href*
-     - String
-     - The URL for the products that are associated with the offering.
-   * - commitGrids.\ commitGrid.\ link.\ *rel*
+     - An info block that contains details about the link for the results.
+   * - products.\ *rel*
      - String
      - The relationship between the current document and the linked document.
+   * - products.\ *href*
+     - String
+     - The URL for a set of results.
 
 **Service plan details**
 
@@ -259,7 +276,10 @@ associated with each Rackspace service plan.
 
 **Example response**
 
-The following example shows the response for the request.
+The following example shows the response for a request to retrieve the
+Cloud Databases products for an offering. To view responses relating to other
+types of products, see the
+:ref:`Responses by product section <responses-by-product/index>`.
 
 .. code::
 
@@ -273,75 +293,304 @@ The following example shows the response for the request.
 
 
    {
-      "products": {
+    "products": {
         "product": [
-          {
-            "productOfferingPrice": {
-              "priceDetails": [
-                {
-                  "priceCharacteristic": [
-                    {
-                      "name": "serviceType",
-                      "value": "INFRASTRUCTURE"
-                    },
-                    {
-                      "name": "serviceLevel",
-                      "value": "LEGACY"
-                    },
-                    {
-                      "name": "chargeType",
-                      "value": "INFRASTRUCTURE"
-                    }
-                  ],
-                  "prices": [
-                    {
-                      "price": [
+            {
+                "name": "Uptime - Hamysql - 98304 MB",
+                "description": "Uptime - Hamysql - 98304 MB",
+                "productOfferingPrice": {
+                    "description": "Uptime - Hamysql - 98304 MB Price",
+                    "priceDetails": [
                         {
-                          "amount": "1.6",
-                          "geo": "USA",
-                          "currency": "USD"
+                            "priceCharacteristic": [
+                                {
+                                    "name": "chargeType",
+                                    "value": "INFRASTRUCTURE"
+                                },
+                                {
+                                    "name": "serviceLevel",
+                                    "value": "INFRASTRUCTURE"
+                                },
+                                {
+                                    "name": "serviceType",
+                                    "value": "LEGACY"
+                                }
+                            ],
+                            "prices": [
+                                {
+                                    "unitOfMeasure": "per Hour",
+                                    "price": [
+                                        {
+                                            "currency": "GBP",
+                                            "amount": "4.4",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "USD",
+                                            "amount": "5.75",
+                                            "geo": "USA"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "priceCharacteristic": [
+                                {
+                                    "name": "chargeType",
+                                    "value": "INFRASTRUCTURE"
+                                },
+                                {
+                                    "name": "serviceLevel",
+                                    "value": "INFRASTRUCTURE"
+                                },
+                                {
+                                    "name": "serviceType",
+                                    "value": "SYSOPS"
+                                }
+                            ],
+                            "prices": [
+                                {
+                                    "unitOfMeasure": "per Hour",
+                                    "price": [
+                                        {
+                                            "currency": "AUD",
+                                            "amount": "8.964955",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "EUR",
+                                            "amount": "6.078239",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "GBP",
+                                            "amount": "4.4",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "USD",
+                                            "amount": "7.171964",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "AUD",
+                                            "amount": "7.1875",
+                                            "geo": "USA"
+                                        },
+                                        {
+                                            "currency": "EUR",
+                                            "amount": "4.873125",
+                                            "geo": "USA"
+                                        },
+                                        {
+                                            "currency": "GBP",
+                                            "amount": "3.527625",
+                                            "geo": "USA"
+                                        },
+                                        {
+                                            "currency": "USD",
+                                            "amount": "5.75",
+                                            "geo": "USA"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "priceCharacteristic": [
+                                {
+                                    "name": "chargeType",
+                                    "value": "INFRASTRUCTURE"
+                                },
+                                {
+                                    "name": "serviceLevel",
+                                    "value": "MANAGED"
+                                },
+                                {
+                                    "name": "serviceType",
+                                    "value": "DEVOPS"
+                                }
+                            ],
+                            "prices": [
+                                {
+                                    "unitOfMeasure": "per Hour",
+                                    "price": [
+                                        {
+                                            "currency": "AUD",
+                                            "amount": "8.964955",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "EUR",
+                                            "amount": "6.078239",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "GBP",
+                                            "amount": "4.4",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "USD",
+                                            "amount": "7.171964",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "AUD",
+                                            "amount": "7.1875",
+                                            "geo": "USA"
+                                        },
+                                        {
+                                            "currency": "EUR",
+                                            "amount": "4.873125",
+                                            "geo": "USA"
+                                        },
+                                        {
+                                            "currency": "GBP",
+                                            "amount": "3.527625",
+                                            "geo": "USA"
+                                        },
+                                        {
+                                            "currency": "USD",
+                                            "amount": "5.75",
+                                            "geo": "USA"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "priceCharacteristic": [
+                                {
+                                    "name": "chargeType",
+                                    "value": "INFRASTRUCTURE"
+                                },
+                                {
+                                    "name": "serviceLevel",
+                                    "value": "MANAGED"
+                                },
+                                {
+                                    "name": "serviceType",
+                                    "value": "LEGACY"
+                                }
+                            ],
+                            "prices": [
+                                {
+                                    "unitOfMeasure": "per Hour",
+                                    "price": [
+                                        {
+                                            "currency": "GBP",
+                                            "amount": "4.4",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "USD",
+                                            "amount": "5.75",
+                                            "geo": "USA"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "priceCharacteristic": [
+                                {
+                                    "name": "chargeType",
+                                    "value": "INFRASTRUCTURE"
+                                },
+                                {
+                                    "name": "serviceLevel",
+                                    "value": "MANAGED"
+                                },
+                                {
+                                    "name": "serviceType",
+                                    "value": "SYSOPS"
+                                }
+                            ],
+                            "prices": [
+                                {
+                                    "unitOfMeasure": "per Hour",
+                                    "price": [
+                                        {
+                                            "currency": "AUD",
+                                            "amount": "8.964955",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "EUR",
+                                            "amount": "6.078239",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "GBP",
+                                            "amount": "4.4",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "USD",
+                                            "amount": "7.171964",
+                                            "geo": "UK"
+                                        },
+                                        {
+                                            "currency": "AUD",
+                                            "amount": "7.1875",
+                                            "geo": "USA"
+                                        },
+                                        {
+                                            "currency": "EUR",
+                                            "amount": "4.873125",
+                                            "geo": "USA"
+                                        },
+                                        {
+                                            "currency": "GBP",
+                                            "amount": "3.527625",
+                                            "geo": "USA"
+                                        },
+                                        {
+                                            "currency": "USD",
+                                            "amount": "5.75",
+                                            "geo": "USA"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
-                      ],
-                      "unitOfMeasure": "per Hour"
+                    ],
+                    "priceType": "Usage"
+                },
+                "productCharacteristic": [
+                    {
+                        "name": "db_type",
+                        "value": "hamysql"
+                    },
+                    {
+                        "name": "product_category",
+                        "value": "UPTIME"
+                    },
+                    {
+                        "name": "ram_in_mb",
+                        "value": "98304 MB"
                     }
-                  ]
-                }
-              ],
-              "priceType": "Usage"
-            },
-            "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee91",
-            "status": "ACTIVE",
-            "productCode": "UPTIME_HIGH_IO_2_WIN_30720MB",
-            "productCharacteristic": [
-              {
-                "name": "os_type",
-                "value": "windows"
-              },
-              {
-                "name": "flavor_id",
-                "value": "performance2-30"
-              },
-              {
-                "name": "class",
-                "value": "performance2"
-              }
-            ],
-            "description": "Windows - 30720 MB High Performance I/O 2 Server Instance",
-            "name": "Windows - 30720 MB High Performance I/O 2 Server Instance"
-          }
+                ],
+                "link": {
+                    "rel": "SELF",
+                    "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/fd2c2294-0498-3791-9df7-1d4ed883a939/products/0a1239ca-19ae-39e7-a7a3-887dfcc8ea85"
+                },
+                "id": "0a1239ca-19ae-39e7-a7a3-887dfcc8ea85",
+                "status": "ACTIVE",
+                "productCode": "UPTIME_hamysql_98304MB",
+                "salesChannel": "PUBLIC"
+            }
         ],
         "link": [
-          {
-            "rel": "prev",
-            "href": "http://offer.api.rackspacecloud.com/v2/offerings/046b6c7f/products?marker\u003d4\u0026amp;limit\u003d3"
-          },
-          {
-            "rel": "next",
-            "href": "http://offer.api.rackspacecloud.com/v2/offerings/046b6c7f/products?marker\u003d4\u0026amp;limit\u003d3"
-          }
+            {
+                "rel": "NEXT",
+                "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/fd2c2294-0498-3791-9df7-1d4ed883a939/products?marker=1&limit=1"
+            }
         ]
-      }
     }
+}
 
 
 Response codes
