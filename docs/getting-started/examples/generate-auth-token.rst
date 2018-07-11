@@ -9,7 +9,8 @@ authentication token, which must be passed in for each request by
 using the ``X-Auth-Token`` header.
 
 The following example demonstrates how to use cURL to obtain the
-authentication token. You will need to supply the authentication token when making subsequent Offer API calls.
+authentication token. You will need to supply the authentication token when
+making subsequent Offer API calls.
 
 Remember to replace the names in the authenticate request examples below
 with their respective values:

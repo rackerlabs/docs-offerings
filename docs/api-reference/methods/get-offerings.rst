@@ -81,9 +81,6 @@ The response has the following body parameters.
    * - offerings.\ *offering*
      - Array
      - An info block that contains details about a specific offering.
-   * - offerings.\ *offering*.\ *id*
-     - String
-     - The universally unique identifier (UUID) for the offering.
    * - offerings.\ *offering*.\ *offeringCode*
      - String
      - A business identifier for the offering. This identifier remains
@@ -95,11 +92,6 @@ The response has the following body parameters.
    * - offerings.\ *offering*.\ *name*
      - String
      - The name of the offering.
-   * - offerings.\ offering.\ *status*
-     - String
-     - The status of the offering. Valid values are ``ACTIVE`` (default) and
-       ``INACTIVE``. An offering becomes  ``INACTIVE`` when Rackspace
-       introduces a new version of the offering.
    * - offerings.\ offering.\ *description*
      - String
      - The description of the offering.
@@ -114,26 +106,34 @@ The response has the following body parameters.
    * - offerings.\ offering.\ *link*
      - Object
      - An info block that contains details about the link for the offering.
-   * - offerings.\ offering.\ link\. *title*
-     - String
-     - The title of the link.
-   * - offerings.\ offering.\ link\. *href*
-     - String
-     - The URL for the link.
    * - offerings.\ offering.\ link\. *rel*
      - String
      - The relationship between the current information and the linked
        information.
+   * - offerings.\ offering.\ link\. *href*
+     - String
+     - The URL for the link.
+   * - offerings.\ offering.\ link\. *title*
+     - String
+     - The title of the link.
+   * - offerings.\ offering.\ *status*
+     - String
+     - The status of the offering. Valid values are ``ACTIVE`` (default) and
+       ``INACTIVE``. An offering becomes  ``INACTIVE`` when Rackspace
+       introduces a new version of the offering.
+   * - offerings.\ *offering*.\ *id*
+     - String
+     - The universally unique identifier (UUID) for the offering.
    * - offerings.\ *link*
      - Object
-     - An info block that contains details about the links for the results.
-   * - offerings.\ link\. *href*
-     - String
-     - The URL for a set of results.
+     - An info block that contains details about the link for the results.
    * - offerings.\ link\. *rel*
      - String
      - The relationship between the current information and the linked
        information.
+   * - offerings.\ link\. *href*
+     - String
+     - The URL for a set of results.
 
 **Example response**
 
@@ -151,290 +151,221 @@ The following example shows the response for the request.
 
 
    {
-    "offerings": {
-        "offering": [
-            {
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee91",
-                "offeringCode": "NXTGEN",
-                "offeringVersion": 1,
-                "name": "NEXT GENERATION CLOUD SERVERS",
-                "status": "ACTIVE",
-                "description": "NEXT GENERATION CLOUD SERVERS",
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD",
-                        "UK_CLOUD"
-                    ]
-                },
-                "link": [
-                    {
-                        "title": "NEXT GENERATION CLOUD SERVERS",
-                        "href": "https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee91/products",
-                        "rel": "PRODUCTS"
-                    }
-                ]
-            },
-            {
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee92",
-                "offeringCode": "DBAAS",
-                "offeringVersion": 1,
-                "status": "ACTIVE",
-                "name": "CLOUD DATABASES",
-                "description": "CLOUD DATABASES",
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD",
-                        "UK_CLOUD"
-                    ]
-                },
-                "link": [
-                    {
-                        "title": "CLOUD DATABASES",
-                        "href": "https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee92/products",
-                        "rel": "PRODUCTS"
-                    }
-                ]
-            },
-            {
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee93",
-                "offeringCode": "MAAS",
-                "offeringVersion": 1,
-                "status": "ACTIVE",
-                "name": "CLOUD MONITORING",
-                "description": "CLOUD MONITORING",
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD",
-                        "UK_CLOUD"
-                    ]
-                },
-                "link": [
-                    {
-                        "title": "CLOUD MONITORING",
-                        "href": "https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee93/products",
-                        "rel": "PRODUCTS"
-                    }
-                ]
-            },
-            {
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee94",
-                "offeringCode": "CBS",
-                "offeringVersion": 1,
-                "status": "ACTIVE",
-                "name": "CLOUD BLOCK STORAGE",
-                "description": "CLOUD BLOCK STORAGE",
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD",
-                        "UK_CLOUD"
-                    ]
-                },
-                "link": [
-                    {
-                        "title": "CLOUD BLOCK STORAGE",
-                        "href": "https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee94/products",
-                        "rel": "PRODUCTS"
-                    }
-                ]
-            },
-            {
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee95",
-                "offeringCode": "CBCKUP",
-                "offeringVersion": 1,
-                "status": "ACTIVE",
-                "name": "CLOUD BACKUP",
-                "description": "CLOUD BACKUP",
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD",
-                        "UK_CLOUD"
-                    ]
-                },
-                "link": [
-                    {
-                        "title": "CLOUD BACKUP",
-                        "href": "https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee95/products",
-                        "rel": "PRODUCTS"
-                    }
-                ]
-            },
-            {
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee96",
-                "offeringCode": "FSTGEN",
-                "offeringVersion": 1,
-                "status": "ACTIVE",
-                "name": "FIRST GENERATION CLOUD SERVERS",
-                "description": "FIRST GENERATION CLOUD SERVERS",
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD",
-                        "UK_CLOUD"
-                    ]
-                },
-                "link": [
-                    {
-                        "title": "FIRST GENERATION CLOUD SERVERS",
-                        "href": "https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee96/products",
-                        "rel": "PRODUCTS"
-                    }
-                ]
-            },
-            {
-                "status": "ACTIVE",
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee97",
-                "offeringCode": "LBAAS",
-                "offeringVersion": 1,
-                "name": "CLOUD LOAD BALANCER",
-                "description": "CLOUD LOAD BALANCER",
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD",
-                        "UK_CLOUD"
-                    ]
-                },
-                "link": [
-                    {
-                        "title": "CLOUD LOAD BALANCER",
-                        "href": "https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee97/products",
-                        "rel": "PRODUCTS"
-                    }
-                ]
-            },
-            {
-                "status": "ACTIVE",
-                "id": "986b6c7f-0b8a-43b9-b35d-6489e6daee97",
-                "offeringCode": "LBAAS2.0",
-                "offeringVersion": 1,
-                "name": "CLOUD LOAD BALANCER 2.0",
-                "description": "CLOUD LOAD BALANCER 2.0",
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD",
-                        "UK_CLOUD"
-                    ]
-                },
-                "link": [
-                    {
-                        "title": "CLOUD LOAD BALANCER 2.0",
-                        "href": "https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee97/products",
-                        "rel": "PRODUCTS"
-                    }
-                ]
-            },
-            {
-                "status": "ACTIVE",
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee98",
-                "offeringCode": "CFILES",
-                "offeringVersion": 1,
-                "name": "CLOUD FILES",
-                "description": "CLOUD FILES",
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD",
-                        "UK_CLOUD"
-                    ]
-                },
-                "link": [
-                    {
-                        "title": "CLOUD FILES",
-                        "href": "https://offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee98/products",
-                        "rel": "PRODUCTS"
-                    }
-                ]
-            },
-            {
-                "name": "CLOUD SITES",
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee99",
-                "offeringCode": "CSITES",
-                "offeringVersion": 1,
-                "description": "CLOUD SITES",
-                "link": [
-                    {
-                        "title": "CLOUD SITES",
-                        "rel": "PRODUCTS",
-                        "href": "https://dev.offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee99/products"
-                    }
-                ],
-                "status": "ACTIVE",
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD"
-                    ]
-                }
-            },
-            {
-                "name": "BIG DATA (HADOOP AS A SERVICE)",
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6dae100",
-                "offeringCode": "BIGDATA",
-                "offeringVersion": 1,
-                "description": "BIG DATA (HADOOP AS A SERVICE)",
-                "link": [
-                    {
-                        "title": "BIG DATA (HADOOP AS A SERVICE)",
-                        "rel": "PRODUCTS",
-                        "href": "https://dev.offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6dae100/products"
-                    }
-                ],
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD",
-                        "UK_CLOUD"
-                    ]
-                }
-            },
-            {
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee93",
-                "offeringCode": "NEWTON",
-                "offeringVersion": 1,
-                "name": "Newton",
-                "description": "Newton",
-                "status": "ACTIVE",
-                "link": [
-                    {
-                        "title": "Newton",
-                        "rel": "PRODUCTS",
-                        "href": "https://dev.offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee93/products"
-                    }
-                ]
-            },
-            {
-                "id": "046b6c7f-0b8a-43b9-b35d-6489e6daee93",
-                "offeringCode": "CLOUDQUEUES",
-                "offeringVersion": 1,
-                "name": "CLOUD QUEUES",
-                "description": "CLOUD QUEUES",
-                "link": [
-                    {
-                        "title": "CLOUD QUEUES",
-                        "rel": "PRODUCTS",
-                        "href": "https://dev.offer.api.rackspacecloud.com/v1/offerings/046b6c7f-0b8a-43b9-b35d-6489e6daee93/products"
-                    }
-                ],
-                "status": "ACTIVE",
-                "lineOfBusinesses": {
-                    "lineOfBusiness": [
-                        "US_CLOUD",
-                        "UK_CLOUD"
-                    ]
-                }
-            }
-        ],
-        "link": [
-            {
-                "href": "https://offer.api.rackspacecloud.com/v1/offerings?marker=0&limit=100",
-                "rel": "self"
-            },
-            {
-                "href": "https://offer.api.rackspacecloud.com/v1/offerings?marker=0&limit=100",
-                "rel": "last"
-            },
-            {
-                "href": "https://offer.api.rackspacecloud.com/v1/offerings?marker=0&limit=100",
-                "rel": "first"
-            }
-        ]
-    }
-   }
+      "offerings": {
+          "offering": [
+              {
+                  "offeringCode": "DBAAS",
+                  "offeringVersion": 2,
+                  "name": "CLOUD DATABASES",
+                  "description": "CLOUD DATABASES",
+                  "lineOfBusinesses": {
+                      "lineOfBusiness": [
+                          "UK_CLOUD",
+                          "US_CLOUD"
+                      ]
+                  },
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/fd2c2294-0498-3791-9df7-1d4ed883a939/products",
+                      "title": "CLOUD DATABASES"
+                  },
+                  "status": "ACTIVE",
+                  "id": "fd2c2294-0498-3791-9df7-1d4ed883a939"
+              },
+              {
+                  "offeringCode": "CBS",
+                  "offeringVersion": 2,
+                  "name": "CLOUD BLOCK STORAGE",
+                  "description": "CLOUD BLOCK STORAGE",
+                  "lineOfBusinesses": {
+                      "lineOfBusiness": [
+                          "UK_CLOUD",
+                          "US_CLOUD"
+                      ]
+                  },
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/a9b2e361-c7de-37e0-8bdb-40fb33ac1576/products",
+                      "title": "CLOUD BLOCK STORAGE"
+                  },
+                  "status": "ACTIVE",
+                  "id": "a9b2e361-c7de-37e0-8bdb-40fb33ac1576"
+              },
+              {
+                  "offeringCode": "CLOUDBIGDATA",
+                  "offeringVersion": 2,
+                  "name": "CLOUD BIG DATA",
+                  "description": "CLOUD BIG DATA",
+                  "lineOfBusinesses": {
+                      "lineOfBusiness": [
+                          "UK_CLOUD",
+                          "US_CLOUD"
+                      ]
+                  },
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/86af1b3c-682d-3114-9549-9a6e9ee12084/products",
+                      "title": "CLOUD BIG DATA"
+                  },
+                  "status": "ACTIVE",
+                  "id": "86af1b3c-682d-3114-9549-9a6e9ee12084"
+              },
+              {
+                  "offeringCode": "RCDN",
+                  "offeringVersion": 2,
+                  "name": "RACKSPACE CDN",
+                  "description": "RACKSPACE CDN",
+                  "lineOfBusinesses": {
+                      "lineOfBusiness": [
+                          "UK_CLOUD",
+                          "US_CLOUD"
+                      ]
+                  },
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/77d04f01-c000-32e9-aa6a-aac4ec3b5d35/products",
+                      "title": "RACKSPACE CDN"
+                  },
+                  "status": "ACTIVE",
+                  "id": "77d04f01-c000-32e9-aa6a-aac4ec3b5d35"
+              },
+              {
+                  "offeringCode": "LBAAS",
+                  "offeringVersion": 2,
+                  "name": "CLOUD LOAD BALANCER",
+                  "description": "CLOUD LOAD BALANCER",
+                  "lineOfBusinesses": {
+                      "lineOfBusiness": [
+                          "UK_CLOUD",
+                          "US_CLOUD"
+                      ]
+                  },
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/6d1e4a24-49df-3d67-88a5-0aa53e6eec23/products",
+                      "title": "CLOUD LOAD BALANCER"
+                  },
+                  "status": "ACTIVE",
+                  "id": "6d1e4a24-49df-3d67-88a5-0aa53e6eec23"
+              },
+              {
+                  "offeringCode": "FSTGEN",
+                  "offeringVersion": 2,
+                  "name": "FIRST GENERATION CLOUD SERVERS",
+                  "description": "FIRST GENERATION CLOUD SERVERS",
+                  "lineOfBusinesses": {
+                      "lineOfBusiness": [
+                          "UK_CLOUD",
+                          "US_CLOUD"
+                      ]
+                  },
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/6d02e6d4-f45f-3f65-b56b-d83ec803a6bb/products",
+                      "title": "FIRST GENERATION CLOUD SERVERS"
+                  },
+                  "status": "ACTIVE",
+                  "id": "6d02e6d4-f45f-3f65-b56b-d83ec803a6bb"
+              },
+              {
+                  "offeringCode": "CBCKUP",
+                  "offeringVersion": 2,
+                  "name": "CLOUD BACKUP",
+                  "description": "CLOUD BACKUP",
+                  "lineOfBusinesses": {
+                      "lineOfBusiness": [
+                          "UK_CLOUD",
+                          "US_CLOUD"
+                      ]
+                  },
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/41cb76aa-dd4d-3bd6-b305-e25f3fb3bae7/products",
+                      "title": "CLOUD BACKUP"
+                  },
+                  "status": "ACTIVE",
+                  "id": "41cb76aa-dd4d-3bd6-b305-e25f3fb3bae7"
+              },
+              {
+                  "offeringCode": "CMNCLD",
+                  "offeringVersion": 2,
+                  "name": "COMMON CLOUD OFFERING",
+                  "description": "COMMON CLOUD OFFERING",
+                  "lineOfBusinesses": {
+                      "lineOfBusiness": [
+                          "UK_CLOUD",
+                          "US_CLOUD"
+                      ]
+                  },
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/3a14712f-c617-3481-b397-174dfff1e41f/products",
+                      "title": "COMMON CLOUD OFFERING"
+                  },
+                  "status": "ACTIVE",
+                  "id": "3a14712f-c617-3481-b397-174dfff1e41f"
+              },
+              {
+                  "offeringCode": "NXTGEN",
+                  "offeringVersion": 2,
+                  "name": "NEXT GENERATION CLOUD SERVERS",
+                  "description": "NEXT GENERATION CLOUD SERVERS",
+                  "lineOfBusinesses": {
+                      "lineOfBusiness": [
+                          "UK_CLOUD",
+                          "US_CLOUD"
+                      ]
+                  },
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/387e19d3-d2bb-3310-96c7-8ea708239646/products",
+                      "title": "NEXT GENERATION CLOUD SERVERS"
+                  },
+                  "status": "ACTIVE",
+                  "id": "387e19d3-d2bb-3310-96c7-8ea708239646"
+              },
+              {
+                  "offeringCode": "CSITES",
+                  "offeringVersion": 2,
+                  "name": "CLOUD SITES",
+                  "description": "CLOUD SITES",
+                  "lineOfBusinesses": {
+                      "lineOfBusiness": [
+                          "UK_CLOUD",
+                          "US_CLOUD"
+                      ]
+                  },
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/361b9937-f217-3a8f-b6e8-27e294343c99/products",
+                      "title": "CLOUD SITES"
+                  },
+                  "status": "ACTIVE",
+                  "id": "361b9937-f217-3a8f-b6e8-27e294343c99"
+              },
+              {
+                  "offeringCode": "CFILES",
+                  "offeringVersion": 2,
+                  "name": "CLOUD FILES",
+                  "description": "CLOUD FILES",
+                  "lineOfBusinesses": {
+                      "lineOfBusiness": [
+                          "UK_CLOUD",
+                          "US_CLOUD"
+                      ]
+                  },
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/1099767e-99dc-3f62-a405-694ce681759c/products",
+                      "title": "CLOUD FILES"
+                  },
+                  "status": "ACTIVE",
+                  "id": "1099767e-99dc-3f62-a405-694ce681759c"
+              }
+          ],
+          "link": []
+      }
+  }
 
 
 Response codes

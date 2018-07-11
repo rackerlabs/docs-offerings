@@ -85,7 +85,7 @@ The response has the following body parameters.
    * - currencies.\ currency.\ *symbol*
      - String
      - The symbol for the currency.
-   * - currencies.\ currency.\ *subdivision*
+   * - currencies.\ currency.\ *subDivision*
      - String
      - The subdivision of the currency.
    * - currencies.\ *link*
@@ -114,51 +114,61 @@ The following example shows the response for the request.
    x-compute-request-id: req-7b7ffed2-9b1f-46a8-a478-315518d35387
 
    {
-    "currencies": {
-        "currency": [
-            {
-                "code": "AUD",
-                "description": "Australian Dollar",
-                "symbol": "\\u0041\\u0024",
-                "subDivision": "cents"
-            },
-            {
-                "code": "EUR",
-                "description": "Euro",
-                "symbol": "\\u20AC",
-                "subDivision": "cents"
-            },
-            {
-                "code": "HKD",
-                "description": "Hong Kong Dollar",
-                "symbol": "\\u0048\\u004B\\u0024",
-                "subDivision": "cents"
-            },
-            {
-                "code": "USD",
-                "description": "US Dollar",
-                "symbol": "\\u0024",
-                "subDivision": "cents"
-            },
-            {
-                "code": "GBP",
-                "description": "Pound Sterling",
-                "symbol": "\\u00A3",
-                "subDivision": "pence"
-            }
-        ],
-        "link": [
-            {
-                "href": "http://offer.api.rackspacecloud.com/v2/currencies?marker=1&limit=10",
-                "rel": "next"
-            },
-            {
-                "href": "http://offer.api.rackspacecloud.com/v2/currencies?marker=101&limit=10",
-                "rel": "previous"
-            }
-          ]
-        }
-      }
+     "currencies": {
+         "currency": [
+             {
+                 "code": "USD",
+                 "description": "US Dollar",
+                 "symbol": "\\u0024",
+                 "subDivision": "cents"
+             },
+             {
+                 "code": "GBP",
+                 "description": "Pound Sterling",
+                 "symbol": "\\u00A3",
+                 "subDivision": "pence"
+             },
+             {
+                 "code": "AUD",
+                 "description": "Australian Dollar",
+                 "symbol": "\\u0041\\u0024",
+                 "subDivision": "cents"
+             },
+             {
+                 "code": "EUR",
+                 "description": "Euro",
+                 "symbol": "\\u20AC",
+                 "subDivision": "cents"
+             },
+             {
+                 "code": "HKD",
+                 "description": "Hong Kong Dollar",
+                 "symbol": "\\u0048\\u004B\\u0024",
+                 "subDivision": "cents"
+             },
+             {
+                 "code": "CNY",
+                 "description": "Renminbi",
+                 "symbol": "\\u00A5",
+                 "subDivision": "jiao"
+             },
+             {
+                 "code": "RUB",
+                 "description": "Russian Ruble",
+                 "symbol": "\\u20BD",
+                 "subDivision": "kopecs"
+             },
+             {
+                 "code": "SGD",
+                 "description": "Singapore Dollar",
+                 "symbol": "\\u0053\\u0024",
+                 "subDivision": "cents"
+             }
+         ],
+         "link": []
+     }
+  }
+
 
 
 Response codes

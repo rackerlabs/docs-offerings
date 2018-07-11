@@ -148,55 +148,61 @@ The following example shows the response for the request.
    x-compute-request-id: req-7b7ffed2-9b1f-46a8-a478-315518d35387
 
    {
-    "volumeGrids":{
-        "volumeGrid":[{
-                "link":{
-                    "href":"https://test.offer.api.rackspacecloud.com/v1/discountGrids/volumeGrids/STANDARD_AUS_VOLUME_GRID_001",
-                    "rel":"self"
-                },
-                "id":"STANDARD_AUS_VOLUME_GRID_001",
-                "geo":"AUS",
-                "currency":"USD",
-                "gridType":"STANDARD",
-                "gridVersion":"1",
-                "gridStartDate":"2013-05-30-05:00"
-            },
-            {
-                "link":{
-                    "href":"https://test.offer.api.rackspacecloud.com/v1/discountGrids/volumeGrids/STANDARD_UK_VOLUME_GRID_001",
-                    "rel":"self"
-                },
-                "id":"STANDARD_UK_VOLUME_GRID_001",
-                "geo":"UK",
-                "currency":"GBP",
-                "gridType":"STANDARD",
-                "gridVersion":"1",
-                "gridStartDate":"2013-05-30-05:00"
-            },
-            {
-                "link":{
-                    "href":"https://test.offer.api.rackspacecloud.com/v1/discountGrids/volumeGrids/STANDARD_USA_VOLUME_GRID_001",
-                    "rel":"self"
-                },
-                "id":"STANDARD_USA_VOLUME_GRID_001",
-                "geo":"USA",
-                "currency":"USD",
-                "gridType":"STANDARD",
-                "gridVersion":"1",
-                "gridStartDate":"2013-05-30-05:00"
-            }
-        ],
-        "link":[{
-                "href":"https://test.offer.api.rackspacecloud.com/v1/discountGrids/volumeGrids?marker=0&limit=100",
-                "rel": "next"
-            },
-            {
-                "href":"https://test.offer.api.rackspacecloud.com/v1/discountGrids/volumeGrids?marker=0&limit=100",
-                "rel": "prev"
-            }
-          ]
-        }
+      "volumeGrids": {
+          "volumeGrid": [
+              {
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/discountGrids/volumeGrids/STANDARD_AUS_AUD_VOLUME_GRID_001"
+                  },
+                  "id": "STANDARD_AUS_AUD_VOLUME_GRID_001",
+                  "geo": "AUS",
+                  "currency": "AUD",
+                  "gridType": "STANDARD",
+                  "gridVersion": "1",
+                  "gridStartDate": "2015-06-26Z"
+              },
+              {
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/discountGrids/volumeGrids/STANDARD_AUS_EUR_VOLUME_GRID_001"
+                  },
+                  "id": "STANDARD_AUS_EUR_VOLUME_GRID_001",
+                  "geo": "AUS",
+                  "currency": "EUR",
+                  "gridType": "STANDARD",
+                  "gridVersion": "1",
+                  "gridStartDate": "2015-06-25Z"
+              },
+              {
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/discountGrids/volumeGrids/STANDARD_AUS_GBP_VOLUME_GRID_001"
+                  },
+                  "id": "STANDARD_AUS_GBP_VOLUME_GRID_001",
+                  "geo": "AUS",
+                  "currency": "GBP",
+                  "gridType": "STANDARD",
+                  "gridVersion": "1",
+                  "gridStartDate": "2015-06-25Z"
+              },
+              {
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/discountGrids/volumeGrids/STANDARD_AUS_VOLUME_GRID_001"
+                  },
+                  "id": "STANDARD_AUS_VOLUME_GRID_001",
+                  "geo": "AUS",
+                  "currency": "USD",
+                  "gridType": "STANDARD",
+                  "gridVersion": "1",
+                  "gridStartDate": "2013-05-30Z",
+                  "gridEndDate": "2015-06-19Z"
+              }
+          ],
+          "link": []
       }
+  }
 
 
 Response codes

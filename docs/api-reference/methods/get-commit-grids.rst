@@ -114,9 +114,6 @@ The response has the following body parameters.
    * - commitGrids.\ commitGrid.\ *gridType*
      - String
      - The type of grid. By default, only ``STANDARD`` grids are returned.
-   * - commitGrids.\ commitGrid.\ *discountType*
-     - String
-     - The type of discount.
    * - commitGrids.\ commitGrid.\ *gridVersion*
      - String
      - The version of the commit grid.
@@ -152,60 +149,61 @@ The following example shows the response for the request.
    x-compute-request-id: req-7b7ffed2-9b1f-46a8-a478-315518d35387
 
    {
-    "commitGrids": {
-        "commitGrid": [
-            {
-                "link": {
-                    "href": "https://test.offer.api.rackspacecloud.com/v1/discountGrids/commitGrids/STANDARD_AUS_COMMIT_GRID_001",
-                    "rel":"self"
-                },
-                "id": "STANDARD_AUS_COMMIT_GRID_001",
-                "geo": "AUS",
-                "currency": "USD",
-                "gridType": "STANDARD",
-                "discountType": "COMMIT",
-                "gridVersion": "1",
-                "gridStartDate": "2013-05-30-05:00"
-            },
-            {
-                "link": {
-                    "href": "https://test.offer.api.rackspacecloud.com/v1/discountGrids/commitGrids/STANDARD_UK_COMMIT_GRID_001",
-                    "rel":"self"
-                },
-                "id": "STANDARD_UK_COMMIT_GRID_001",
-                "geo": "UK",
-                "currency": "GBP",
-                "gridType": "STANDARD",
-                "discountType": "COMMIT",
-                "gridVersion": "1",
-                "gridStartDate": "2013-05-30-05:00"
-            },
-            {
-                "link": {
-                    "href": "https://test.offer.api.rackspacecloud.com/v1/discountGrids/commitGrids/STANDARD_USA_COMMIT_GRID_001",
-                    "rel":"self"
-                },
-                "id": "STANDARD_USA_COMMIT_GRID_001",
-                "geo": "USA",
-                "currency": "USD",
-                "gridType": "STANDARD",
-                "gridVersion": "1",
-                "gridStartDate": "2013-05-30-05:00"
-            }
-        ],
-        "link": [
-            {
-                "href": "https://test.offer.api.rackspacecloud.com/v1/discountGrids/commitGrids?marker=0&limit=100",
-                "rel":"next"
-            },
-            {
-                "href": "https://test.offer.api.rackspacecloud.com/v1/discountGrids/commitGrids?marker=0&limit=100",
-                "rel":"prev"
-            }
-          ]
-        }
+      "commitGrids": {
+          "commitGrid": [
+              {
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/discountGrids/commitGrids/STANDARD_USA_AUD_COMMIT_GRID_001"
+                  },
+                  "id": "STANDARD_USA_AUD_COMMIT_GRID_001",
+                  "geo": "USA",
+                  "currency": "AUD",
+                  "gridType": "STANDARD",
+                  "gridVersion": "1",
+                  "gridStartDate": "2015-06-25Z"
+              },
+              {
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/discountGrids/commitGrids/STANDARD_USA_COMMIT_GRID_001"
+                  },
+                  "id": "STANDARD_USA_COMMIT_GRID_001",
+                  "geo": "USA",
+                  "currency": "USD",
+                  "gridType": "STANDARD",
+                  "gridVersion": "1",
+                  "gridStartDate": "2013-05-30Z",
+                  "gridEndDate": "2015-06-19Z"
+              },
+              {
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/discountGrids/commitGrids/STANDARD_USA_EUR_COMMIT_GRID_001"
+                  },
+                  "id": "STANDARD_USA_EUR_COMMIT_GRID_001",
+                  "geo": "USA",
+                  "currency": "EUR",
+                  "gridType": "STANDARD",
+                  "gridVersion": "1",
+                  "gridStartDate": "2015-06-25Z"
+              },
+              {
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/discountGrids/commitGrids/STANDARD_USA_GBP_COMMIT_GRID_001"
+                  },
+                  "id": "STANDARD_USA_GBP_COMMIT_GRID_001",
+                  "geo": "USA",
+                  "currency": "GBP",
+                  "gridType": "STANDARD",
+                  "gridVersion": "1",
+                  "gridStartDate": "2015-06-25Z"
+              }
+          ],
+          "link": []
       }
-
+  }
 
 Response codes
 --------------

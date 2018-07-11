@@ -1,8 +1,8 @@
 .. _responses-by-product:
 
-=======================
+====================
 Responses by product
-=======================
+====================
 
 Responses to the get product and get products calls vary by product. Use the
 following links to view sample responses by product.
@@ -10,15 +10,14 @@ following links to view sample responses by product.
 .. toctree::
    :maxdepth: 1
 
-   cloud-servers-get-products-responses
-   cloud-dbs-get-products-responses
-   cloud-files-get-products-responses
-   cloud-big-data-get-products-responses
-   cloud-queue-get-products-responses
-   cloud-bs-get-products-responses
-   cloud-lb-get-products-responses
-   common-cloud-offering-get-products-responses
-   cloud-sites-offering-get-products-responses
-   cdn-offering-get-products-responses
-   cloud-big-data-aws-get-products-responses
-   cloud-lb2-get-products-responses
+   cloud-servers-firstgen-get-products-response
+   cloud-servers-nextgen-get-products-response
+   cloud-dbs-get-products-response
+   cloud-files-get-products-response
+   cloud-big-data-get-products-response
+   cloud-backup-get-products-response
+   cloud-bs-get-products-response
+   cloud-lb-get-products-response
+   common-cloud-offering-get-products-response
+   cloud-sites-offering-get-products-response
+   cdn-offering-get-products-response
