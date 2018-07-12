@@ -26,6 +26,11 @@ try:
 except ImportError:
     spelling = None
 
+try:
+    import chios
+except ImportError:
+    chios = None
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -42,36 +47,22 @@ except ImportError:
 extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.todo',
-    'sphinx.ext.extlinks',
-    'chios.bolditalic',
-    'chios.remotecode',
-    'chios.remoteinclude'
+    'sphinx.ext.extlinks'
 ]
 
 if spelling is not None:
     extensions.append('sphinxcontrib.spelling')
+
+if chios is not None:
+    extensions.append('chios.bolditalic')
+    extensions.append('chios.remotecode')
+    extensions.append('chios.remoteinclude')
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']
 
 # The suffix of source filenames.
 source_suffix = ['.rst']
-
-# Add Markdown support
-try:
-    from recommonmark.parser import CommonMarkParser
-    source_suffix.append('.md')
-    source_parsers = {
-        '.md': CommonMarkParser,
-    }
-except ImportError:
-    sys.stdout.write('''
-                     *************************************
-                     Unable to import CommonMarkParser.
-                     Markdown support will not be enabled.
-                     *************************************
-
-                     ''')
 
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
