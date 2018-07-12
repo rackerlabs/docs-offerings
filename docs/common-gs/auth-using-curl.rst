@@ -79,8 +79,8 @@ endpoint
     For guidance on choosing an endpoint, see
     :ref:`Service access <service-access>`.
 
-If the request failed, review the response message and
-the following error message descriptions to determine next steps.
+If the request failed, review the response message and the following error
+message descriptions to determine next steps.
 
 - If you see the following error message, review the authentication request
   for syntax or coding errors. If you are using cURL, see
