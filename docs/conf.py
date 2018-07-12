@@ -295,7 +295,8 @@ html_context = {
 #   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'
 # html_search_language = 'en'
 
-# A dictionary with options for the search language support, empty by default.
+# A dictionary with options for the search language support, which is
+# empty by default.
 # Now only 'ja' uses this config value
 # html_search_options = {'type': 'default'}
 
