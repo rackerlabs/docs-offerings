@@ -286,7 +286,7 @@ html_context = {
 # base URL from which the finished HTML is served.
 # html_use_opensearch = ''
 
-# This is the file name suffix for HTML files (e.g. ".xhtml").
+# This is the filename suffix for HTML files (e.g. ".xhtml").
 # html_file_suffix = None
 
 # Language to be used for generating the HTML full-text search index.
@@ -295,7 +295,8 @@ html_context = {
 #   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'
 # html_search_language = 'en'
 
-# A dictionary with options for the search language support, empty by default.
+# A dictionary with options for the search language support, which is
+# empty by default.
 # Now only 'ja' uses this config value
 # html_search_options = {'type': 'default'}
 
