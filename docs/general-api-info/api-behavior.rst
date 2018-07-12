@@ -8,7 +8,7 @@ API behavior and statuses
    product.
 
 
-The Offer API is considered to be asynchronous because mutable
-operations (that is, POST, PUT, and DELETE) are often queued up and then
+The Offer API is considered to be asynchronous because mutable operations
+(that is, POST, PUT, and DELETE) are often queued up and then
 handled accordingly. All successful asynchronous API operations have a normal
 response code of 202.
