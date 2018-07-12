@@ -29,7 +29,7 @@ except ImportError:
 try:
     import chios
 except ImportError:
-    chia_package = None
+    chios = None
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -53,7 +53,7 @@ extensions = [
 if spelling is not None:
     extensions.append('sphinxcontrib.spelling')
 
-if chia_package is not None:
+if chios is not None:
     extensions.append('chios.bolditalic')
     extensions.append('chios.remotecode')
     extensions.append('chios.remoteinclude')
