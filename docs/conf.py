@@ -64,22 +64,6 @@ if chia_package is not None:
 # The suffix of source filenames.
 source_suffix = ['.rst']
 
-# Add Markdown support
-try:
-    from recommonmark.parser import CommonMarkParser
-    source_suffix.append('.md')
-    source_parsers = {
-        '.md': CommonMarkParser,
-    }
-except ImportError:
-    sys.stdout.write('''
-                     *************************************
-                     Unable to import CommonMarkParser.
-                     Markdown support will not be enabled.
-                     *************************************
-
-                     ''')
-
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
 
