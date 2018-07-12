@@ -5,7 +5,6 @@ chardet==3.0.4
 chios
 click==6.7
 colorclass==2.2.0
-commonmark
 doc8==0.8.0
 docutils==0.14
 idna==2.6
