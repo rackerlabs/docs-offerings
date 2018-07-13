@@ -39,8 +39,12 @@ The request has the following URI and header parameters.
        For example, a ``lineOfBusiness`` value of ``US_CLOUD`` returns the products for ``US_CLOUD``.
    * - ``{status}``
      - String
-     - Retrieves offerings with a given status. Valid values are ``ACTIVE``
-       and ``INACTIVE``.
+     -
+       - ``ACTIVE``: Default
+       - ``INACTIVE``: An offering becomes  ``INACTIVE`` when Rackspace
+         introduces a new version of the offering. When an offering becomes
+         ``INACTIVE``, all of the products that belong to that offering also
+         become ``INACTIVE``.
    * - ``{limit}``
      - String
      - The maximum number of items to return. This value should be ``100`` or

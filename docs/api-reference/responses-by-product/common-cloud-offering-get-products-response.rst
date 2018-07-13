@@ -5,7 +5,7 @@ Common Cloud get products response
 ==================================
 
 The following example shows the response for a request to retrieve the
-Rackspace Common Cloud products that are associated with an offering.
+Common Cloud products that are associated with an offering.
 
 .. code::
 

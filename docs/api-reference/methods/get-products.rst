@@ -137,7 +137,7 @@ The response has the following body parameters.
      - A description of the product offering price.
    * - products.\ product.\ productOfferingPrice.\ *priceDetails*
      - Complex type
-     - A collection that provides details specific to pricing for the product.
+     - A collection that provides details about pricing for the product.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\
        *priceCharacteristic*
      - Array
@@ -148,7 +148,7 @@ The response has the following body parameters.
        (``INFRASTRUCTURE`` or ``MANAGED``), ``serviceType`` (``SYSOPS``,
        ``DEVOPS``, or ``LEGACY``), ``chargeType`` (``INFRASTRUCTURE`` or
        ``SUPPORT``), and other pricing qualifiers. These
-       pricing qualifiers are present where applicable. For more information, see the **Service plan details** table on this page.
+       pricing qualifiers are present where applicable. For more information, see the "Service plan details" table on this page.
    * - products.\ product.\ productOfferingPrice.\ priceDetails.\ *prices*
      - Array
      - An info block that contains information about prices for the product.
@@ -224,12 +224,15 @@ The response has the following body parameters.
      - The universally unique identifier (UUID) for the product.
    * - products.\ product.\ *status*
      - String
-     - The status of the product. The default is ``ACTIVE``. When an offering
-       becomes ``INACTIVE``, all of the products that belong to that offering also become ``INACTIVE``.
+     -
+       - ``ACTIVE``: Default
+       - ``INACTIVE``: When an offering becomes ``INACTIVE``, all of the
+         products that belong to that offering also become ``INACTIVE``.
    * - products.\ product.\ *productCode*
      - String
      - A business identifier for the product. This identifier remains
-       consistent when a new version of the product is introduced. This identifier is unique across all of the products within an offering.
+       consistent when a new version of the product is introduced. It is
+       unique across all of the products within an offering.
    * - products.\ product.\ *salesChannel*
      - String
      -
@@ -279,7 +282,8 @@ associated with each Rackspace service plan.
 The following example shows the response for a request to retrieve the
 Cloud Databases products for an offering. To view responses relating to other
 types of products, see the
-:ref:`Responses by product section <responses-by-product/index>`.
+:doc:`Responses by product section <responses-by-product/index>` of this
+guide.
 
 .. code::
 
@@ -293,304 +297,304 @@ types of products, see the
 
 
    {
-    "products": {
-        "product": [
-            {
-                "name": "Uptime - Hamysql - 98304 MB",
-                "description": "Uptime - Hamysql - 98304 MB",
-                "productOfferingPrice": {
-                    "description": "Uptime - Hamysql - 98304 MB Price",
-                    "priceDetails": [
-                        {
-                            "priceCharacteristic": [
-                                {
-                                    "name": "chargeType",
-                                    "value": "INFRASTRUCTURE"
-                                },
-                                {
-                                    "name": "serviceLevel",
-                                    "value": "INFRASTRUCTURE"
-                                },
-                                {
-                                    "name": "serviceType",
-                                    "value": "LEGACY"
-                                }
-                            ],
-                            "prices": [
-                                {
-                                    "unitOfMeasure": "per Hour",
-                                    "price": [
-                                        {
-                                            "currency": "GBP",
-                                            "amount": "4.4",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "USD",
-                                            "amount": "5.75",
-                                            "geo": "USA"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "priceCharacteristic": [
-                                {
-                                    "name": "chargeType",
-                                    "value": "INFRASTRUCTURE"
-                                },
-                                {
-                                    "name": "serviceLevel",
-                                    "value": "INFRASTRUCTURE"
-                                },
-                                {
-                                    "name": "serviceType",
-                                    "value": "SYSOPS"
-                                }
-                            ],
-                            "prices": [
-                                {
-                                    "unitOfMeasure": "per Hour",
-                                    "price": [
-                                        {
-                                            "currency": "AUD",
-                                            "amount": "8.964955",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "EUR",
-                                            "amount": "6.078239",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "GBP",
-                                            "amount": "4.4",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "USD",
-                                            "amount": "7.171964",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "AUD",
-                                            "amount": "7.1875",
-                                            "geo": "USA"
-                                        },
-                                        {
-                                            "currency": "EUR",
-                                            "amount": "4.873125",
-                                            "geo": "USA"
-                                        },
-                                        {
-                                            "currency": "GBP",
-                                            "amount": "3.527625",
-                                            "geo": "USA"
-                                        },
-                                        {
-                                            "currency": "USD",
-                                            "amount": "5.75",
-                                            "geo": "USA"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "priceCharacteristic": [
-                                {
-                                    "name": "chargeType",
-                                    "value": "INFRASTRUCTURE"
-                                },
-                                {
-                                    "name": "serviceLevel",
-                                    "value": "MANAGED"
-                                },
-                                {
-                                    "name": "serviceType",
-                                    "value": "DEVOPS"
-                                }
-                            ],
-                            "prices": [
-                                {
-                                    "unitOfMeasure": "per Hour",
-                                    "price": [
-                                        {
-                                            "currency": "AUD",
-                                            "amount": "8.964955",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "EUR",
-                                            "amount": "6.078239",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "GBP",
-                                            "amount": "4.4",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "USD",
-                                            "amount": "7.171964",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "AUD",
-                                            "amount": "7.1875",
-                                            "geo": "USA"
-                                        },
-                                        {
-                                            "currency": "EUR",
-                                            "amount": "4.873125",
-                                            "geo": "USA"
-                                        },
-                                        {
-                                            "currency": "GBP",
-                                            "amount": "3.527625",
-                                            "geo": "USA"
-                                        },
-                                        {
-                                            "currency": "USD",
-                                            "amount": "5.75",
-                                            "geo": "USA"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "priceCharacteristic": [
-                                {
-                                    "name": "chargeType",
-                                    "value": "INFRASTRUCTURE"
-                                },
-                                {
-                                    "name": "serviceLevel",
-                                    "value": "MANAGED"
-                                },
-                                {
-                                    "name": "serviceType",
-                                    "value": "LEGACY"
-                                }
-                            ],
-                            "prices": [
-                                {
-                                    "unitOfMeasure": "per Hour",
-                                    "price": [
-                                        {
-                                            "currency": "GBP",
-                                            "amount": "4.4",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "USD",
-                                            "amount": "5.75",
-                                            "geo": "USA"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "priceCharacteristic": [
-                                {
-                                    "name": "chargeType",
-                                    "value": "INFRASTRUCTURE"
-                                },
-                                {
-                                    "name": "serviceLevel",
-                                    "value": "MANAGED"
-                                },
-                                {
-                                    "name": "serviceType",
-                                    "value": "SYSOPS"
-                                }
-                            ],
-                            "prices": [
-                                {
-                                    "unitOfMeasure": "per Hour",
-                                    "price": [
-                                        {
-                                            "currency": "AUD",
-                                            "amount": "8.964955",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "EUR",
-                                            "amount": "6.078239",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "GBP",
-                                            "amount": "4.4",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "USD",
-                                            "amount": "7.171964",
-                                            "geo": "UK"
-                                        },
-                                        {
-                                            "currency": "AUD",
-                                            "amount": "7.1875",
-                                            "geo": "USA"
-                                        },
-                                        {
-                                            "currency": "EUR",
-                                            "amount": "4.873125",
-                                            "geo": "USA"
-                                        },
-                                        {
-                                            "currency": "GBP",
-                                            "amount": "3.527625",
-                                            "geo": "USA"
-                                        },
-                                        {
-                                            "currency": "USD",
-                                            "amount": "5.75",
-                                            "geo": "USA"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "priceType": "Usage"
-                },
-                "productCharacteristic": [
-                    {
-                        "name": "db_type",
-                        "value": "hamysql"
-                    },
-                    {
-                        "name": "product_category",
-                        "value": "UPTIME"
-                    },
-                    {
-                        "name": "ram_in_mb",
-                        "value": "98304 MB"
-                    }
-                ],
-                "link": {
-                    "rel": "SELF",
-                    "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/fd2c2294-0498-3791-9df7-1d4ed883a939/products/0a1239ca-19ae-39e7-a7a3-887dfcc8ea85"
-                },
-                "id": "0a1239ca-19ae-39e7-a7a3-887dfcc8ea85",
-                "status": "ACTIVE",
-                "productCode": "UPTIME_hamysql_98304MB",
-                "salesChannel": "PUBLIC"
-            }
-        ],
-        "link": [
-            {
-                "rel": "NEXT",
-                "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/fd2c2294-0498-3791-9df7-1d4ed883a939/products?marker=1&limit=1"
-            }
-        ]
-    }
-}
+      "products": {
+          "product": [
+              {
+                  "name": "Uptime - Hamysql - 98304 MB",
+                  "description": "Uptime - Hamysql - 98304 MB",
+                  "productOfferingPrice": {
+                      "description": "Uptime - Hamysql - 98304 MB Price",
+                      "priceDetails": [
+                          {
+                              "priceCharacteristic": [
+                                  {
+                                      "name": "chargeType",
+                                      "value": "INFRASTRUCTURE"
+                                  },
+                                  {
+                                      "name": "serviceLevel",
+                                      "value": "INFRASTRUCTURE"
+                                  },
+                                  {
+                                      "name": "serviceType",
+                                      "value": "LEGACY"
+                                  }
+                              ],
+                              "prices": [
+                                  {
+                                      "unitOfMeasure": "per Hour",
+                                      "price": [
+                                          {
+                                              "currency": "GBP",
+                                              "amount": "4.4",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "USD",
+                                              "amount": "5.75",
+                                              "geo": "USA"
+                                          }
+                                      ]
+                                  }
+                              ]
+                          },
+                          {
+                              "priceCharacteristic": [
+                                  {
+                                      "name": "chargeType",
+                                      "value": "INFRASTRUCTURE"
+                                  },
+                                  {
+                                      "name": "serviceLevel",
+                                      "value": "INFRASTRUCTURE"
+                                  },
+                                  {
+                                      "name": "serviceType",
+                                      "value": "SYSOPS"
+                                  }
+                              ],
+                              "prices": [
+                                  {
+                                      "unitOfMeasure": "per Hour",
+                                      "price": [
+                                          {
+                                              "currency": "AUD",
+                                              "amount": "8.964955",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "EUR",
+                                              "amount": "6.078239",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "GBP",
+                                              "amount": "4.4",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "USD",
+                                              "amount": "7.171964",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "AUD",
+                                              "amount": "7.1875",
+                                              "geo": "USA"
+                                          },
+                                          {
+                                              "currency": "EUR",
+                                              "amount": "4.873125",
+                                              "geo": "USA"
+                                          },
+                                          {
+                                              "currency": "GBP",
+                                              "amount": "3.527625",
+                                              "geo": "USA"
+                                          },
+                                          {
+                                              "currency": "USD",
+                                              "amount": "5.75",
+                                              "geo": "USA"
+                                          }
+                                      ]
+                                  }
+                              ]
+                          },
+                          {
+                              "priceCharacteristic": [
+                                  {
+                                      "name": "chargeType",
+                                      "value": "INFRASTRUCTURE"
+                                  },
+                                  {
+                                      "name": "serviceLevel",
+                                      "value": "MANAGED"
+                                  },
+                                  {
+                                      "name": "serviceType",
+                                      "value": "DEVOPS"
+                                  }
+                              ],
+                              "prices": [
+                                  {
+                                      "unitOfMeasure": "per Hour",
+                                      "price": [
+                                          {
+                                              "currency": "AUD",
+                                              "amount": "8.964955",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "EUR",
+                                              "amount": "6.078239",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "GBP",
+                                              "amount": "4.4",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "USD",
+                                              "amount": "7.171964",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "AUD",
+                                              "amount": "7.1875",
+                                              "geo": "USA"
+                                          },
+                                          {
+                                              "currency": "EUR",
+                                              "amount": "4.873125",
+                                              "geo": "USA"
+                                          },
+                                          {
+                                              "currency": "GBP",
+                                              "amount": "3.527625",
+                                              "geo": "USA"
+                                          },
+                                          {
+                                              "currency": "USD",
+                                              "amount": "5.75",
+                                              "geo": "USA"
+                                          }
+                                      ]
+                                  }
+                              ]
+                          },
+                          {
+                              "priceCharacteristic": [
+                                  {
+                                      "name": "chargeType",
+                                      "value": "INFRASTRUCTURE"
+                                  },
+                                  {
+                                      "name": "serviceLevel",
+                                      "value": "MANAGED"
+                                  },
+                                  {
+                                      "name": "serviceType",
+                                      "value": "LEGACY"
+                                  }
+                              ],
+                              "prices": [
+                                  {
+                                      "unitOfMeasure": "per Hour",
+                                      "price": [
+                                          {
+                                              "currency": "GBP",
+                                              "amount": "4.4",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "USD",
+                                              "amount": "5.75",
+                                              "geo": "USA"
+                                          }
+                                      ]
+                                  }
+                              ]
+                          },
+                          {
+                              "priceCharacteristic": [
+                                  {
+                                      "name": "chargeType",
+                                      "value": "INFRASTRUCTURE"
+                                  },
+                                  {
+                                      "name": "serviceLevel",
+                                      "value": "MANAGED"
+                                  },
+                                  {
+                                      "name": "serviceType",
+                                      "value": "SYSOPS"
+                                  }
+                              ],
+                              "prices": [
+                                  {
+                                      "unitOfMeasure": "per Hour",
+                                      "price": [
+                                          {
+                                              "currency": "AUD",
+                                              "amount": "8.964955",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "EUR",
+                                              "amount": "6.078239",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "GBP",
+                                              "amount": "4.4",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "USD",
+                                              "amount": "7.171964",
+                                              "geo": "UK"
+                                          },
+                                          {
+                                              "currency": "AUD",
+                                              "amount": "7.1875",
+                                              "geo": "USA"
+                                          },
+                                          {
+                                              "currency": "EUR",
+                                              "amount": "4.873125",
+                                              "geo": "USA"
+                                          },
+                                          {
+                                              "currency": "GBP",
+                                              "amount": "3.527625",
+                                              "geo": "USA"
+                                          },
+                                          {
+                                              "currency": "USD",
+                                              "amount": "5.75",
+                                              "geo": "USA"
+                                          }
+                                      ]
+                                  }
+                              ]
+                          }
+                      ],
+                      "priceType": "Usage"
+                  },
+                  "productCharacteristic": [
+                      {
+                          "name": "db_type",
+                          "value": "hamysql"
+                      },
+                      {
+                          "name": "product_category",
+                          "value": "UPTIME"
+                      },
+                      {
+                          "name": "ram_in_mb",
+                          "value": "98304 MB"
+                      }
+                  ],
+                  "link": {
+                      "rel": "SELF",
+                      "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/fd2c2294-0498-3791-9df7-1d4ed883a939/products/0a1239ca-19ae-39e7-a7a3-887dfcc8ea85"
+                  },
+                  "id": "0a1239ca-19ae-39e7-a7a3-887dfcc8ea85",
+                  "status": "ACTIVE",
+                  "productCode": "UPTIME_hamysql_98304MB",
+                  "salesChannel": "PUBLIC"
+              }
+          ],
+          "link": [
+              {
+                  "rel": "NEXT",
+                  "href": "https://staging.offer.api.rackspacecloud.com/v2/offerings/fd2c2294-0498-3791-9df7-1d4ed883a939/products?marker=1&limit=1"
+              }
+          ]
+      }
+  }
 
 
 Response codes

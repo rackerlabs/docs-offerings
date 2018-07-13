@@ -5,7 +5,7 @@ Rackspace CDN get products response
 ===================================
 
 The following example shows the response for a request to retrieve the
-Rackspace Content Delivery Network (CDN) products that are associated with an
+Content Delivery Network (CDN) products that are associated with an
 offering.
 
 .. code::

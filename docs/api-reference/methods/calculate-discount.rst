@@ -42,6 +42,9 @@ The request has the following body parameters.
    :widths: 15 10 30
    :header-rows: 1
 
+   * - Name
+     - Type
+     - Description
    * - commitDiscountCalculation
      - Object *(Required)*
      - An info block that contains information about the commit discount
@@ -68,7 +71,9 @@ The following example shows the header information.
   Content-Type: application/json
   Accept: application/json
 
-**Example request for a commit discount calculation request with prepay opted**
+**Example request for a commit discount calculation with prepay opted**
+
+The following example shows what the request for a commit discount calculation with prepay opted looks like:
 
  .. code::
 

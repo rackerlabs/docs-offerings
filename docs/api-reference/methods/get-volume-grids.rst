@@ -113,7 +113,11 @@ The response has the following body parameters.
        - ``EUR``: Euro
    * - volumeGrids.\ volumeGrid.\ *gridType*
      - String
-     - The type of grid. By default, only ``STANDARD`` grids are returned.
+     -
+     - ``STANDARD``: Offers pre-defined discounts based on the length of the
+       commitment. By default, only ``STANDARD`` grids are returned.
+     - ``CUSTOM``: Offers a customized discount based on a customer's
+       request.
    * - volumeGrids.\ volumeGrid.\ *gridVersion*
      - String
      - The version of the volume grid.
@@ -125,10 +129,10 @@ The response has the following body parameters.
      - The date and time that the volume grid ends.
    * - volumeGrids.\ *link*
      - Object
-     - An info block that contains details about the link for the volume grids.
+     - An info block that contains details about the links for the results.
    * - volumeGrids.\ link.\ *href*
      - String
-     - The URL for the volume grids.
+     - The URL for the results.
    * - volumeGrids.\ link.\ *rel*
      - String
      - The relationship between the current document and the linked document.
