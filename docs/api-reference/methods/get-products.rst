@@ -278,8 +278,8 @@ associated with each Rackspace service plan.
 
 The following example shows the response for a request to retrieve the
 Cloud Databases products for an offering. To view responses relating to other
-types of products, see the
-:ref:`Responses by product section <responses-by-product/index>`.
+types of products, see
+:ref:`responses-by-product`.
 
 .. code::
 
@@ -590,7 +590,7 @@ types of products, see the
             }
         ]
     }
-}
+   }
 
 
 Response codes
