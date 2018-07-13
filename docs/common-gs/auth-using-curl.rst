@@ -157,8 +157,8 @@ request, prefix the variable name with a ``$``, for example ``$ENDPOINT``.
    .. include:: ../common-gs/samples/service-catalog-endpoint.rst
 
    .. note::
-        For some services, the ``publicURL`` value for the API consists of
-        the endpoint URL with the tenant ID for your account
+        For some services, the ``publicURL`` value for the API consists
+        of the endpoint URL with the tenant ID for your account
         appended after the final ``/``.
 
 
