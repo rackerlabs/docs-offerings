@@ -1,7 +1,5 @@
 .. _role-based-access-control:
 
-.. COMMENT: Adapt this topic to provide information that is relevant for your
-   product.
 
 ================================
 Role-based access control (RBAC)
