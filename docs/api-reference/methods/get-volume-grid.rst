@@ -69,7 +69,8 @@ The response has the following body parameters.
      - The description of the volume grid.
    * - volumeGrid.\ *offerings*
      - Complex type
-     - An info block that contains details about offerings.
+     - An info block that contains details about the offerings that are
+       associated with the volume grid.
    * - volumeGrid.\ offerings.\ *offering*
      - Array
      - An array of offering codes.
@@ -81,7 +82,7 @@ The response has the following body parameters.
      - An info block that contains details about volume tiers.
    * - volumeGrid.\ volumeTiers.\ *volumeTier*
      - Complex type
-     - An info block that contains details about a volume tier.
+     - An info block that contains details about a specific volume tier.
    * - volumeGrid.\ volumeTiers.\ volumeTier.\ *minAmount*
      - String
      - The minimum amount of the discount.

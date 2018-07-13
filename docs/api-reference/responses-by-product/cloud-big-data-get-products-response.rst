@@ -5,7 +5,7 @@ Cloud Big Data get products response
 ====================================
 
 The following example shows the response for a request to retrieve the
-Rackspace Cloud Big Data products that are associated with an offering.
+Cloud Big Data products that are associated with an offering.
 
 .. code::
 

@@ -105,7 +105,8 @@ The response has the following body parameters.
      - The maximum amount of the discount.
    * - commitGrid.\ monthlyCommitTiers.\ commitTier.\ *tierIndex*
      - Integer
-     - The index that is associated with the tier.
+     - The index that is associated with the tier. This number is used to
+       organize tiers.
    * - commitGrid.\ *prepayCommitTiers*
      - Object
      - An info block that contains details about any prepay commit tiers.
@@ -135,7 +136,8 @@ The response has the following body parameters.
      - The maximum amount of the discount.
    * - commitGrid.\ prepayCommitTiers.\ commitTier.\ *tierIndex*
      - Integer
-     - The index that is associated with the tier.
+     - The index that is associated with the tier. This number is used to
+       organize tiers.
    * - commitGrid.\ *id*
      - String
      - The ID for the commit grid.

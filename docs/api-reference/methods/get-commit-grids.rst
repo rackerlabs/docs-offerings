@@ -113,7 +113,11 @@ The response has the following body parameters.
        - ``EUR``: Euro
    * - commitGrids.\ commitGrid.\ *gridType*
      - String
-     - The type of grid. By default, only ``STANDARD`` grids are returned.
+     -
+       - ``STANDARD``: Offers pre-defined discounts based on the length of the
+           commitment. By default, only ``STANDARD`` grids are returned.
+       - ``CUSTOM``: Offers a customized discount based on a customer's
+           request.
    * - commitGrids.\ commitGrid.\ *gridVersion*
      - String
      - The version of the commit grid.

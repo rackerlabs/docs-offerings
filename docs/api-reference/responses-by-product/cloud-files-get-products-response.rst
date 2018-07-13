@@ -5,7 +5,7 @@ Cloud Files get products response
 =================================
 
 The following example shows the response for a request to retrieve the
-Rackspace Cloud Files products that are associated with an offering.
+Cloud Files products that are associated with an offering.
 
 .. code::
 

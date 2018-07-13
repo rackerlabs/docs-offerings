@@ -4,8 +4,8 @@
 Responses by product
 ====================
 
-Responses to the get product and get products calls vary by product. Use the
-following links to view sample responses by product.
+Responses to the get product and get products calls vary, depending on the
+product. Use the following links to view sample responses.
 
 .. toctree::
    :maxdepth: 1

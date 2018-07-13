@@ -80,8 +80,8 @@ The response has the following body parameters.
    * - product.\ *productCode*
      - String
      - A business identifier for the product. This identifier remains
-       consistent when a new version of the product is introduced. This
-       identifier is unique across all of the products within an offering.
+       consistent when a new version of the product is introduced. It is
+       unique across all of the products within an offering.
    * - product.\ *productOfferingPrice*
      - Complex type
      - Provides pricing information specific to a product in an offering
@@ -97,7 +97,7 @@ The response has the following body parameters.
        - ``subscription``: Recurring pricing.
    * - product.\ productOfferingPrice.\ *priceDetails*
      - Complex type
-     - A collection that provides details specific to pricing for the product.
+     - A collection that provides details about pricing for the product.
    * - product.\ productOfferingPrice.\ priceDetails.\ *priceCharacteristic*
      - Array
      - An array of JSON strings that contains a collection of characteristics
@@ -108,10 +108,10 @@ The response has the following body parameters.
        ``DEVOPS``, or ``LEGACY``), ``chargeType`` (``INFRASTRUCTURE`` or
        ``SUPPORT``), and other pricing qualifiers. These
        pricing qualifiers are present where applicable. For more information,
-       see the **Service plan details** table on this page.
+       see the "Service plan details" table on this page.
    * - product.\ productOfferingPrice.\ priceDetails.\ *prices*
      - Array
-     - An info block that contains information about the product prices.
+     - An info block that contains information about product prices.
    * - product.\ productOfferingPrice.\ priceDetails.\ prices.\ *unitOfMeasure*
      - String
      -
@@ -152,7 +152,10 @@ The response has the following body parameters.
        drive product and pricing. Example: ``"name": "flavor_id", "value":"performance2-30"``.
    * - product.\ *status*
      - String
-     - Whether the product is ``ACTIVE`` (default) or ``INACTIVE``.
+     -
+       - ``ACTIVE``: Default
+       - ``INACTIVE``: When an offering becomes ``INACTIVE``, all of the
+         products that belong to that offering also become ``INACTIVE``.
 
 **Service plan details**
 

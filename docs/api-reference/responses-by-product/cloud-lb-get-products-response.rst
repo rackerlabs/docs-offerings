@@ -5,7 +5,7 @@ Cloud Load Balancers get products response
 ==========================================
 
 The following example shows the response for a request to retrieve the
-Rackspace loud Load Balancers products that are associated with an offering.
+Cloud Load Balancers products that are associated with an offering.
 
 .. code::
 
