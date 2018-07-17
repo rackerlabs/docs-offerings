@@ -7,7 +7,7 @@ Additional resources
 We welcome feedback, comments, and bug reports.
 Email them to `<infodev@rackspace.com>`__.
 
-Use the following resources to learn more about the Offer service API.
+Use the following resources to learn more about the Offer service API:
 
 - For information about getting started using the |product name|, see the
   :ref:`Getting started section <getting-started-guide>`.
