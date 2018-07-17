@@ -8,14 +8,14 @@ Role-based access control (RBAC)
 ================================
 
 Role-based access control (RBAC) restricts access to the capabilities of
-Rackspace Cloud services, including the |product name| API, to authorized
+Rackspace Cloud services, including the Offer service API, to authorized
 users only. RBAC enables Rackspace Cloud customers to specify
 users have access to which |product name| API
 service capabilities, based on roles defined by Rackspace. The
-permissions to perform certain operations in |product name| API (create,
+permissions to perform certain operations in the Offer service API (create,
 read, update, delete) are assigned to specific roles. The account owner user
 assigns these roles, either global (multiproduct) or product-specific (for
-example, |product name|), to account users.
+example, the Offer service), to account users.
 
 .. _rbac-assign:
 
@@ -98,7 +98,7 @@ RBAC-enabled. The following table describes these roles and their permissions.
 Resolving conflicts between RBAC multiproduct and product-specific roles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The account owner can set roles for both multiproduct and |product name|
+The account owner can set roles for both multiproduct and the Offer service
 scope, and it is important to understand how any potential conflicts between
 these roles are resolved. When two roles appear to conflict, the role that
 provides the more extensive permissions takes precedence. Therefore, admin
@@ -106,7 +106,7 @@ roles take precedence over observer and creator roles, because admin roles
 provide more permissions.
 
 The following table shows two examples of how potential conflicts between user
-roles in the Control Panel are resolved.
+roles in the Cloud Control Panel are resolved.
 
 
 .. list-table:: **Example of resolving permissions**

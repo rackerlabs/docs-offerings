@@ -19,12 +19,12 @@ expressed as UTC.
 
     YYYY-MM-DD'T'hh:mm:ssZ
 
-For example, May 19, 2016 at 8:07:08 AM, GMT-5 would have the following
+For example, May 19, 2018 at 8:07:08 AM, GMT-5 would have the following
 UCT-5 format:
 
 .. code::
 
-    2016-05-19T08:07:08-05:00
+    2018-05-19T08:07:08-05:00
 
 The following table describes the date and time format codes.
 

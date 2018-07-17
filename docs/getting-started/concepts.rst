@@ -62,7 +62,7 @@ commit grid applied to it.
 
 .. _concept-volume-grid:
 
-Volume Grid
+Volume grid
 ~~~~~~~~~~~
 
 A volume grid is a matrix that indicates the discounts that can be applied

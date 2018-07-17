@@ -9,8 +9,8 @@ The |api-service| can be accessed at https://offer.api.rackspace.com/.
 Versions
 ~~~~~~~~
 
-The Offering API uses a URI versioning scheme. The first element of the URI
-path contains the target version identifier: for example, in the URL
+The Offer service API uses a URI versioning scheme. The first element of the
+URI path contains the target version identifier: for example, in the URL
 https://offer.api.rackspacecloud.com/v2/, the API version is 2.
 
 All requests except for queries for the contract version must contain a target
@@ -21,7 +21,8 @@ will be marked as deprecated. Rackspace will work with developers and partners
 to ensure that there is adequate time to migrate to the new version before
 deprecated versions are discontinued.
 
-**Note**: At this time, only version 2 of the Offer API is publicly available.
+**Note**: At this time, only version 2 of the Offer service API is publicly
+available.
 
 Example request with URI versioning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -21,12 +21,12 @@ Install CLI clients
    cURL and CLI examples.
 
 If you want to run the examples by using cURL instead of using the CLI, skip
-this step and proceed to the next section, "Sending API requests to
+this step and proceed to the next section, "Sending API requests to the
 |product name|".
 
-You can use the designate command-line interface (CLI) client with Managed DNS.
-The  designate client is the CLI for the OpenStack DNS service API and its
-extensions, and is  a plug-in to the OpenStack CLI.
+You can use the OpenStack&reg; designate command-line interface (CLI) client
+with Managed DNS. The designate client is the CLI for the OpenStack DNS
+service API and its extensions, and is  a plug-in to the OpenStack CLI.
 
 ..  note::
 
@@ -36,7 +36,7 @@ extensions, and is  a plug-in to the OpenStack CLI.
 
 
 #. Run the following commands on a Mac OS X® or Linux® distribution to install
-   the OpenStack® and designate clients:
+   the OpenStack and designate clients:
 
    .. code::
 
@@ -69,7 +69,7 @@ extensions, and is  a plug-in to the OpenStack CLI.
 
       $ export OS_CLOUD=prod
 
-#. Run the following command to see if OpenStack/Designate CLI works:
+#. Run the following command to see if OpenStack designate CLI works:
 
    .. code::
 
@@ -85,4 +85,4 @@ extensions, and is  a plug-in to the OpenStack CLI.
       $ sudo pip install -U distribute
 
 Now that your command line tool is ready, skip to
-*Creating a zone with the CLI*.
+"Creating a zone with the CLI."

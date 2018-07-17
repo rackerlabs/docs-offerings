@@ -4,9 +4,9 @@
 Faults
 ======
 
-API operations that return an error return one of the fault objects described
-in this section. All fault objects extend from the base fault,
-``serviceFault``, for easier exception handling  for languages that support it.
+The fault objects in this section describe possible API operation errors. All
+fault objects extend from the base fault, ``serviceFault``, for easier
+exception handling  for languages that support it.
 
 .. _faults-service:
 
