@@ -66,7 +66,7 @@ token ID
     expire, unless it is revoked before the expiration. To get a new token,
     submit another authentication request. For more information, see
     :rax-devdocs:`Manage tokens and token expiration
-    <cloud-identity/v2/getting-started/manage-auth-tokens/#manage-authentication-tokens>`
+    <cloud-identity/v2/getting-started/manage-auth-tokens/#manage-authentication-tokens>`.
 
 tenant ID
     The tenant ID provides your account number. For most Rackspace Cloud
@@ -145,7 +145,7 @@ request, prefix the variable name with a ``$``, for example ``$ENDPOINT``.
 
        $ export TENANT_ID="tenant-id"
 
-   Replace ``tenant-id`` with the authentication token ``id`` value returned
+   Replace ``tenant-id`` with the token ``id`` value returned
    in the authentication response.
 
 #. In the ``service catalog`` section of the authentication response, copy the

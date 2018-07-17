@@ -10,7 +10,7 @@ the ``X-Auth-Token`` header of each request. You get a token by submitting an
 authentication request with valid account credentials to the Rackspace Cloud
 Identity API service.
 
-To access the Authentication Service, you must know whether your account is
+To access the Authentication service, you must know whether your account is
 US-based or UK-based.
 
 US-based accounts authenticate through the following endpoint:

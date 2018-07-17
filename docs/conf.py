@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Offer Service API documentation build configuration file.
+Offer service API documentation build configuration file.
 
 This file is execfile()d with the current directory set to its
 containing dir.
@@ -91,7 +91,7 @@ linkcheck_ignore = ['https://pages.github.rackspace.com*',
 linkcheck_anchors = False
 
 # General information about the project.
-project = 'Offer Service API'
+project = 'Offer service API'
 copyright = '2018, Rackspace'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -108,8 +108,8 @@ release = "version 2.0"
 # Global variables that are replaced by the specified value during the build
 # process.
 rst_epilog = """
-.. |service| replace:: Offer Service
-.. |api-service| replace:: Offer Service API
+.. |service| replace:: Offer service
+.. |api-service| replace:: Offer service API
 .. |contract version| replace:: 2.0
 .. |product name| replace:: Offer
 """
@@ -209,11 +209,11 @@ else:
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Offer Service API v2.0 documentation'
+html_title = 'Offer service API v2.0 documentation'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 # html_short_title = None
-html_short_title = 'Offer Service API v2.0'
+html_short_title = 'Offer service API v2.0'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.

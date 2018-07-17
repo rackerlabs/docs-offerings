@@ -1,7 +1,7 @@
 .. _send-api-requests:
 
 ==============================
-Send API requests to |service|
+Send API requests to the |service|
 ==============================
 
 This section shows how to send requests by using cURL.
@@ -13,7 +13,7 @@ This section shows how to send requests by using cURL.
      -  If you are developing applications or automation, try using
         the `OpenStack client applications`_.
 
-     -  For API development, testing and workflow management in a graphical
+     -  For API development, testing, and workflow management in a graphical
         environment, try interacting with the API by using an application such
         as `Postman`_  or `RESTClient for Firefox`_.
 
