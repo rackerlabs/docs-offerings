@@ -4,8 +4,8 @@
 Offering operations
 ===================
 
-Use the following offering API operation to retrieve information on Rackspace
-offerings.
+Use the following offering API operation to retrieve information about
+Rackspace offerings.
 
 .. contents::
    :depth: 1

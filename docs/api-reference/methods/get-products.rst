@@ -128,7 +128,7 @@ The response has the following body parameters.
      - The description of the product.
    * - products.\ product.\ *productOfferingPrice*
      - Complex type
-     - Provides pricing information specific to a product in an offering
+     - Pricing information specific to a product in an offering
        through a nested structure.
    * - products.\ product.\ productOfferingPrice.\ *description*
      - String
@@ -365,31 +365,9 @@ guide.
                                               "amount": "6.078239",
                                               "geo": "UK"
                                           },
-                                          {
-                                              "currency": "GBP",
-                                              "amount": "4.4",
-                                              "geo": "UK"
-                                          },
-                                          {
-                                              "currency": "USD",
-                                              "amount": "7.171964",
-                                              "geo": "UK"
-                                          },
-                                          {
-                                              "currency": "AUD",
-                                              "amount": "7.1875",
-                                              "geo": "USA"
-                                          },
-                                          {
-                                              "currency": "EUR",
-                                              "amount": "4.873125",
-                                              "geo": "USA"
-                                          },
-                                          {
-                                              "currency": "GBP",
-                                              "amount": "3.527625",
-                                              "geo": "USA"
-                                          },
+                                          .
+                                          .
+                                          .
                                           {
                                               "currency": "USD",
                                               "amount": "5.75",
@@ -428,36 +406,9 @@ guide.
                                               "amount": "6.078239",
                                               "geo": "UK"
                                           },
-                                          {
-                                              "currency": "GBP",
-                                              "amount": "4.4",
-                                              "geo": "UK"
-                                          },
-                                          {
-                                              "currency": "USD",
-                                              "amount": "7.171964",
-                                              "geo": "UK"
-                                          },
-                                          {
-                                              "currency": "AUD",
-                                              "amount": "7.1875",
-                                              "geo": "USA"
-                                          },
-                                          {
-                                              "currency": "EUR",
-                                              "amount": "4.873125",
-                                              "geo": "USA"
-                                          },
-                                          {
-                                              "currency": "GBP",
-                                              "amount": "3.527625",
-                                              "geo": "USA"
-                                          },
-                                          {
-                                              "currency": "USD",
-                                              "amount": "5.75",
-                                              "geo": "USA"
-                                          }
+                                          .
+                                          .
+                                          .
                                       ]
                                   }
                               ]
@@ -519,36 +470,9 @@ guide.
                                               "amount": "8.964955",
                                               "geo": "UK"
                                           },
-                                          {
-                                              "currency": "EUR",
-                                              "amount": "6.078239",
-                                              "geo": "UK"
-                                          },
-                                          {
-                                              "currency": "GBP",
-                                              "amount": "4.4",
-                                              "geo": "UK"
-                                          },
-                                          {
-                                              "currency": "USD",
-                                              "amount": "7.171964",
-                                              "geo": "UK"
-                                          },
-                                          {
-                                              "currency": "AUD",
-                                              "amount": "7.1875",
-                                              "geo": "USA"
-                                          },
-                                          {
-                                              "currency": "EUR",
-                                              "amount": "4.873125",
-                                              "geo": "USA"
-                                          },
-                                          {
-                                              "currency": "GBP",
-                                              "amount": "3.527625",
-                                              "geo": "USA"
-                                          },
+                                          .
+                                          .
+                                          .
                                           {
                                               "currency": "USD",
                                               "amount": "5.75",
