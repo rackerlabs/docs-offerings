@@ -1,8 +1,8 @@
 .. _offering-methods:
 
-===========================
-Offering methods
-===========================
+===================
+Offering operations
+===================
 
 Use the following offering API operation to retrieve information on Rackspace
 offerings.

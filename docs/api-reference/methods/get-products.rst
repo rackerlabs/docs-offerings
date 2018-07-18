@@ -7,8 +7,6 @@ List products
 
     GET /v2/offerings/{offeringId}/products​
 
-Gets the products for a Rackspace offering.
-
 This operation retrieves all of the products that are associated with a
 Rackspace offering.
 
@@ -40,7 +38,7 @@ The request has the following URI and header parameters.
    * - ``{limit}``
      - String
      - The maximum number of items to return. The default value is ``100``.
-       For this method, you may also set the value for this parameter to
+       For this operation, you may also set the value for this parameter to
        ``infinite``.
    * - ``{marker}``
      - String

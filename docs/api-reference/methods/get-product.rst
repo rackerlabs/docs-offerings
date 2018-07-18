@@ -7,8 +7,6 @@ List a product
 
     GET /v2/offerings/{offeringId}/products/{productId}
 
-Gets a specific product.
-
 This operation retrieves a specific product.
 
 Request
