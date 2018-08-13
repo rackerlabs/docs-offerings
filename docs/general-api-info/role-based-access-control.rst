@@ -61,13 +61,13 @@ The following table describes the roles that can be used to access the
 
    * - Role name
      - Role permissions
-   * - lbaas:admin
+   * - offer:admin
      - This role provides Create, Read, Update, and Delete permissions
        in |product name|, where access is granted.
-   * - lbaas:creator
+   * - billing:admin
      - This role provides Create, Read and Update permissions in
        |product name|, where access is granted.
-   * - lbaas:observer
+   * - billing:observer
      - This role provides Read permission in |product name|, where access
        is granted.
 
