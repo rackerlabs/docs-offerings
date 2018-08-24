@@ -146,7 +146,7 @@ variables that can be substituted for the actual values.
    in the authentication response.
 
 #. The ``service catalog`` section of the authentication response does not
-   include the endpoint for the Offer Service API. To get the endpoint, go to
+   include the endpoint for the Offer service API. To get the endpoint, go to
    :ref:`Authenticate to the Rackspace Cloud <../getting-started/authenticate.rst>` and copy the URL for the
    |api-service|, version, and region that you want to access.
 
