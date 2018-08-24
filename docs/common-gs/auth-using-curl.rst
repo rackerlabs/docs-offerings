@@ -37,7 +37,7 @@ response that includes the following information:
  - A service catalog with information about the services that you can access
 
    **Note**: The response to the authentication request only includes
-   endpoints for products, and does not include the endpoint for the Offer
+   endpoints for products and does not include the endpoint for the Offer
    Service API.
 
  - User information and role assignments
