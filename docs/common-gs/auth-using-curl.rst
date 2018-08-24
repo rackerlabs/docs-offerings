@@ -147,8 +147,8 @@ variables that can be substituted for the actual values.
 
 #. The ``service catalog`` section of the authentication response does not
    include the endpoint for the Offer service API. To get the endpoint, go to
-   :ref:`Authenticate to the Rackspace Cloud <authenticate>` and copy the URL for the version and
-   region that you want to access.
+   the top of this page and copy the URL for the version and region that you
+   want to access.
 
 #. Export the URL to an environment variable, as shown in the following
    example:
@@ -158,5 +158,5 @@ variables that can be substituted for the actual values.
         $ export API_ENDPOINT="URL"
 
 
-   Replace ``URL`` with the URL that is listed for your region at
-   :ref:`Authenticate to the Rackspace Cloud <authenticate>`.
+   Replace ``URL`` with the URL that is listed for your region at the top of
+   this page.
