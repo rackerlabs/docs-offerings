@@ -33,14 +33,14 @@ Review the authentication response
 If your credentials are valid, the Identity service returns an authentication
 response that includes the following information:
 
- - An authentication token
- - A service catalog with information about the services that you can access
+ - An authentication token.
+ - A service catalog with information about the services that you can access.
 
    **Note**: The response to the authentication request only includes
    endpoints for products and does not include the endpoint for the Offer
    Service API.
 
- - User information and role assignments
+ - User information and role assignments.
 
 
 .. note::
@@ -147,7 +147,7 @@ variables that can be substituted for the actual values.
 
 #. The ``service catalog`` section of the authentication response does not
    include the endpoint for the Offer Service API. To get the endpoint, go to
-   :ref:`Authenticate to the Rackspace Cloud <../getting-started/authenticate.rst>`. and copy the URL for the
+   :ref:`Authenticate to the Rackspace Cloud <../getting-started/authenticate.rst>` and copy the URL for the
    |api-service|, version, and region that you want to access.
 
 #. Export the URL to an environment variable, as shown in the following
@@ -155,8 +155,8 @@ variables that can be substituted for the actual values.
 
    .. code::
 
-        $ export API_ENDPOINT="<URL>"
+        $ export API_ENDPOINT="URL"
 
 
-   Replace ``<URL>`` with the URL listed for your region at
+   Replace ``URL`` with the URL listed for your region at
    :ref:`Authenticate to the Rackspace Cloud <../getting-started/authenticate.rst>`.
