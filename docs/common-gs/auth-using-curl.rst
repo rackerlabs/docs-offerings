@@ -158,5 +158,5 @@ variables that can be substituted for the actual values.
         $ export API_ENDPOINT="URL"
 
 
-   Replace ``URL`` with the URL listed for your region at
+   Replace ``URL`` with the URL that is listed for your region at
    :ref:`Authenticate to the Rackspace Cloud <../getting-started/authenticate>`.
