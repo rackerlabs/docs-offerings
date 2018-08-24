@@ -135,8 +135,7 @@ variables that can be substituted for the actual values.
    in the authentication response.
 
 #. Export the tenant ID to an environment variable that can be supplied in
-   requests that require you to specify a tenant ID or
-   tenant name.
+   requests that require you to specify a tenant ID or tenant name.
 
    .. code::
 
