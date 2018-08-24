@@ -61,15 +61,15 @@ The following table describes the roles that can be used to access the
 
    * - Role name
      - Role permissions
-   * - offer:admin
-     - This role provides Create, Read, Update, and Delete permissions
+   * - identity:user-admin
+     - This role provides Create, Read, Update, and Delete accounts
        in |product name|, where access is granted.
    * - billing:admin
-     - This role provides Create, Read and Update permissions in
-       |product name|, where access is granted.
+     - This role provides Create, Read and Update permissions for billing only
+       in |product name|, where access is granted. It also provides Read permissions for offerings and their products.
    * - billing:observer
-     - This role provides Read permission in |product name|, where access
-       is granted.
+     - This role provides Read permissions for billing and offerings in
+       |product name|, where access is granted.
 
 .. _rbac-available-multi-roles:
 

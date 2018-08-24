@@ -35,6 +35,11 @@ response that includes the following information:
 
  - An authentication token
  - A service catalog with information about the services that you can access
+
+   **Note**: The response to the authentication request only includes
+   endpoints for products, and does not include the endpoint for the Offer
+   Service API.
+
  - User information and role assignments
 
 
@@ -74,11 +79,6 @@ tenant ID
     catalog automatically. For Rackspace Cloud services, the tenant ID has the
     same value as the tenant name.
 
-endpoint
-    The API endpoint provides the URL that you use to access the API service.
-    For guidance on choosing an endpoint, see
-    :ref:`Service access <service-access>`.
-
 If the request failed, review the response message and
 the following error message descriptions to determine next steps.
 
@@ -109,12 +109,9 @@ the following error message descriptions to determine next steps.
 Configure environment variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To make it easier to include the token ID, tenant ID, endpoint, and other
+To make it easier to include the token ID, tenant ID, and other
 values in API requests, use the ``export`` command to create environment
-variables that can be substituted for the
-actual values. For example, you can create an ``ENDPOINT`` variable to
-store the URL for accessing an API service. To reference the value in an API
-request, prefix the variable name with a ``$``, for example ``$ENDPOINT``.
+variables that can be substituted for the actual values.
 
 .. include:: ../common-gs/using-env-variables.rst
 
@@ -148,27 +145,18 @@ request, prefix the variable name with a ``$``, for example ``$ENDPOINT``.
    Replace ``tenant-id`` with the token ``id`` value returned
    in the authentication response.
 
-#. In the ``service catalog`` section of the authentication response, copy the
-   ``publicURL`` value for the |api-service|, version, and region that you want
-   to access.
-
-   The following response section shows example endpoints only.
-
-   .. include:: ../common-gs/samples/service-catalog-endpoint.rst
-
-   .. note::
-        For some services, the ``publicURL`` value for the API consists of
-        the endpoint URL with the tenant ID for your account
-        appended after the final ``/``.
-
+#. The ``service catalog`` section of the authentication response does not
+   include the endpoint for the Offer Service API. To get the endpoint, go to
+   :ref:`Authenticate to the Rackspace Cloud <../getting-started/authenticate.rst>`. and copy the URL for the
+   |api-service|, version, and region that you want to access.
 
 #. Export the URL to an environment variable, as shown in the following
    example:
 
    .. code::
 
-        $ export API_ENDPOINT="publicURL"
+        $ export API_ENDPOINT="<URL>"
 
 
-   Replace ``publicURL`` with the ``publicURL`` value listed in the service
-   catalog.
+   Replace ``<URL>`` with the URL listed for your region at
+   :ref:`Authenticate to the Rackspace Cloud <../getting-started/authenticate.rst>`.
