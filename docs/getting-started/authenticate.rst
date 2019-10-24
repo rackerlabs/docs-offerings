@@ -30,9 +30,9 @@ associated with your account is not determined by your physical location but
 by the location of the Rackspace retail site which was used to create your
 account.
 
-If your account was created through http://www.rackspacecloud.com, it is a US-based account.
+If your account was created through https://www.rackspacecloud.com, it is a US-based account.
 
-If your account was created through http://www.rackspace.co.uk, it is a UK-based account.
+If your account was created through https://www.rackspace.co.uk, it is a UK-based account.
 
 If you are unsure how your account was created, use the Rackspace contact
 information at either site to ask for help.

@@ -57,10 +57,10 @@ Your account may be based in either the US or the UK. This is not
 determined by your physical location, but by the location of the
 Rackspace retail site which was used to create your account:
 
--  If your account was created via http://www.rackspacecloud.com, it is
+-  If your account was created via https://www.rackspacecloud.com, it is
    a US-based account.
 
--  If your account was created via http://www.rackspace.co.uk, it is a
+-  If your account was created via https://www.rackspace.co.uk, it is a
    UK-based account.
 
 Notice that you authenticate by using a special URL for Cloud
