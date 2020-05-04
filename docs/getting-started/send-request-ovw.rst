@@ -1,8 +1,8 @@
 .. _send-api-requests:
 
-==============================
+==================================
 Send API requests to the |service|
-==============================
+==================================
 
 This section shows how to send requests by using cURL.
 

@@ -1,8 +1,8 @@
 .. _currency-methods:
 
-===========================
-Currency methods
-===========================
+===================
+Currency operations
+===================
 
 Use the following currency API operation to retrieve information about
 supported currencies.

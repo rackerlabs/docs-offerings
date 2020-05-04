@@ -1,8 +1,8 @@
 .. _discount-grid-methods:
 
-===========================
-Discount grid methods
-===========================
+========================
+Discount grid operations
+========================
 
 Use the following discount grid API operations to retrieve commit grids and
 volume grids and to calculate discounts.
