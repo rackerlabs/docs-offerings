@@ -1,8 +1,0 @@
-{
-  "contentIDBase": "https://github.com/rackerlabs/docs-offerings/",
-  "githubUrl": "https://github.com/rackerlabs/docs-offerings/",
-  "githubBranch": "master",
-  "meta": {
-    "preferGithubIssues": true
-  }
-}
