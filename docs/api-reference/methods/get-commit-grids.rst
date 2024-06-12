@@ -7,8 +7,6 @@ List commit grids
 
     GET /v2/discountGrids/commitGrids?geo={location}
 
-Gets information on commit grids.
-
 This operation retrieves a list of commit grids.
 
 Request

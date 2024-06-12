@@ -89,77 +89,9 @@ Cloud Sites products that are associated with an offering.
                                    }
                                ]
                            },
-                           {
-                               "priceCharacteristic": [
-                                   {
-                                       "name": "chargeType",
-                                       "value": "INFRASTRUCTURE"
-                                   },
-                                   {
-                                       "name": "serviceLevel",
-                                       "value": "MANAGED"
-                                   },
-                                   {
-                                       "name": "serviceType",
-                                       "value": "DEVOPS"
-                                   }
-                               ],
-                               "prices": [
-                                   {
-                                       "unitOfMeasure": "per Year",
-                                       "price": [
-                                           {
-                                               "currency": "AUD",
-                                               "amount": "12.5",
-                                               "geo": "USA"
-                                           },
-                                           {
-                                               "currency": "EUR",
-                                               "amount": "8.475",
-                                               "geo": "USA"
-                                           },
-                                           {
-                                               "currency": "GBP",
-                                               "amount": "6.135",
-                                               "geo": "USA"
-                                           },
-                                           {
-                                               "currency": "USD",
-                                               "amount": "10",
-                                               "geo": "USA"
-                                           }
-                                       ]
-                                   }
-                               ]
-                           },
-                           {
-                               "priceCharacteristic": [
-                                   {
-                                       "name": "chargeType",
-                                       "value": "INFRASTRUCTURE"
-                                   },
-                                   {
-                                       "name": "serviceLevel",
-                                       "value": "MANAGED"
-                                   },
-                                   {
-                                       "name": "serviceType",
-                                       "value": "LEGACY"
-                                   }
-                               ],
-                               "prices": [
-                                   {
-                                       "unitOfMeasure": "per Year",
-                                       "price": [
-                                           {
-                                               "currency": "USD",
-                                               "amount": "10",
-                                               "geo": "USA"
-                                           }
-                                       ]
-                                   }
-                               ]
-                           },
+                           .
+                           .
+                           .
                            {
                                "priceCharacteristic": [
                                    {

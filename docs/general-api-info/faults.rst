@@ -130,7 +130,7 @@ The ``itemNotFound`` fault is returned when a requested resource is not found.
 methodNotAllowed
 ~~~~~~~~~~~~~~~~
 
-The ``methodNotAllowed`` fault is returned when the operation is not allowed
+The ``methodNotAllowed`` fault is returned when the method is not allowed
 for the resource that you are calling.
 
 **Example: methodNotAllowed fault response**

@@ -7,8 +7,6 @@ List offerings
 
     GET /v2/offerings
 
-Lists Rackspace offerings.
-
 This operation retrieves all of the Rackspace offerings that are available in
 the product catalog.
 
@@ -110,14 +108,14 @@ The response has the following body parameters.
    * - offerings.\ offering.\ *link*
      - Object
      - An info block that contains details about the link for the offering.
-   * - offerings.\ offering.\ link\. *rel*
+   * - offerings.\ offering.\ link.\ *rel*
      - String
      - The relationship between the current information and the linked
        information.
-   * - offerings.\ offering.\ link\. *href*
+   * - offerings.\ offering.\ link.\ *href*
      - String
      - The URL for the link.
-   * - offerings.\ offering.\ link\. *title*
+   * - offerings.\ offering.\ link.\ *title*
      - String
      - The title of the link.
    * - offerings.\ offering.\ *status*
@@ -131,11 +129,11 @@ The response has the following body parameters.
    * - offerings.\ *link*
      - Object
      - An info block that contains details about the link for the results.
-   * - offerings.\ link\. *rel*
+   * - offerings.\ link.\ *rel*
      - String
      - The relationship between the current information and the linked
        information.
-   * - offerings.\ link\. *href*
+   * - offerings.\ link.\ *href*
      - String
      - The URL for a set of results.
 

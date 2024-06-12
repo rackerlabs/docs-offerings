@@ -7,8 +7,6 @@ Calculate a discount
 
     POST /v2/discountGrids/commitGrids/{commitGridId}/commitDiscountCalculation
 
-Calculate a discount.
-
 This operation calculates a discount by using a commit grid.
 
 Request
