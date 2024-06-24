@@ -6,7 +6,7 @@ Copying and Pasting cURL Request Examples into a Terminal Window
 To run the cURL request examples shown in this guide on Linux or Mac
 systems, select the desired example from the HTML version of this guide
 by clicking the Select Text icon to the right of the example and then
-select Edit->Copy. Then paste it into an ASCII editor (for example
+select **Edit > Copy**. Then paste it into an ASCII editor (for example
 **vi** or **TextEdit**). Next modify the example with your required
 account information and so forth, as detailed in this guide.
 
@@ -53,7 +53,7 @@ continues on the next line:
     'https://identity.api.rackspacecloud.com/v2.0/tokens'
 
 However the lines *within* the xml portion of the message are *not*
-escaped with a backslash ('\\') in order to avoid issues with the xml
+escaped with a backslash ('\\') in order to avoid issues with the XML
 processing:
 
 .. code::
@@ -67,14 +67,14 @@ processing:
      </auth>' \
 
 .. note::
-   The final line of the xml message is escaped since the backslash lies
-   *outside* the xml message and continues the cURL command to the next
+   The final line of the XML message is escaped since the backslash lies
+   *outside* the XML message and continues the cURL command to the next
    line.
 
 After you are finished modifying the text for the cURL request example
 with your information (for example **``your_username``** and
 **``your_api_key``**), paste it into your terminal window. Then execute
-the cURL command by pressing Enter.
+the cURL command by pressing **Ente**r.
 
 If you have trouble copying and pasting the examples as described, try
 typing the entire example on one long line, removing all the backslash

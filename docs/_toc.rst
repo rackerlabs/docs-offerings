@@ -4,5 +4,5 @@
    :includehidden:
    :maxdepth: 99
 
-   Docs Starter Kit (Sphinx Public GitHub)<self>
+   Offering Service Documentation<self>
    index.rst

@@ -5,7 +5,8 @@ Additional resources
 ====================
 
 We welcome feedback, comments, and bug reports.
-Email them to `<infodev@rackspace.com>`__.
+Email them to the LASER Application Support team at
+`<laserappsupport@rackspace.com>`__.
 
 Use the following resources to learn more about the Offer service API:
 
