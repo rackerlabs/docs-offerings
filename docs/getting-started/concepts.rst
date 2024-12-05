@@ -56,7 +56,7 @@ Custom commit grid
 
 A custom commit grid offers customized discounts based on a customer's
 request. A payload for the custom commit grid is created and posted to the
-Offer Service with a unique ID. A customer account that is associated with a
+Offer service with a unique ID. A customer account that is associated with a
 specific geographic region (such as USA or UK) can have only one
 commit grid applied to it.
 
@@ -70,7 +70,7 @@ based on the volume of cloud services usage. A volume grid is only used when
 an overflow occurs, such as when a customer exceeds the monthly maximum amount
 (``maxAmount``) that is associated with the commitment.
 
-Rackspace has the following types of volume discount grids:
+Rackspace volume grids can be classified into the following types.
 
 Standard volume grid
 ####################

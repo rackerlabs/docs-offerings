@@ -15,7 +15,6 @@ and complete basic operations by using the |api-service|.
    :maxdepth: 1
 
    get-credentials-include
-   install-CLI-client
    send-request-ovw
    authenticate
    concepts
