@@ -7,8 +7,6 @@ List a product
 
     GET /v2/offerings/{offeringId}/products/{productId}
 
-Gets a specific product.
-
 This operation retrieves a specific product.
 
 Request
@@ -84,7 +82,7 @@ The response has the following body parameters.
        unique across all of the products within an offering.
    * - product.\ *productOfferingPrice*
      - Complex type
-     - Provides pricing information specific to a product in an offering
+     - Pricing information specific to a product in an offering
        through a nested structure.
    * - product.\ productOfferingPrice.\ *description*
      - String
@@ -160,7 +158,8 @@ The response has the following body parameters.
 **Service plan details**
 
 The following table shows the service level and service type that is
-associated with each Rackspace service plan.
+associated with each Rackspace service plan. This information appears in the
+``priceDetails`` parameter of the response.
 
 .. list-table::
   :widths: 15 10 30
@@ -169,6 +168,9 @@ associated with each Rackspace service plan.
   * - Service plan
     - Service level
     - Service type
+    - (*priceDetails.priceCharacteristic*)
+    - (*serviceLevel*)
+    - (*serviceType*)
   * - Infrastructure
     - Infrastructure
     - Legacy

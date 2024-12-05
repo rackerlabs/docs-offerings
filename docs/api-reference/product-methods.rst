@@ -1,8 +1,8 @@
 .. _product-methods:
 
-===========================
-Product methods
-===========================
+==================
+Product operations
+==================
 
 Use the following product API operations to retrieve products.
 

@@ -7,8 +7,6 @@ List supported currency information
 
     GET /v2/currencies
 
-Gets information on supported monetary currencies.
-
 This operation retrieves a list of supported monetary currencies.
 
 Request
@@ -68,10 +66,10 @@ The response has the following body parameters.
      - Description
    * - currencies
      - Object
-     - An info block that contains details about supported currencies.
+     - An information block that contains details about supported currencies.
    * - currencies.\ *currency*
      - Array
-     - An info block that contains details about currencies.
+     - An information block that contains details about currencies.
    * - currencies.\ currency.\ *code*
      - String
      -
@@ -90,7 +88,8 @@ The response has the following body parameters.
      - The subdivision of the currency.
    * - currencies.\ *link*
      - String
-     - An info block that contains details about the links for the results.
+     - An information block that contains details about the links for the
+       results.
    * - currencies.\ link.\ *href*
      - String
      - The URL for a set of results.
@@ -138,30 +137,6 @@ The following example shows the response for the request.
                  "code": "EUR",
                  "description": "Euro",
                  "symbol": "\\u20AC",
-                 "subDivision": "cents"
-             },
-             {
-                 "code": "HKD",
-                 "description": "Hong Kong Dollar",
-                 "symbol": "\\u0048\\u004B\\u0024",
-                 "subDivision": "cents"
-             },
-             {
-                 "code": "CNY",
-                 "description": "Renminbi",
-                 "symbol": "\\u00A5",
-                 "subDivision": "jiao"
-             },
-             {
-                 "code": "RUB",
-                 "description": "Russian Ruble",
-                 "symbol": "\\u20BD",
-                 "subDivision": "kopecs"
-             },
-             {
-                 "code": "SGD",
-                 "description": "Singapore Dollar",
-                 "symbol": "\\u0053\\u0024",
                  "subDivision": "cents"
              }
          ],

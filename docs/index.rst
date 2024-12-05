@@ -6,12 +6,11 @@ Rackspace |product name| API |contract version|
 
 *Last updated:* |today|
 
-The Rackspace |product name| service enables customers to access information
-about all of the offers that are available from Rackspace at a particular time.
+The Offering API enables developers to access information about the offers
+available at Rackspace at a particular time.
 
-This guide is intended to assist software developers who want to develop
-applications by using the REST application programming interface (API) for
-the |product name| service.
+This guide provides information that helps developers integrate their
+applications with the Offering API.
 
 To use the information provided here, you should have a general understanding
 of the service and have access to an installation of it. You should also be

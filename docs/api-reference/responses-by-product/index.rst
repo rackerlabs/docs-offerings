@@ -4,7 +4,7 @@
 Responses by product
 ====================
 
-Responses to the get product and get products calls vary, depending on the
+Responses to the get product and get products operations vary, depending on the
 product. Use the following links to view sample responses.
 
 .. toctree::

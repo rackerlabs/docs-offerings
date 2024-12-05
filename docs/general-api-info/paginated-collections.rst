@@ -11,9 +11,9 @@ To reduce load on the service, retrieve operations return a maximum limit of
 100 items at a time. If a request supplies no limit or one that exceeds the
 configured  default limit, the default limit is used instead.
 
-The only exception is the ``get products`` method, which enables you to set the
-limit to a value of ``infinite``. This value returns all of the products that
-are associated with an ``offeringId``.
+The only exception is the ``get products`` operation, which enables you to set
+the limit to a value of ``infinite``. This value returns all of the products
+that are associated with an ``offeringId``.
 
 The limit behavior for all other retrieve (GET) operations is called
 *pagination*. Pagination gives you the ability to limit the size of the

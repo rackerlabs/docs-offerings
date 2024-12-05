@@ -7,8 +7,6 @@ List volume grid
 
     GET /v2/discountGrids/volumeGrids/{volumeGridId}
 
-Gets information on a specific volume grid.
-
 This operation retrieves a volume grid.
 
 Request

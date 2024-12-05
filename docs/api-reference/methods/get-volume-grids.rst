@@ -7,8 +7,6 @@ List volume grids
 
     GET /v2/discountGrids/volumeGrids
 
-Gets information on volume grids.
-
 This operation retrieves a list of volume grids.
 
 Request
